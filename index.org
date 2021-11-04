@@ -10,12 +10,23 @@
   The PL Reading Group (/PLRG@IU/) is the de facto successor to PL Wonks and
   several previous reading groups.
 
+  Unlike PL Wonks events, the focus of PLRG is paper reading and discussion.
+  However, we do occasionally schedule talks. Please send us ([[*Contact]])
+  a short talk proposal (informal; one paragraph) if you have an idea!
+
+* Time & Location
+
+  TBA
+
 * Schedule
 
-| Date             | Title                | Link       |
-|------------------+----------------------+------------|
-| <2021-11-12 Fri> | /Theorems for free!/ | [[https://people.mpi-sws.org/~dreyer/tor/papers/wadler.pdf][1]] , [[https://dl.acm.org/doi/pdf/10.1145/99370.99404][ACM-DL]] |
-| <2021-11-19 Fri> | TBA                  | TBA        |
+| Date             | Paper Title / Talk          | Link       |
+|------------------+-----------------------------+------------|
+| <2021-11-12 Fri> | 1. /Theorems for free!/     | [[https://people.mpi-sws.org/~dreyer/tor/papers/wadler.pdf][1]] , [[https://dl.acm.org/doi/pdf/10.1145/99370.99404][ACM-DL]] |
+|                  | 2. On Paper Reading         |            |
+|                  | (Talk by [[https://wphomes.soic.indiana.edu/jsiek/][Prof. Jeremy Siek]]) |            |
+|------------------+-----------------------------+------------|
+| <2021-11-19 Fri> | TBA                         | TBA        |
 
 * Participation
 
