@@ -1,0 +1,27 @@
+# -*- org-html-validation-link: nil; -*-
+
+#+TITLE: PL Reading Group @ IU
+#+AUTHOR: Tianyu Chen
+#+SETUPFILE: ./white_clean.theme
+#+OPTIONS: ^:nil p:t num:0 author:nil
+
+* About
+
+  The PL Reading Group (/PLRG@IU/) is the de facto successor to PL Wonks and
+  several previous reading groups.
+
+* Schedule
+
+| Date             | Title              | Link       |
+|------------------+--------------------+------------|
+| <2021-11-12 Fri> | Theorems for free! | I'm a link |
+| <2021-11-19 Fri> | TBA                | TBA        |
+
+* Code of Conduct
+
+  + Due to COVID-19, it *is required* to wear a mask when attending in-person meetings.
+
+* Contact
+
+  + Mailing list: ~pl-reading-iu-group~
+  + Email Tianyu (~chen512~) to ask questions and / or to join the mailing list
