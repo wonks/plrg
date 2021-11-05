@@ -6,12 +6,18 @@
 * About
 
   The PL Reading Group (/PLRG@IU/) is the de facto successor to PL Wonks and
-  several previous reading groups.
+  several previous reading groups. Unlike PL Wonks events, the focus of PLRG
+  is paper reading and discussion. However, we do occasionally schedule talks,
+  presentations, and tutorials.
 
-  Unlike PL Wonks events, the focus of PLRG is paper reading and discussion.
-  However, we do occasionally schedule talks, presentations, and tutorials.
+  *@@html:<font color="#a90533">@@Call for Presentations!!@@html:</font>@@*
+  
   Please send us ([[*Contact]]) a short proposal (informal; one paragraph) if you
-  have an idea!
+  have an idea, including but not limited to:
+
+  + Presenting a classic work [fn:1].
+  + Talking about your original work (library, language design, etc. ).
+  + Tutorial (for example, how to use a proof assistant).
 
 * Time & Location
 
@@ -39,11 +45,11 @@
 
 * Participation
 
-  + *Everyone is welcome!!*
+  *Everyone is welcome!!*
 
 ** Paper Bidding Mechanism (RFC)
 
-   We maintain a queue of papers where every member can contribute to. New
+   We maintain [[https://docs.google.com/spreadsheets/d/1NuWy4YpqwUCiR2V9wU1nb7UOKCusfiz1jaHEHUaEg3Y/edit?usp=sharing][a queue of papers]] where every member can contribute to. New
    proposals are pushed to the rear of the queue.
 
    Paper selection is bidding-based: we maintain a sliding window with a
@@ -69,3 +75,5 @@
 
   + Mailing list: ~pl-reading-iu-group~
   + Email Tianyu (~chen512~) to ask questions and / or to join the mailing list
+
+[fn:1] Not limited to the ones in the paper queue.
