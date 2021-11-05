@@ -1,5 +1,3 @@
-# -*- org-html-validation-link: nil; -*-
-
 #+TITLE: PL Reading Group @ IU
 #+AUTHOR: Tianyu Chen
 #+SETUPFILE: ./white_clean.theme
@@ -11,8 +9,9 @@
   several previous reading groups.
 
   Unlike PL Wonks events, the focus of PLRG is paper reading and discussion.
-  However, we do occasionally schedule talks. Please send us ([[*Contact]])
-  a short talk proposal (informal; one paragraph) if you have an idea!
+  However, we do occasionally schedule talks, presentations, and tutorials.
+  Please send us ([[*Contact]]) a short proposal (informal; one paragraph) if you
+  have an idea!
 
 * Time & Location
 
@@ -20,21 +19,23 @@
 
 * Schedule
 
-| Date             | Paper Title / Talk          | Link       |
-|------------------+-----------------------------+------------|
-| <2021-11-12 Fri> | 1. /Theorems for free!/     | [[https://people.mpi-sws.org/~dreyer/tor/papers/wadler.pdf][1]] , [[https://dl.acm.org/doi/pdf/10.1145/99370.99404][ACM-DL]] |
-|                  | 2. On Paper Reading         |            |
-|                  | (Talk by [[https://wphomes.soic.indiana.edu/jsiek/][Prof. Jeremy Siek]]) |            |
-|------------------+-----------------------------+------------|
-| <2021-11-19 Fri> | TBA                         | TBA        |
-|------------------+-----------------------------+------------|
-| +<2021-11-26 Fri>+ | Thanksgiving break        | +n/a+      |
-|------------------+-----------------------------+------------|
-| <2021-12-03 Fri> | TBA                         | TBA        |
-|------------------+-----------------------------+------------|
-| <2021-12-10 Fri> | TBA                         | TBA        |
-|------------------+-----------------------------+------------|
-| <2021-12-17 Fri> | TBA                         | TBA        |
+| Date               | Paper Title / Presentation               | Speaker(s)        |
+|--------------------+------------------------------------------+-------------------|
+| <2021-11-12 Fri>   | 1. Paper Reading: /Theorems for free!/   | [[https://github.com/Fyrbll][Kartik Sabharwal]]  |
+|                    | Paper links:  [[https://people.mpi-sws.org/~dreyer/tor/papers/wadler.pdf][1]] , [[https://dl.acm.org/doi/pdf/10.1145/99370.99404][ACM-DL]]                 |                   |
+|                    | 2. Invited Talk: On Paper Reading        | [[https://wphomes.soic.indiana.edu/jsiek/][Prof. Jeremy Siek]] |
+|--------------------+------------------------------------------+-------------------|
+| <2021-11-19 Fri>   | Presentation:                            | [[https://homes.luddy.indiana.edu/chen512/][Tianyu Chen]]       |
+|                    | A Gentle Introduction to Noninterference |                   |
+|                    | (with Full [[https://wiki.portal.chalmers.se/agda][Agda]] Formalization)           |                   |
+|--------------------+------------------------------------------+-------------------|
+| +<2021-11-26 Fri>+ | Thanksgiving break                       | n/a               |
+|--------------------+------------------------------------------+-------------------|
+| <2021-12-03 Fri>   | TBA                                      |                   |
+|--------------------+------------------------------------------+-------------------|
+| <2021-12-10 Fri>   | TBA                                      |                   |
+|--------------------+------------------------------------------+-------------------|
+| <2021-12-17 Fri>   | TBA                                      |                   |
 
 * Participation
 
@@ -54,14 +55,13 @@
    
 ** Paper Discussion
 
-   We expect that every participant read the paper before coming to the discussion
-   session. You do not need to understand every detail, but it is recommended that
-   you go through the paper and get the main idea.
+   + We expect that every participant read the paper before coming to the discussion
+      session. You do not need to understand every detail, but it is recommended that
+      you go through the paper and get the main idea.
+   + We recommend that you bring a physical or electronic copy of the paper to the
+      discussion.
 
-   We recommend that you bring a physical or electronic copy of the paper to the
-   discussion.
-
-* Code of Conduct
+* COVID & Health
 
   + Due to COVID-19, it *is required* to wear a mask when attending in-person meetings.
 
