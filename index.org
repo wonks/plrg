@@ -22,7 +22,8 @@
 * Time & Location
 
   + Time: <4:00 PM> on Fridays 
-  + Location: TBA
+  + Location: [[https://registrar.indiana.edu/information/building-codes.shtml][BLI-107]] (/Myles Brand Hall West/, also known as /Info West/, Room 107)
+  + Where is it? Search "Myles Brand Hall" on [[https://map.iu.edu/iub/][Campus Map]].
 
 * Schedule
 
@@ -42,7 +43,6 @@
 |--------------------+------------------------------------------+-------------------|
 | <2021-12-10 Fri>   | TBA                                      |                   |
 |--------------------+------------------------------------------+-------------------|
-| <2021-12-17 Fri>   | TBA                                      |                   |
 
 * Participation
 
