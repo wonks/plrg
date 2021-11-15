@@ -57,8 +57,6 @@
    tentative size of 3 (arbitrarily chosen), The window starts from the head
    of the queue. Members select from these 3 papers and vote for the next
    one to read. We then update the queue by popping the winner.
-
-   *[NOTE]* The paper for <2021-11-12 Fri> is pre-selected to get things going.
    
 ** Paper Discussion
 
