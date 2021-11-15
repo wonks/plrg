@@ -18,31 +18,31 @@
   + Presenting a classic work [fn:1].
   + Talking about your original work (library, language design, etc. ).
   + Tutorial (for example, how to use a proof assistant).
-
+  
 * Time & Location
 
-  + Time: <4:00 PM> on Fridays 
-  + Location: [[https://registrar.indiana.edu/information/building-codes.shtml][BLI-107]] (/Myles Brand Hall West/, also known as /Info West/, Room 107)
+  + *Time:* <4:00 PM> on Fridays 
+  + *Location:* [[https://registrar.indiana.edu/information/building-codes.shtml][BLI-107]] (/Myles Brand Hall West/, also known as /Info West/, Room 107)
   + Where is it? Search "Myles Brand Hall" on [[https://map.iu.edu/iub/][Campus Map]].
+  + If you are a speaker, please make sure your talk is within 40 minutes.
 
 * Schedule
 
-| Date               | Paper Title / Presentation               | Speaker(s)        |
-|--------------------+------------------------------------------+-------------------|
-| <2021-11-12 Fri>   | 1. Paper Reading: /Theorems for free!/   | [[https://github.com/Fyrbll][Kartik Sabharwal]]  |
-|                    | Paper links:  [[https://people.mpi-sws.org/~dreyer/tor/papers/wadler.pdf][1]] , [[https://dl.acm.org/doi/pdf/10.1145/99370.99404][ACM-DL]]                 |                   |
-|                    | 2. Invited Talk: On Paper Reading        | [[https://wphomes.soic.indiana.edu/jsiek/][Prof. Jeremy Siek]] |
-|--------------------+------------------------------------------+-------------------|
-| <2021-11-19 Fri>   | Presentation:                            | [[https://homes.luddy.indiana.edu/chen512/][Tianyu Chen]]       |
-|                    | A Gentle Introduction to Noninterference |                   |
-|                    | (with Full [[https://wiki.portal.chalmers.se/agda][Agda]] Formalization)           |                   |
-|--------------------+------------------------------------------+-------------------|
-| +<2021-11-26 Fri>+ | Thanksgiving break                       | n/a               |
-|--------------------+------------------------------------------+-------------------|
-| <2021-12-03 Fri>   | TBA                                      |                   |
-|--------------------+------------------------------------------+-------------------|
-| <2021-12-10 Fri>   | TBA                                      |                   |
-|--------------------+------------------------------------------+-------------------|
+| Date               | Paper Title / Presentation          | Speaker(s)        |
+|--------------------+-------------------------------------+-------------------|
+| <2021-11-12 Fri>   | Paper Reading: /Theorems for free!/ | [[https://github.com/Fyrbll][Kartik Sabharwal]]  |
+|                    | Paper links:  [[https://people.mpi-sws.org/~dreyer/tor/papers/wadler.pdf][1]] , [[https://dl.acm.org/doi/pdf/10.1145/99370.99404][ACM-DL]]            |                   |
+|--------------------+-------------------------------------+-------------------|
+| <2021-11-19 Fri>   | 1. Invited Talk: On Paper Reading   | [[https://wphomes.soic.indiana.edu/jsiek/][Prof. Jeremy Siek]] |
+|                    | 2. Presentation:                    | [[https://homes.luddy.indiana.edu/chen512/][Tianyu Chen]]       |
+|                    | Programming and proving in [[https://wiki.portal.chalmers.se/agda][Agda]]     |                   |
+|--------------------+-------------------------------------+-------------------|
+| +<2021-11-26 Fri>+ | Thanksgiving break                  | n/a               |
+|--------------------+-------------------------------------+-------------------|
+| <2021-12-03 Fri>   | TBA                                 |                   |
+|--------------------+-------------------------------------+-------------------|
+| <2021-12-10 Fri>   | TBA                                 |                   |
+|--------------------+-------------------------------------+-------------------|
 
 * Participation
 
