@@ -31,11 +31,12 @@
 | Date               | Paper Title / Presentation          | Speaker(s)        |
 |--------------------+-------------------------------------+-------------------|
 | <2021-11-12 Fri>   | Paper Reading: /Theorems for free!/ | [[https://github.com/Fyrbll][Kartik Sabharwal]]  |
-|                    | Paper links:  [[https://people.mpi-sws.org/~dreyer/tor/papers/wadler.pdf][1]] , [[https://dl.acm.org/doi/pdf/10.1145/99370.99404][ACM-DL]]            |                   |
+|                    | ( Paper links:  [[https://people.mpi-sws.org/~dreyer/tor/papers/wadler.pdf][1]] , [[https://dl.acm.org/doi/pdf/10.1145/99370.99404][ACM-DL]] )        |                   |
 |--------------------+-------------------------------------+-------------------|
 | <2021-11-19 Fri>   | 1. Invited Talk: On Paper Reading   | [[https://wphomes.soic.indiana.edu/jsiek/][Prof. Jeremy Siek]] |
 |                    | 2. Presentation:                    | [[https://homes.luddy.indiana.edu/chen512/][Tianyu Chen]]       |
 |                    | Programming and proving in [[https://wiki.portal.chalmers.se/agda][Agda]]     |                   |
+|                    | ( [[./upload/agda-tutorial/index.html][Presentation homepage]] )           |                   |
 |--------------------+-------------------------------------+-------------------|
 | +<2021-11-26 Fri>+ | Thanksgiving break                  | n/a               |
 |--------------------+-------------------------------------+-------------------|
