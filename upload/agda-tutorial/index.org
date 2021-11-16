@@ -1,0 +1,25 @@
+#+TITLE: Programming and Proving in Agda
+#+AUTHOR: Tianyu Chen
+#+SETUPFILE: ./white_clean.theme
+#+OPTIONS: ^:nil p:t num:0
+
+* Bootstrapping
+
+  You can follow [[https://plfa.github.io/GettingStarted/][Getting Started - PLFA]] but ignore all the PLFA-specific stuff.
+
+* Course Materials
+  
+  Agda tutorial session <2021-11-19 Fri> .
+
+|----------------------+----------|
+| Readable HTML        | [[./html/Tutorial.html][Go]]       |
+| Download source code | [[./Tutorial.agda][Download]] |
+|----------------------+----------|
+
+* Further Reading
+
+  + B522 Spring 2020 by Prof. Jeremy Siek ( [[https://jsiek.github.io/B522-PL-Foundations/][link]] )
+  + PLFA ( [[https://plfa.github.io/][link]] )
+  + Learn You an Agda ( [[http://learnyouanagda.liamoc.net/toc.html][link]] )
+  + Agda tutorial by Uma Zalakain ( [[https://umazalakain.github.io/agda-bcam/][link]] )
+
