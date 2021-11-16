@@ -1,7 +1,7 @@
 open import Data.Unit
 open import Data.Nat
 open import Data.Product
-  using (_×_; Σ; ∃; Σ-syntax; ∃-syntax)
+  using (_×_; proj₁; proj₂; Σ; ∃; Σ-syntax; ∃-syntax)
   renaming (_,_ to ⟨_,_⟩)
 import Relation.Binary.PropositionalEquality as Eq
 open import Function using (_∘_)
@@ -12,6 +12,17 @@ module Tutorial where
 
 -- Maybe add a hello world example here?
 -- And a meme: https://twitter.com/pruvisto/status/971670088574210048
+
+{- Extensionality asserts that the only way to
+   distinguish functions is by applying them;
+   if two functions applied to the same argument
+   always yield the same result, then they are
+   the same function. - plfa -}
+postulate
+  extensionality : ∀ {X Y : Set} {f g : X → Y}
+    → (∀ (x : X) → f x ≡ g x)
+      -----------------------
+    → f ≡ g
 
 module DT where
   open import Data.Fin
@@ -81,22 +92,51 @@ module ListReasoning where
   r : ∀ (X : Set) → List X → List X
   r X = reverse
 
-  {- Extensionality asserts that the only way to
-     distinguish functions is by applying them;
-     if two functions applied to the same argument
-     always yield the same result, then they are
-     the same function. -}
-  postulate
-    extensionality : ∀ {X Y : Set} {f g : X → Y}
-      → (∀ (x : X) → f x ≡ g x)
-        -----------------------
-      → f ≡ g
-
   a* : List A → List B
   a* = map a
 
   a*∘r≡r∘a* : (a* ∘ (r A)) ≡ ((r B) ∘ a*)
   a*∘r≡r∘a* = extensionality (map∘reverse≡reverse∘map a)
+
+module FibExtEqual where
+
+  fib-spec : ℕ → ℕ
+  fib-spec 0             = 0
+  fib-spec 1             = 1
+  fib-spec (suc (suc k)) = (fib-spec k) + (fib-spec (suc k))
+
+  swap-add : ℕ × ℕ → ℕ × ℕ
+  swap-add ⟨ n , m ⟩ = ⟨ m , n + m ⟩
+
+  -- repeat n times
+  repeat : ∀ {A : Set} → (A → A) → A → ℕ → A
+  repeat f z zero    = z
+  repeat f z (suc n) = repeat f (f z) n
+
+  -- O(n) time
+  fib : ℕ → ℕ
+  fib n =
+    let ⟨ m , _ ⟩ = repeat swap-add ⟨ 0 , 1 ⟩ n in m
+
+  -- fⁿ (f a) ≡ f (fⁿ a)
+  repeat-eq : ∀ {A} (f : A → A) a n → repeat f (f a) n ≡ f (repeat f a n)
+  repeat-eq f a zero    = refl
+  repeat-eq f a (suc n) = repeat-eq f (f a) n
+
+  correctness : ∀ n
+    → repeat swap-add ⟨ 0 , 1 ⟩ n ≡ ⟨ fib-spec n , fib-spec (suc n) ⟩
+  correctness zero = refl
+  correctness (suc n) rewrite repeat-eq swap-add ⟨ 0 , 1 ⟩ n =
+    step n (correctness n)
+    where
+    step : ∀ {p} (n : ℕ)
+      → p ≡ ⟨ fib-spec n , fib-spec (suc n) ⟩
+        -----------------------------------------------------------
+      → swap-add p ≡ ⟨ fib-spec (suc n) , fib-spec (suc (suc n)) ⟩
+    step n refl = refl
+
+  fib-correct : fib ≡ fib-spec
+  fib-correct = extensionality (λ n → cong proj₁ (correctness n))
 
 module Isomorphism where
   infix 0 _≃_
@@ -205,3 +245,9 @@ module Isomorphism where
            from∘to = from∘to ;
            to∘from = to∘from
          }
+
+{-
+  The idea for this talk is partially inspired by
+      [ https://umazalakain.github.io/agda-bcam/ ]
+  You should check Uma's talk too!
+-}
