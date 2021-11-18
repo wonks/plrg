@@ -10,9 +10,6 @@ open Eq.≡-Reasoning
 
 module Tutorial where
 
--- Maybe add a hello world example here?
--- And a meme: https://twitter.com/pruvisto/status/971670088574210048
-
 {- Extensionality asserts that the only way to
    distinguish functions is by applying them;
    if two functions applied to the same argument
@@ -147,6 +144,10 @@ module Isomorphism where
       from∘to : ∀ (x : A) → from (to x) ≡ x
       to∘from : ∀ (y : B) → to (from y) ≡ y
 
+  {-
+    *Pop quiz:* How is this different from the definition in PLFA?
+    Why does the latter one require a canonical form?
+  -}
   open import Data.Nat.Binary
     renaming (zero to zeroᵇ; suc to sucᵇ; _*_ to _*ᵇ_; _+_ to _+ᵇ_)
     hiding (toℕ; fromℕ; fromℕ')
@@ -208,9 +209,9 @@ module Isomorphism where
   from∘to : ∀ (b : ℕᵇ) → fromℕ (toℕ b) ≡ b
   from∘to zeroᵇ = refl
   from∘to 2[1+ b ] rewrite +-identityʳ (toℕ b) =
-    let iH : fromℕ (toℕ b) ≡ b
-        iH = from∘to b in
     begin
+      let iH : fromℕ (toℕ b) ≡ b
+          iH = from∘to b in
       sucᵇ (fromℕ (toℕ b + suc (toℕ b)))
         ≡⟨ cong (λ □ → sucᵇ (fromℕ □)) (+-suc (toℕ b) (toℕ b)) ⟩
       sucᵇ (fromℕ (suc (toℕ b + (toℕ b))))
@@ -225,6 +226,21 @@ module Isomorphism where
         ≡⟨⟩
       2[1+ b ]
         ∎
+    {-
+    -- *Pop quiz:* why doesn't this one work?
+    let iH = from∘to 1+[2 b ] in
+    begin
+      sucᵇ (fromℕ (toℕ b + suc (toℕ b + 0)))
+        ≡⟨ cong (λ □ → sucᵇ (fromℕ □)) (+-suc (toℕ b) (toℕ b + 0)) ⟩
+      sucᵇ (fromℕ (suc (toℕ b + (toℕ b + 0))))
+        ≡⟨⟩
+      sucᵇ (sucᵇ (fromℕ (toℕ b + (toℕ b + 0))))
+        ≡⟨ cong sucᵇ iH ⟩
+      sucᵇ 1+[2 b ]
+        ≡⟨⟩
+      2[1+ b ]
+        ∎
+    -}
   from∘to 1+[2 b ] rewrite +-identityʳ (toℕ b) =
     let iH : fromℕ (toℕ b) ≡ b
         iH = from∘to b in
@@ -247,7 +263,7 @@ module Isomorphism where
          }
 
 {-
-  The idea for this talk is partially inspired by
-      [ https://umazalakain.github.io/agda-bcam/ ]
-  You should check Uma's talk too!
+  Working with proof assistants can be tedious and annoying at times:
+  https://twitter.com/pruvisto/status/971670088574210048
+  So good luck! :-P
 -}
