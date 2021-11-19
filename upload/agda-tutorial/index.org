@@ -22,4 +22,5 @@
   + PLFA ( [[https://plfa.github.io/][link]] )
   + Learn You an Agda ( [[http://learnyouanagda.liamoc.net/toc.html][link]] )
   + Agda tutorial by Uma Zalakain ( [[https://umazalakain.github.io/agda-bcam/][link]] )
+  + A list of tutorials on Agda's homepage ( [[https://agda.readthedocs.io/en/latest/getting-started/tutorial-list.html][link]] )
 
