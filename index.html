@@ -3,13 +3,13 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-11-29 Mon 13:47 -->
+<!-- 2021-12-03 Fri 20:10 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>PL Reading Group @ IU</title>
-<meta name="generator" content="Org Mode" />
-<style>
-  #content { max-width: 60em; margin: auto; }
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -30,9 +30,8 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
-    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -41,21 +40,21 @@
   pre.src {
     position: relative;
     overflow: auto;
+    padding-top: 1.2em;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    top: -8px;
-    right: 12px;
+    background-color: white;
+    top: -10px;
+    right: 10px;
     padding: 3px;
-    color: #555;
-    background-color: #f2f2f299;
+    border: 1px solid black;
   }
   pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
-  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -191,6 +190,7 @@
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
+  /*]]>*/-->
 </style>
 <style type="text/css">
 /******************************************************
@@ -589,32 +589,54 @@ function show_org_source(){
 document.location.href = orgsource;
 }
 </script>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
 </head>
 <body>
-<div id="content" class="content">
+<div id="content">
 <h1 class="title">PL Reading Group @ IU</h1>
-<div id="table-of-contents" role="doc-toc">
+<div id="table-of-contents">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
+<div id="text-table-of-contents">
 <ul>
-<li><a href="#org06da85e">About</a></li>
-<li><a href="#org43dc058">Time &amp; Location</a></li>
-<li><a href="#orgd45900f">Schedule</a></li>
-<li><a href="#org884c6fb">Participation</a>
+<li><a href="#org2d49558">About</a></li>
+<li><a href="#orge2507f7">Time &amp; Location</a></li>
+<li><a href="#org869d59c">Schedule</a></li>
+<li><a href="#orgeed5acb">Participation</a>
 <ul>
-<li><a href="#orgb046fc0">Paper Bidding Mechanism (RFC)</a></li>
-<li><a href="#orgf96f039">Paper Discussion</a></li>
+<li><a href="#org3631b99">Paper Bidding Mechanism (RFC)</a></li>
+<li><a href="#orge0faee5">Paper Discussion</a></li>
 </ul>
 </li>
-<li><a href="#orga5f2dc3">COVID &amp; Health</a></li>
-<li><a href="#org1a328d2">Contact</a></li>
+<li><a href="#org008cd89">COVID &amp; Health</a></li>
+<li><a href="#org1b0cb74">Contact</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org06da85e" class="outline-2">
-<h2 id="org06da85e">About</h2>
-<div class="outline-text-2" id="text-org06da85e">
+<div id="outline-container-org2d49558" class="outline-2">
+<h2 id="org2d49558">About</h2>
+<div class="outline-text-2" id="text-org2d49558">
 <p>
 The PL Reading Group (<i>PLRG@IU</i>) is the de facto successor to PL Wonks and
 several previous reading groups. Unlike PL Wonks events, the focus of PLRG
@@ -627,21 +649,21 @@ presentations, and tutorials.
 </p>
 
 <p>
-Please send us (<a href="#org1a328d2">Contact</a>) a short proposal (informal; one paragraph) if you
+Please send us (<a href="#org1b0cb74">Contact</a>) a short proposal (informal; one paragraph) if you
 have an idea, including but not limited to:
 </p>
 
 <ul class="org-ul">
-<li>Presenting a classic work <sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>.</li>
+<li>Presenting a classic work <sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>.</li>
 <li>Talking about your original work (library, language design, etc. ).</li>
 <li>Tutorial (for example, how to use a proof assistant).</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org43dc058" class="outline-2">
-<h2 id="org43dc058">Time &amp; Location</h2>
-<div class="outline-text-2" id="text-org43dc058">
+<div id="outline-container-orge2507f7" class="outline-2">
+<h2 id="orge2507f7">Time &amp; Location</h2>
+<div class="outline-text-2" id="text-orge2507f7">
 <ul class="org-ul">
 <li><b>Time:</b> &lt;4:00 PM&gt; on Fridays</li>
 <li><b>Location:</b> <a href="https://registrar.indiana.edu/information/building-codes.shtml">BLI-107</a> (<i>Myles Brand Hall West</i>, also known as <i>Info West</i>, Room 107)</li>
@@ -651,9 +673,9 @@ have an idea, including but not limited to:
 </div>
 </div>
 
-<div id="outline-container-orgd45900f" class="outline-2">
-<h2 id="orgd45900f">Schedule</h2>
-<div class="outline-text-2" id="text-orgd45900f">
+<div id="outline-container-org869d59c" class="outline-2">
+<h2 id="org869d59c">Schedule</h2>
+<div class="outline-text-2" id="text-org869d59c">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -719,7 +741,7 @@ have an idea, including but not limited to:
 
 <tr>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">Using SMT-LIB and Z3</td>
+<td class="org-left">Using SMT-LIB and Z3 (<a href="./Upload/smt-tutorial/presentation.txt">Presentation</a>)</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 </tbody>
@@ -734,17 +756,17 @@ have an idea, including but not limited to:
 </div>
 </div>
 
-<div id="outline-container-org884c6fb" class="outline-2">
-<h2 id="org884c6fb">Participation</h2>
-<div class="outline-text-2" id="text-org884c6fb">
+<div id="outline-container-orgeed5acb" class="outline-2">
+<h2 id="orgeed5acb">Participation</h2>
+<div class="outline-text-2" id="text-orgeed5acb">
 <p>
 <b>Everyone is welcome!!</b>
 </p>
 </div>
 
-<div id="outline-container-orgb046fc0" class="outline-3">
-<h3 id="orgb046fc0">Paper Bidding Mechanism (RFC)</h3>
-<div class="outline-text-3" id="text-orgb046fc0">
+<div id="outline-container-org3631b99" class="outline-3">
+<h3 id="org3631b99">Paper Bidding Mechanism (RFC)</h3>
+<div class="outline-text-3" id="text-org3631b99">
 <p>
 We maintain <a href="https://docs.google.com/spreadsheets/d/1NuWy4YpqwUCiR2V9wU1nb7UOKCusfiz1jaHEHUaEg3Y/edit?usp=sharing">a queue of papers</a> where every member can contribute to. New
 proposals are pushed to the rear of the queue.
@@ -759,9 +781,9 @@ one to read. We then update the queue by popping the winner.
 </div>
 </div>
 
-<div id="outline-container-orgf96f039" class="outline-3">
-<h3 id="orgf96f039">Paper Discussion</h3>
-<div class="outline-text-3" id="text-orgf96f039">
+<div id="outline-container-orge0faee5" class="outline-3">
+<h3 id="orge0faee5">Paper Discussion</h3>
+<div class="outline-text-3" id="text-orge0faee5">
 <ul class="org-ul">
 <li>We expect that every participant read the paper before coming to the discussion
 session. You do not need to understand every detail, but it is recommended that
@@ -773,18 +795,18 @@ discussion.</li>
 </div>
 </div>
 
-<div id="outline-container-orga5f2dc3" class="outline-2">
-<h2 id="orga5f2dc3">COVID &amp; Health</h2>
-<div class="outline-text-2" id="text-orga5f2dc3">
+<div id="outline-container-org008cd89" class="outline-2">
+<h2 id="org008cd89">COVID &amp; Health</h2>
+<div class="outline-text-2" id="text-org008cd89">
 <ul class="org-ul">
 <li>Due to COVID-19, it <b>is required</b> to wear a mask when attending in-person meetings.</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org1a328d2" class="outline-2">
-<h2 id="org1a328d2">Contact</h2>
-<div class="outline-text-2" id="text-org1a328d2">
+<div id="outline-container-org1b0cb74" class="outline-2">
+<h2 id="org1b0cb74">Contact</h2>
+<div class="outline-text-2" id="text-org1b0cb74">
 <ul class="org-ul">
 <li>Mailing list: <code>pl-reading-iu-group</code></li>
 <li>Email Tianyu (<code>chen512</code>) to ask questions and / or to join the mailing list</li>
@@ -795,7 +817,7 @@ discussion.</li>
 <h2 class="footnotes">Footnotes: </h2>
 <div id="text-footnotes">
 
-<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
 Not limited to the ones in the paper queue.
 </p></div></div>
 
@@ -803,7 +825,7 @@ Not limited to the ones in the paper queue.
 </div>
 </div></div>
 <div id="postamble" class="status">
-<p class="date">Created: 2021-11-29 Mon 13:47</p>
+<p class="date">Created: 2021-12-03 Fri 20:10</p>
 </div>
 </body>
 </html>
