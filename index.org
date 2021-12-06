@@ -42,7 +42,9 @@
 | <2021-12-03 Fri>   | Tutorial: Satisfiability Modulo Theories | [[https://github.com/Fyrbll][Kartik Sabharwal]]  |
 |                    | Using SMT-LIB and Z3                     |                   |
 |--------------------+------------------------------------------+-------------------|
-| <2021-12-10 Fri>   | Paper bidding: [[https://docs.google.com/forms/d/1vfQ7XrerNgpFDG4zqWC3aFS4IdD4rDgOn5wbCpX-hzg/prefill][link]]                      |                   |
+| <2021-12-10 Fri>   | Paper Reading:                           | Group Discussion  |
+|                    | /Applicative Programming with Effects/   |                   |
+|                    | ( Paper link: [[https://doi.org/10.1017/S0956796807006326][DOI]] )                      |                   |
 |--------------------+------------------------------------------+-------------------|
 
 * Participation

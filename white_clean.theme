@@ -177,7 +177,7 @@
 #+HTML_HEAD: /* body */
 #+HTML_HEAD: body {
 #+HTML_HEAD:     margin:  0 auto;
-#+HTML_HEAD:     max-width:  960px;
+#+HTML_HEAD:     max-width:  1024px;
 #+HTML_HEAD: }
 #+HTML_HEAD: /* head */
 #+HTML_HEAD: .masthead {
