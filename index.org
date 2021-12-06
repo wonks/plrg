@@ -40,7 +40,7 @@
 | +<2021-11-26 Fri>+ | Thanksgiving break                       | n/a               |
 |--------------------+------------------------------------------+-------------------|
 | <2021-12-03 Fri>   | Tutorial: Satisfiability Modulo Theories | [[https://github.com/Fyrbll][Kartik Sabharwal]]  |
-|                    | Using SMT-LIB and Z3                     |                   |
+|                    | Using SMT-LIB and Z3 ([[./upload/smt-tutorial/presentation.txt][Presentation]])      |                   |
 |--------------------+------------------------------------------+-------------------|
 | <2021-12-10 Fri>   | Paper Reading:                           | Group Discussion  |
 |                    | /Applicative Programming with Effects/   |                   |

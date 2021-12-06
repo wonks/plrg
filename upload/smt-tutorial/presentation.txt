@@ -1,0 +1,608 @@
+Satisfiability Modulo Theories using SMT-LIB and Z3
+================================================================================
+
+Contents
+--------------------------------------------------------------------------------
+
+Here's what we'll cover today
+
+- First Order Language
+- Extra Theories
+- Satisfiability and Validity
+- Solving Equations
+    - Subset Sum
+    - 3-Color a Graph
+    - Sudoku
+    - Sum of Squares
+    - Synthesizing `append` for Lists
+- Proving Theorems by "Induction"
+    - Strategy
+    - Sum of 1,...,_n_
+    - Equivalence of Fast and Slow Fibonacci
+    - Order of `map-succ` and `append` is Irrelevant
+- Solver-Aided Languages (Rosette, LiquidHaskell, Dafny, Isabelle)
+- Further Reading
+
+First Order Language
+--------------------------------------------------------------------------------
+
+The following symbols are a part of every first-order language:
+
+```
+⊤      ⊥       ¬     ∧     ∨    →         ↔     ∃        ∀        =
+true   false   not   and   or   implies   iff   exists   forall   (equality)
+```
+
+We're allowed to use infinitely many variables
+
+```
+x₀   x₁   x₂   x₃   ...
+```
+
+We can also use any number of **constant symbols** (literals), _n_-ary function
+symbols, and _n_-ary relation symbols.
+
+Note that the language has redundancies. I believe it's possible to discard →, ∨
+and ↔ as they can be defined using just ¬ and ∧. Similarly it's possible to drop
+function symbols and constants in favor of relation symbols.
+
+Let's go over some examples.
+
+**Example 1**
+
+_x_ is a variable symbol, < is a relation symbol, + is a function symbol
+
+```
+∀ x (x < x + 1)
+```
+
+**Example 2**
+
+_x_ and _y_ are variable symbols, * is a function symbol
+
+```
+∀ x ∃ y (y * y = x)
+```
+
+References:
+
+- [https://www.math.cmu.edu/~eschimme/300Book/300-Page-3.html][1]
+- [https://en.wikipedia.org/wiki/First-order_logic#Restricted_languages][2]
+
+Extra Theories
+--------------------------------------------------------------------------------
+
+A **theory** is just a collection of sentences. SMT-LIB supports theories about
+
+- **Bit Vectors.** Literals, negation, addition, multiplication, division,
+comparison, shift, bitwise and, bitwise or, bitwise not
+- **Integers & Reals.** Literals, negation, addition, multiplication, division,
+absolute value, comparison
+- **Strings & RegExs.** Literals, Concatenation, length, lexicographic
+comparison, RE membership, RE concatenation, RE union, RE intersection, Kleene
+star
+- **Arrays.** Infinite arrays with a default element, selection, storage
+
+I would be remiss if I didn't mention that SMT-LIB supports user-defined
+algebraic datatypes.
+
+Reference: [http://smtlib.cs.uiowa.edu/theories.shtml][3]
+
+Satisfiability and Validity
+--------------------------------------------------------------------------------
+
+A sentence φ is **satisfiable** if there is some - even just one - assignment of
+values to variables that makes it "evaluate to" true.
+
+A sentence φ is **valid** if any given assignment of values to variables makes
+it evaluate to true.
+
+It's good to keep in mind that an SMT solver is a tool that tells us whether or
+not a sentence φ is satisfiable.
+
+Our solver can't directly comment on the validity of a formula, so we use a
+trick:
+
+> Sentence φ is valid if and only if ¬φ is unsatisfiable.
+
+Solving Equations
+--------------------------------------------------------------------------------
+
+### Subset Sum
+
+```
+(declare-const s_1 Bool)
+(declare-const s_2 Bool)
+(declare-const s_3 Bool)
+(declare-const s_4 Bool)
+(declare-const s_5 Bool)
+
+(assert (= (+ (ite s_1 7 0)
+              (ite s_2 2 0)
+              (ite s_3 4 0)
+              (ite s_4 1 0)
+              (ite s_5 11 0))
+           10))
+
+(check-sat)
+
+(get-model)
+```
+
+### 3-Coloring
+
+```
+(declare-const v_1 Int)
+(declare-const v_2 Int)
+(declare-const v_3 Int)
+(assert (not (= v_1 v_2)))
+(assert (not (= v_1 v_3)))
+(assert (not (= v_2 v_3)))
+(assert (and (>= v_1 0) (<= v_1 2)))
+(assert (and (>= v_2 0) (<= v_2 2)))
+(assert (and (>= v_3 0) (<= v_3 2)))
+(check-sat)
+(get-model)
+```
+
+### Sudoku
+
+```
+   0 1 2 3 4 5 6 7 8
+  +-----+-----+-----+
+0 |5    |  8  |  4 9|
+1 |     |5    |  3  |
+2 |  6 7|3    |    1|
+  +-----+-----+-----+
+3 |1 5  |     |     |
+4 |     |2   8|     |
+5 |     |     |  1 8|
+  +-----+-----+-----+
+6 |7    |    4|1 5  |
+7 |  3  |    2|     |
+8 |4 9  |  5  |    3|
+  +-----+-----+-----+
+```
+```
+(declare-const x_0_0 Int) (assert (> x_0_0 0)) (assert (< x_0_0 10)) 
+(declare-const x_0_1 Int) (assert (> x_0_1 0)) (assert (< x_0_1 10)) 
+(declare-const x_0_2 Int) (assert (> x_0_2 0)) (assert (< x_0_2 10)) 
+(declare-const x_0_3 Int) (assert (> x_0_3 0)) (assert (< x_0_3 10)) 
+(declare-const x_0_4 Int) (assert (> x_0_4 0)) (assert (< x_0_4 10)) 
+(declare-const x_0_5 Int) (assert (> x_0_5 0)) (assert (< x_0_5 10)) 
+(declare-const x_0_6 Int) (assert (> x_0_6 0)) (assert (< x_0_6 10)) 
+(declare-const x_0_7 Int) (assert (> x_0_7 0)) (assert (< x_0_7 10)) 
+(declare-const x_0_8 Int) (assert (> x_0_8 0)) (assert (< x_0_8 10)) 
+(declare-const x_1_0 Int) (assert (> x_1_0 0)) (assert (< x_1_0 10)) 
+(declare-const x_1_1 Int) (assert (> x_1_1 0)) (assert (< x_1_1 10)) 
+(declare-const x_1_2 Int) (assert (> x_1_2 0)) (assert (< x_1_2 10)) 
+(declare-const x_1_3 Int) (assert (> x_1_3 0)) (assert (< x_1_3 10)) 
+(declare-const x_1_4 Int) (assert (> x_1_4 0)) (assert (< x_1_4 10)) 
+(declare-const x_1_5 Int) (assert (> x_1_5 0)) (assert (< x_1_5 10)) 
+(declare-const x_1_6 Int) (assert (> x_1_6 0)) (assert (< x_1_6 10)) 
+(declare-const x_1_7 Int) (assert (> x_1_7 0)) (assert (< x_1_7 10)) 
+(declare-const x_1_8 Int) (assert (> x_1_8 0)) (assert (< x_1_8 10)) 
+(declare-const x_2_0 Int) (assert (> x_2_0 0)) (assert (< x_2_0 10)) 
+(declare-const x_2_1 Int) (assert (> x_2_1 0)) (assert (< x_2_1 10)) 
+(declare-const x_2_2 Int) (assert (> x_2_2 0)) (assert (< x_2_2 10)) 
+(declare-const x_2_3 Int) (assert (> x_2_3 0)) (assert (< x_2_3 10)) 
+(declare-const x_2_4 Int) (assert (> x_2_4 0)) (assert (< x_2_4 10)) 
+(declare-const x_2_5 Int) (assert (> x_2_5 0)) (assert (< x_2_5 10)) 
+(declare-const x_2_6 Int) (assert (> x_2_6 0)) (assert (< x_2_6 10)) 
+(declare-const x_2_7 Int) (assert (> x_2_7 0)) (assert (< x_2_7 10)) 
+(declare-const x_2_8 Int) (assert (> x_2_8 0)) (assert (< x_2_8 10)) 
+(declare-const x_3_0 Int) (assert (> x_3_0 0)) (assert (< x_3_0 10)) 
+(declare-const x_3_1 Int) (assert (> x_3_1 0)) (assert (< x_3_1 10)) 
+(declare-const x_3_2 Int) (assert (> x_3_2 0)) (assert (< x_3_2 10)) 
+(declare-const x_3_3 Int) (assert (> x_3_3 0)) (assert (< x_3_3 10)) 
+(declare-const x_3_4 Int) (assert (> x_3_4 0)) (assert (< x_3_4 10)) 
+(declare-const x_3_5 Int) (assert (> x_3_5 0)) (assert (< x_3_5 10)) 
+(declare-const x_3_6 Int) (assert (> x_3_6 0)) (assert (< x_3_6 10)) 
+(declare-const x_3_7 Int) (assert (> x_3_7 0)) (assert (< x_3_7 10)) 
+(declare-const x_3_8 Int) (assert (> x_3_8 0)) (assert (< x_3_8 10)) 
+(declare-const x_4_0 Int) (assert (> x_4_0 0)) (assert (< x_4_0 10)) 
+(declare-const x_4_1 Int) (assert (> x_4_1 0)) (assert (< x_4_1 10)) 
+(declare-const x_4_2 Int) (assert (> x_4_2 0)) (assert (< x_4_2 10)) 
+(declare-const x_4_3 Int) (assert (> x_4_3 0)) (assert (< x_4_3 10)) 
+(declare-const x_4_4 Int) (assert (> x_4_4 0)) (assert (< x_4_4 10)) 
+(declare-const x_4_5 Int) (assert (> x_4_5 0)) (assert (< x_4_5 10)) 
+(declare-const x_4_6 Int) (assert (> x_4_6 0)) (assert (< x_4_6 10)) 
+(declare-const x_4_7 Int) (assert (> x_4_7 0)) (assert (< x_4_7 10)) 
+(declare-const x_4_8 Int) (assert (> x_4_8 0)) (assert (< x_4_8 10)) 
+(declare-const x_5_0 Int) (assert (> x_5_0 0)) (assert (< x_5_0 10)) 
+(declare-const x_5_1 Int) (assert (> x_5_1 0)) (assert (< x_5_1 10)) 
+(declare-const x_5_2 Int) (assert (> x_5_2 0)) (assert (< x_5_2 10)) 
+(declare-const x_5_3 Int) (assert (> x_5_3 0)) (assert (< x_5_3 10)) 
+(declare-const x_5_4 Int) (assert (> x_5_4 0)) (assert (< x_5_4 10)) 
+(declare-const x_5_5 Int) (assert (> x_5_5 0)) (assert (< x_5_5 10)) 
+(declare-const x_5_6 Int) (assert (> x_5_6 0)) (assert (< x_5_6 10)) 
+(declare-const x_5_7 Int) (assert (> x_5_7 0)) (assert (< x_5_7 10)) 
+(declare-const x_5_8 Int) (assert (> x_5_8 0)) (assert (< x_5_8 10)) 
+(declare-const x_6_0 Int) (assert (> x_6_0 0)) (assert (< x_6_0 10)) 
+(declare-const x_6_1 Int) (assert (> x_6_1 0)) (assert (< x_6_1 10)) 
+(declare-const x_6_2 Int) (assert (> x_6_2 0)) (assert (< x_6_2 10)) 
+(declare-const x_6_3 Int) (assert (> x_6_3 0)) (assert (< x_6_3 10)) 
+(declare-const x_6_4 Int) (assert (> x_6_4 0)) (assert (< x_6_4 10)) 
+(declare-const x_6_5 Int) (assert (> x_6_5 0)) (assert (< x_6_5 10)) 
+(declare-const x_6_6 Int) (assert (> x_6_6 0)) (assert (< x_6_6 10)) 
+(declare-const x_6_7 Int) (assert (> x_6_7 0)) (assert (< x_6_7 10)) 
+(declare-const x_6_8 Int) (assert (> x_6_8 0)) (assert (< x_6_8 10)) 
+(declare-const x_7_0 Int) (assert (> x_7_0 0)) (assert (< x_7_0 10)) 
+(declare-const x_7_1 Int) (assert (> x_7_1 0)) (assert (< x_7_1 10)) 
+(declare-const x_7_2 Int) (assert (> x_7_2 0)) (assert (< x_7_2 10)) 
+(declare-const x_7_3 Int) (assert (> x_7_3 0)) (assert (< x_7_3 10)) 
+(declare-const x_7_4 Int) (assert (> x_7_4 0)) (assert (< x_7_4 10)) 
+(declare-const x_7_5 Int) (assert (> x_7_5 0)) (assert (< x_7_5 10)) 
+(declare-const x_7_6 Int) (assert (> x_7_6 0)) (assert (< x_7_6 10)) 
+(declare-const x_7_7 Int) (assert (> x_7_7 0)) (assert (< x_7_7 10)) 
+(declare-const x_7_8 Int) (assert (> x_7_8 0)) (assert (< x_7_8 10)) 
+(declare-const x_8_0 Int) (assert (> x_8_0 0)) (assert (< x_8_0 10)) 
+(declare-const x_8_1 Int) (assert (> x_8_1 0)) (assert (< x_8_1 10)) 
+(declare-const x_8_2 Int) (assert (> x_8_2 0)) (assert (< x_8_2 10)) 
+(declare-const x_8_3 Int) (assert (> x_8_3 0)) (assert (< x_8_3 10)) 
+(declare-const x_8_4 Int) (assert (> x_8_4 0)) (assert (< x_8_4 10)) 
+(declare-const x_8_5 Int) (assert (> x_8_5 0)) (assert (< x_8_5 10)) 
+(declare-const x_8_6 Int) (assert (> x_8_6 0)) (assert (< x_8_6 10)) 
+(declare-const x_8_7 Int) (assert (> x_8_7 0)) (assert (< x_8_7 10)) 
+(declare-const x_8_8 Int) (assert (> x_8_8 0)) (assert (< x_8_8 10)) 
+;; ROWS
+(assert (distinct x_0_0 x_0_1 x_0_2 x_0_3 x_0_4 x_0_5 x_0_6 x_0_7 x_0_8))
+(assert (distinct x_1_0 x_1_1 x_1_2 x_1_3 x_1_4 x_1_5 x_1_6 x_1_7 x_1_8))
+(assert (distinct x_2_0 x_2_1 x_2_2 x_2_3 x_2_4 x_2_5 x_2_6 x_2_7 x_2_8))
+(assert (distinct x_3_0 x_3_1 x_3_2 x_3_3 x_3_4 x_3_5 x_3_6 x_3_7 x_3_8))
+(assert (distinct x_4_0 x_4_1 x_4_2 x_4_3 x_4_4 x_4_5 x_4_6 x_4_7 x_4_8))
+(assert (distinct x_5_0 x_5_1 x_5_2 x_5_3 x_5_4 x_5_5 x_5_6 x_5_7 x_5_8))
+(assert (distinct x_6_0 x_6_1 x_6_2 x_6_3 x_6_4 x_6_5 x_6_6 x_6_7 x_6_8))
+(assert (distinct x_7_0 x_7_1 x_7_2 x_7_3 x_7_4 x_7_5 x_7_6 x_7_7 x_7_8))
+(assert (distinct x_8_0 x_8_1 x_8_2 x_8_3 x_8_4 x_8_5 x_8_6 x_8_7 x_8_8))
+;; COLUMNS
+(assert (distinct x_0_0 x_1_0 x_2_0 x_3_0 x_4_0 x_5_0 x_6_0 x_7_0 x_8_0))
+(assert (distinct x_0_1 x_1_1 x_2_1 x_3_1 x_4_1 x_5_1 x_6_1 x_7_1 x_8_1))
+(assert (distinct x_0_2 x_1_2 x_2_2 x_3_2 x_4_2 x_5_2 x_6_2 x_7_2 x_8_2))
+(assert (distinct x_0_3 x_1_3 x_2_3 x_3_3 x_4_3 x_5_3 x_6_3 x_7_3 x_8_3))
+(assert (distinct x_0_4 x_1_4 x_2_4 x_3_4 x_4_4 x_5_4 x_6_4 x_7_4 x_8_4))
+(assert (distinct x_0_5 x_1_5 x_2_5 x_3_5 x_4_5 x_5_5 x_6_5 x_7_5 x_8_5))
+(assert (distinct x_0_6 x_1_6 x_2_6 x_3_6 x_4_6 x_5_6 x_6_6 x_7_6 x_8_6))
+(assert (distinct x_0_7 x_1_7 x_2_7 x_3_7 x_4_7 x_5_7 x_6_7 x_7_7 x_8_7))
+(assert (distinct x_0_8 x_1_8 x_2_8 x_3_8 x_4_8 x_5_8 x_6_8 x_7_8 x_8_8))
+;; SQUARE
+(assert (distinct x_2_2 x_2_1 x_2_0 x_1_2 x_1_1 x_1_0 x_0_2 x_0_1 x_0_0))
+(assert (distinct x_2_5 x_2_4 x_2_3 x_1_5 x_1_4 x_1_3 x_0_5 x_0_4 x_0_3))
+(assert (distinct x_2_8 x_2_7 x_2_6 x_1_8 x_1_7 x_1_6 x_0_8 x_0_7 x_0_6))
+(assert (distinct x_5_2 x_5_1 x_5_0 x_4_2 x_4_1 x_4_0 x_3_2 x_3_1 x_3_0))
+(assert (distinct x_5_5 x_5_4 x_5_3 x_4_5 x_4_4 x_4_3 x_3_5 x_3_4 x_3_3))
+(assert (distinct x_5_8 x_5_7 x_5_6 x_4_8 x_4_7 x_4_6 x_3_8 x_3_7 x_3_6))
+(assert (distinct x_8_2 x_8_1 x_8_0 x_7_2 x_7_1 x_7_0 x_6_2 x_6_1 x_6_0))
+(assert (distinct x_8_5 x_8_4 x_8_3 x_7_5 x_7_4 x_7_3 x_6_5 x_6_4 x_6_3))
+(assert (distinct x_8_8 x_8_7 x_8_6 x_7_8 x_7_7 x_7_6 x_6_8 x_6_7 x_6_6))
+;; GIVEN
+(assert (= x_0_0 5))
+(assert (= x_0_4 8))
+(assert (= x_0_7 4))
+(assert (= x_0_8 9))
+(assert (= x_1_3 5))
+(assert (= x_1_7 3))
+(assert (= x_2_1 6))
+(assert (= x_2_2 7))
+(assert (= x_2_3 3))
+(assert (= x_2_8 1))
+(assert (= x_3_0 1))
+(assert (= x_3_1 5))
+(assert (= x_4_3 2))
+(assert (= x_4_5 8))
+(assert (= x_5_7 1))
+(assert (= x_5_8 8))
+(assert (= x_6_0 7))
+(assert (= x_6_5 4))
+(assert (= x_6_6 1))
+(assert (= x_6_7 5))
+(assert (= x_7_1 3))
+(assert (= x_7_5 2))
+(assert (= x_8_0 4))
+(assert (= x_8_1 9))
+(assert (= x_8_4 5))
+(assert (= x_8_8 3))
+;; SAT?
+(check-sat)
+(get-model)
+```
+
+### Sum of Squares
+
+```
+(declare-const x_0 Int)
+(declare-const x_1 Int)
+(declare-const x_2 Int)
+(declare-const x_3 Int)
+(declare-const x_4 Int)
+(declare-const x_5 Int)
+
+(assert (> x_5 0))
+(assert (= (div (+ (* x_0 1) (* x_1 1) (* x_2 1) (* x_3 1) x_4) x_5) 1))
+(assert (= (div (+ (* x_0 16) (* x_1 8) (* x_2 4) (* x_3 2) x_4) x_5) 5))
+(assert (= (div (+ (* x_0 81) (* x_1 27) (* x_2 9) (* x_3 3) x_4) x_5) 14))
+(assert (= (div (+ (* x_0 256) (* x_1 64) (* x_2 16) (* x_3 4) x_4) x_5) 30))
+(assert (= (div (+ (* x_0 625) (* x_1 125) (* x_2 25) (* x_3 5) x_4) x_5) 55))
+(assert (= (div (+ (* x_0 1296) (* x_1 216) (* x_2 36) (* x_3 6) x_4) x_5) 91))
+(assert (= (div (+ (* x_0 2401) (* x_1 343) (* x_2 49) (* x_3 7) x_4) x_5) 140))
+
+(check-sat)
+
+(get-model)
+```
+
+### Synthesis of `append`
+
+```
+(set-option :smt.auto-config false)
+(set-option :smt.mbqi false)
+(set-option :smt.candidate-models true)
+(set-option :timeout 60000)
+
+(declare-datatype AList
+  ((null)
+   (cons (car Int) (cdr AList))))
+
+(declare-datatype Fun
+  ((Car)
+   (Cdr)
+   (Cons)
+   (Append)
+   (Identity)))
+
+(declare-datatype Exp
+  ((Nothing)
+   (Xs)
+   (Ys)
+   (Apply (Apply-f Fun) (Apply-x Exp) (Apply-y Exp))))
+
+(declare-const e_1 Exp)
+(declare-const e_2 Exp)
+(define-fun e () Exp (Apply Cons e_1 e_2))
+
+(define-funs-rec ((append ((vs AList) (ws AList)) AList)
+                  (interpret ((exp Exp) (xs AList) (ys AList)) AList))
+  ((match vs
+     (((null)      ws)
+      ((cons u us) (interpret e (cons u us) ws))))
+   (match exp
+     (((Nothing) null)
+      ((Xs) xs)
+      ((Ys) ys)
+      ((Apply f p q)
+       (match f
+         (((Car) (cons (car (interpret p xs ys)) null))
+          ((Cdr) (cdr (interpret p xs ys)))
+          ((Cons) (cons (car (interpret p xs ys)) (interpret q xs ys)))
+          ((Append) (append (interpret p xs ys) (interpret q xs ys)))
+          ((Identity) (interpret p xs ys)))))))))
+
+(assert
+  (= (append (cons 1 null) (cons 2 null))
+     (cons 1 (cons 2 null))))
+
+(assert
+  (= (append (cons 1 (cons 2 null)) (cons 3 null))
+     (cons 1 (cons 2 (cons 3 null)))))
+
+(assert
+  (= (append (cons 1 (cons 2 null)) (cons 3 (cons 4 null)))
+     (cons 1 (cons 2 (cons 3 (cons 4 null))))))
+
+(check-sat)
+
+(get-model)
+```
+
+Proving Theorems
+--------------------------------------------------------------------------------
+
+### Strategy
+
+Suppose we want to prove a proposition _P_(_n_) for all _n_ where 0 ≤ _n_
+
+1. First ask Z3 if _P_(0) is valid, if it is we can move on to step 2
+
+2. Assume there exists _n_ such that _P_(_k_) is true for all _k_ ≤ _n_
+
+3. Ask Z3 if _P_(_n_+1) is valid under this assumption, if it's valid then we
+can move to step 4
+
+4. We, users of Z3 as an API, can apply the Principle of Mathematical Induction
+and justifiably assume for all subsequent proof obligations that
+_P_(_n_) holds for all _n_ where 0 ≤ _n_
+
+Reference: [Automating Induction with an SMT Solver](https://www.microsoft.com/en-us/research/publication/automating-induction-smt-solver/)
+
+### Sum of 1,...,n
+
+```
+;; Axioms
+;; -----------------------------------------------------------------------------
+
+(define-fun-rec sum ((n Int)) Int
+  (ite (< n 1) 0 (+ n (sum (- n 1)))))
+
+;; Base Case
+;; -----------------------------------------------------------------------------
+
+(push)
+
+(assert (not (= (sum 0) (div (* 0 1) 2))))
+
+(check-sat) ;; unsat
+
+(pop)
+
+;; Induction Step
+;; -----------------------------------------------------------------------------
+
+(push)
+
+(declare-const k Int) (assert (>= k 0))
+
+(assert (= (sum k) (div (* k (+ k 1)) 2)))
+
+(assert (not (= (sum (+ k 1)) (div (* (+ k 1) (+ k 2)) 2))))
+
+(check-sat) ;; unsat
+
+(pop)
+```
+
+### Equivalence of Fibonacci Implementations
+
+```
+;; Axioms 
+;; -----------------------------------------------------------------------------
+
+(declare-datatype Pair
+  ((cons (car Int) (cdr Int))))
+
+(define-fun-rec fib_1 ((n Int)) Int
+  (ite (< n 1) 0
+  (ite (= n 1) 1
+  (+ (fib_1 (- n 2)) (fib_1 (- n 1))))))
+
+(define-fun-rec fib_2 ((p Pair) (n Int)) Pair
+  (ite (< n 1) (match p (((cons x y) (cons x y))))
+  (match p (((cons x y) (fib_2 (cons y (+ x y)) (- n 1)))))))
+
+;; Lemma
+;; -----------------------------------------------------------------------------
+
+(push)
+(declare-const x Int)
+
+(declare-const y Int)
+
+(declare-const n Int) (assert (> n -1))
+
+(assert (not
+  (= (fib_2 (cons x y) (+ n 1))
+     (fib_2 (cons y (+ x y)) n))))
+
+(check-sat) ;; unsat
+(pop)
+
+;; Base Case
+;; -----------------------------------------------------------------------------
+
+(push)
+
+(assert (not
+  (= (fib_2 (cons (fib_1 0) (fib_1 1)) 0)
+     (cons (fib_1 0) (fib_1 1)))))
+
+(check-sat) ;; unsat
+
+(pop)
+
+;; Induction Step
+;; -----------------------------------------------------------------------------
+
+(push)
+;; Required if we want to prove "unsat"!
+(assert (forall ((x Int) (y Int) (n Int))
+  (! (implies (> n -1)
+              (= (fib_2 (cons x y) (+ n 1))
+                 (fib_2 (cons y (+ x y)) n)))
+     :pattern ((fib_2 (cons x y) (+ n 1))))))
+
+(declare-const k Int) (assert (> k -1))
+
+(assert (forall ((M Int))
+  (implies (>= M 0)
+    (= (fib_2 (cons (fib_1 M) (fib_1 (+ M 1))) k)
+       (cons (fib_1 (+ M k)) (fib_1 (+ M k 1)))))))
+
+(declare-const m Int) (assert (> m -1))
+
+(assert (not
+  (= (fib_2 (cons (fib_1 m) (fib_1 (+ m 1))) (+ k 1))
+     (cons (fib_1 (+ m k 1)) (fib_1 (+ m k 2))))))
+
+(check-sat) ;; unsat
+(pop)
+```
+
+### Order of `map-succ` and `append` is Irrelevant
+
+```
+;; Axioms
+;; -----------------------------------------------------------------------------
+
+(declare-datatype IntList
+  ((null)
+   (cons (car Int) (cdr IntList))))
+
+(define-fun-rec append ((l_1 IntList) (l_2 IntList)) IntList
+  (match l_1
+    (((cons n ns) (cons n (append ns l_2)))
+     ((null)      l_2))))
+
+(define-fun-rec map-succ ((l IntList)) IntList
+  (match l
+    (((cons n ns) (cons (+ n 1) (map-succ ns)))
+     ((null)      null))))
+
+;; Base Case
+;; -----------------------------------------------------------------------------
+
+(push)
+(declare-const l IntList)
+
+(assert (not
+  (= (map-succ (append null l))
+     (append (map-succ null) (map-succ l)))))
+
+(check-sat) ;; unsat
+(pop)
+
+;; Induction Step
+;; -----------------------------------------------------------------------------
+
+(push)
+(declare-const n Int)
+
+(declare-const l_1 IntList)
+
+(declare-const l_2 IntList)
+
+(assert (=
+  (map-succ (append l_1 l_2))
+  (append (map-succ l_1) (map-succ l_2))))
+
+(assert (not (=
+  (map-succ (append (cons n l_1) l_2))
+  (append (map-succ (cons n l_1)) (map-succ l_2)))))
+
+(check-sat) ;; unsat
+(pop)
+```
+
+Solver-Aided Languages
+--------------------------------------------------------------------------------
+
+- [Rosette](https://emina.github.io/rosette/)
+- [LiquidHaskell](https://ucsd-progsys.github.io/liquidhaskell-blog/about.html)
+- [F*](https://www.fstar-lang.org)
+- Isabelle's [Sledgehammer](https://isabelle.in.tum.de/website-Isabelle2009-1/sledgehammer.html)
+- [CLP(SMT)-miniKanren](https://youtu.be/KsC_9_-NuQg)
+
+Eventually, maybe, Typed Racket
+
+Further Reading/Watching
+--------------------------------------------------------------------------------
+
+- [SAT/SMT by Example](https://sat-smt.codes) is a fun book that provides lots
+of concrete examples in program verification and puzzle solving in Z3Py
+- [Satisfiability Modulo Theories: Introduction and Applications](http://www.cs.cmu.edu/~15811/papers/smt-intro.pdf)
+is a good overview of what an SMT solver is and where it's used
+- [Reasoning Under Uncertainty in SMT Solving, Research and Life](https://youtu.be/6K6HFl7UhQk)
+
+<!-- Links -->
+
+[1]:https://www.math.cmu.edu/~eschimme/300Book/300-Page-3.html
+[2]:https://en.wikipedia.org/wiki/First-order_logic#Restricted_languages
+[3]:http://smtlib.cs.uiowa.edu/theories.shtml
