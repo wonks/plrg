@@ -3,10 +3,10 @@
 #+SETUPFILE: ./white_clean.theme
 #+OPTIONS: ^:nil p:t num:0 author:nil
 
-* Happy holidays!
+* @@html:<font color="#a90533">@@Happy Holidays!@@html:</font>@@
 
 We have reached the end of the fall semester. Happy holidays and see you
-in spring! ☃️
+in spring! ❄
 
 * About
 
@@ -15,7 +15,7 @@ in spring! ☃️
   is paper reading and discussion. However, we do occasionally schedule talks,
   presentations, and tutorials.
 
-  *@@html:<font color="#a90533">@@Call for Presentations!!@@html:</font>@@*
+  *@@html:<font color="#a90533">@@Call for Presentations@@html:</font>@@*
   
   Please send us ([[*Contact]]) a short proposal (informal; one paragraph) if you
   have an idea, including but not limited to:
