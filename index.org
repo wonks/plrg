@@ -3,6 +3,11 @@
 #+SETUPFILE: ./white_clean.theme
 #+OPTIONS: ^:nil p:t num:0 author:nil
 
+* Happy holidays!
+
+We have reached the end of the fall semester. Happy holidays and see you
+in spring! ☃️
+
 * About
 
   The PL Reading Group (/PLRG@IU/) is the de facto successor to PL Wonks and
