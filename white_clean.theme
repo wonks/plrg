@@ -1,5 +1,9 @@
 #+OPTIONS: org-html-head-include-default-style:nil
 
+#+HTML_HEAD:  <link rel="preconnect" href="https://fonts.googleapis.com">
+#+HTML_HEAD:  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+#+HTML_HEAD:  <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Libre+Baskerville&display=swap" rel="stylesheet">
+
 #+HTML_HEAD:  <style type="text/css">
 
 #+HTML_HEAD:/******************************************************
@@ -42,7 +46,7 @@
 #+HTML_HEAD: }
 #+HTML_HEAD: body {
 #+HTML_HEAD:     padding:  20px;
-#+HTML_HEAD:     font-family:  Menlo, Monaco, monospace;
+#+HTML_HEAD:     font-family:  'Libre Baskerville', serif;
 #+HTML_HEAD:     font-size:  14px;
 #+HTML_HEAD:     line-height:  1.5;
 #+HTML_HEAD:     color:  #666;
@@ -51,10 +55,15 @@
 #+HTML_HEAD: p {
 #+HTML_HEAD:     margin:  0 0 20px;
 #+HTML_HEAD: }
+#+HTML_HEAD: h1 {
+#+HTML_HEAD:     font-size:  28px;
+#+HTML_HEAD: }
+#+HTML_HEAD: h2, h3 {
+#+HTML_HEAD:     font-size:  22px;
+#+HTML_HEAD: }
 #+HTML_HEAD: h1, h2, h3 {
 #+HTML_HEAD:     position:  relative;
 #+HTML_HEAD:     margin:  30px 0 20px;
-#+HTML_HEAD:     font-size:  18px;
 #+HTML_HEAD:     font-weight:  bold;
 #+HTML_HEAD:     line-height:  1.1;
 #+HTML_HEAD:     color:  #111;
@@ -107,7 +116,7 @@
 #+HTML_HEAD:     margin:  0 0 20px;
 #+HTML_HEAD: }
 #+HTML_HEAD: code, pre {
-#+HTML_HEAD:     font-family:  Menlo, Monaco, Consolas, "Courier New", monospace;
+#+HTML_HEAD:     font-family:  'Fira Mono', monospace;
 #+HTML_HEAD: }
 #+HTML_HEAD: code {
 #+HTML_HEAD:     color:  #d14;
