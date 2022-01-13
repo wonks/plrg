@@ -59,7 +59,7 @@
 #+HTML_HEAD:     font-size:  28px;
 #+HTML_HEAD: }
 #+HTML_HEAD: h2, h3 {
-#+HTML_HEAD:     font-size:  22px;
+#+HTML_HEAD:     font-size:  20px;
 #+HTML_HEAD: }
 #+HTML_HEAD: h1, h2, h3 {
 #+HTML_HEAD:     position:  relative;
@@ -394,6 +394,11 @@
 #+HTML_HEAD:         padding:  30px;
 #+HTML_HEAD:     }
 #+HTML_HEAD: }
+#+HTML_HEAD: @media (max-width: 768px) {
+#+HTML_HEAD:     div[role="doc-toc"] {
+#+HTML_HEAD:         display: none;
+#+HTML_HEAD:     }
+#+HTML_HEAD: }
 
 
 #+HTML_HEAD:  </style>
@@ -412,3 +417,5 @@
 #+HTML_HEAD:      document.location.href = orgsource;
 #+HTML_HEAD:  }
 #+HTML_HEAD:</script>
+
+#+HTML_HEAD:  <meta name="viewport" content="width=device-width, initial-scale=1.0">
