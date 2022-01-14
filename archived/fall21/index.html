@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-01-13 Thu 17:27 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PL Reading Group @ IU</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Libre+Baskerville&display=swap" rel="stylesheet">
+<style type="text/css">
+/******************************************************
+* I copied these styles from markdotto.com, who is
+* the creator of bootstrap, and I also did some
+* modification. Thanks Mark for the beautiful theme,
+* so I reserved the @mdo sign below.
+*****************************************************/
+
+/*
+__
+__                  /\ \
+/'_`\_    ___ ___    \_\ \    ___
+/'/'_` \ /' __` __`\  /'_` \  / __`\
+/\ \ \L\ \/\ \/\ \/\ \/\ \L\ \/\ \L\ \
+\ \ `\__,_\ \_\ \_\ \_\ \___,_\ \____/
+\ `\_____\\/_/\/_/\/_/\/__,_ /\/___/
+`\/_____/
+
+*/
+
+
+
+/* Body resets
+-------------------------------------------------- */
+
+* {
+-webkit-box-sizing:  border-box;
+-moz-box-sizing:  border-box;
+box-sizing:  border-box;
+}
+html, body {
+margin:  0;
+padding:  0;
+}
+html {
+font-size:  62.5%;
+}
+body {
+padding:  20px;
+font-family:  'Libre Baskerville', serif;
+font-size:  14px;
+line-height:  1.5;
+color:  #666;
+background-color:  #fff;
+}
+p {
+margin:  0 0 20px;
+}
+h1 {
+font-size:  28px;
+}
+h2, h3 {
+font-size:  20px;
+}
+h1, h2, h3 {
+position:  relative;
+margin:  30px 0 20px;
+font-weight:  bold;
+line-height:  1.1;
+color:  #111;
+text-rendering:  optimizeLegibility;
+}
+h1:before, h2:before, h3:before {
+position:  absolute;
+top:  auto;
+color:  #ccc;
+display:  none;
+}
+h1:before {
+content:  "";
+left:  -1.25em;
+}
+h2:before {
+content:  "*";
+left:  -2em;
+}
+h3:before {
+content:  "**";
+left:  -2.5em;
+}
+i, em, b, strong {
+padding-left:  .1em;
+padding-right:  .1em;
+}
+b, strong {
+font-weight:  bold;
+color:  #333;
+}
+b:before, b: after, strong:before, strong: after {
+content:  "*";
+}
+i:before, i: after, em:before, em: after {
+content:  "/";
+}
+hr {
+margin:  0;
+border:  0;
+}
+hr: after {
+display:  block;
+margin:  20px 0;
+content:  "----------------------------------------------------------------";
+color:  #ccc;
+}
+ul, ol {
+padding:  0;
+margin:  0 0 20px;
+}
+code, pre {
+font-family:  'Fira Mono', monospace;
+}
+code {
+color:  #d14;
+}
+code:before, code: after {
+content:  "=";
+color:  #ccc;
+}
+pre {
+display:  block;
+margin:  0 0 14px;
+padding:  15px;
+border-radius:  3px 3px 3px 3px;
+font-size:  18px;
+line-height:  28px;
+background-color:  #f5f5f5;
+white-space:  pre;
+white-space:  pre-wrap;
+word-break:  break-all;
+word-wrap:  break-word;
+}
+blockquote {
+padding:  0 0 0 20px;
+margin:  0 30px 20px -22.5px;
+color:  #999;
+border-left:  8px solid #e5e5e5;
+}
+blockquote p: last-child {
+margin-bottom:  0;
+}
+img {
+display:  block;
+margin:  0;
+border-radius:  5px;
+}
+a {
+font-weight:  inherit;
+line-height:  inherit;
+color:  #000;
+text-decoration:  none;
+}
+sup a:before {
+content:  "[";
+}
+sup a: after {
+content:  "]";
+}
+a: hover {
+text-decoration:  underline;
+}
+table {
+line-height:  2.5;
+margin-bottom:  15px;
+max-width:  100%;
+width:  100%;
+}
+table td, table th {
+padding:  0 15px;
+}
+table th.left, table td.left {
+text-align:  left;
+}
+table th.right, table td.right {
+text-align:  right;
+}
+/******************************************************/
+/* body */
+body {
+margin:  0 auto;
+max-width:  1024px;
+}
+/* head */
+.masthead {
+color:  #888;
+}
+.masthead: after {
+display:  block;
+content:  '----------------------------------------------------------------';
+margin:  10px 0;
+color:  #ccc;
+}
+.masthead a {
+color:  #333;
+}
+.masthead ul {
+list-style:  none;
+}
+.masthead li {
+display:  inline-block;
+}
+.masthead li + li:before {
+display:  inline-block;
+content:  "\00B7 \00a0";
+color:  #ccc;
+}
+/* searchform*/
+#searchform {
+position:  absolute;
+top:  54px;
+right:  30.4%;
+}
+#searchform #s {
+background:  url("/media/img/search.png") no-repeat 5px 6px;
+box-shadow:  inset 0 1px 1px rgba(0,0,0,0.1);
+border:  1px solid #ddd;
+border-radius:  2px;
+-moz-border-radius:  2px;
+width:  90px;
+height:  30px;
+line-height:  12px;
+padding:  4px 10px 4px 28px;
+
+-webkit-transition-duration:  400ms;
+-webkit-transition-property:  width, background;
+-webkit-transition-timing-function:  ease;
+-moz-transition-duration:  400ms;
+-moz-transition-property:  width, background;
+-moz-transition-timing-function:  ease;
+-o-transition-duration:  400ms;
+-o-transition-property:  width, background;
+-o-transition-timing-function:  ease;
+}
+#searchform #s: focus {
+background-color:  #f9f9f9;
+width:  160px;
+}
+.masthead img.avatar {
+position:  relative;
+float:  right;
+margin-top:  -100px;
+margin-bottom:  -100%;
+margin-right:  10%;
+width:  200px;
+background-color:  #fff;
+}
+/* post */
+.post {
+position:  relative;
+}
+.post: after {
+display:  block;
+content:  "----------------------------------------------------------------";
+color:  #ccc;
+}
+.post img {
+max-width:  100%;
+}
+.post li {
+list-style:  none outside none;
+}
+.post ul > li:before {
+content:  "- ";
+margin-left:  -1.25em;
+color:  #ccc;
+}
+.post ol {
+counter-reset:  o-list;
+}
+.post ol > li:before {
+content:  counter(o-list) ") ";
+counter-increment:  o-list;
+margin-left:  -1.85em;
+color:  #ccc;
+}
+
+/* special for li in pre */
+.post pre li {
+list-style-type:  decimal;
+}
+
+.post pre li:before {
+display:  none;
+}
+
+/* meta info */
+.post-info {
+display:  inline-block;
+margin:  -10px 0 -10px;
+color:  #999;
+}
+.post-info + .post-info:before {
+content:  "\2223 \00a0";
+}
+.post-meta: after {
+content:  "----------------------------------------------------------------";
+display:  block;
+margin-top:  -1px;
+color:  #ccc;
+}
+
+/* table of content */
+#table-of-contents {
+position:  fixed;
+right:  0em;
+top:  0em;
+border: 1px solid #e1e1e8;
+-webkit-box-shadow:  0 0 1em #777777;
+-moz-box-shadow:  0 0 1em #777777;
+-webkit-border-bottom-left-radius:  5px;
+-moz-border-radius-bottomleft:  5px;
+text-align:  center;
+/* ensure doesn't flow off the screen when expanded */
+max-height:  80%;
+overflow:  auto;
+z-index:  200;
+}
+
+#table-of-contents h2 {
+max-width:  20em;
+font-weight:  normal;
+padding-left:  0.5em;
+padding-top:  0.05em;
+padding-bottom:  0.05em;
+}
+
+#table-of-contents ul {
+margin-left:  14pt;
+margin-bottom:  10pt;
+padding:  0
+}
+
+#table-of-contents li {
+padding:  0;
+margin:  1px;
+list-style:  none;
+}
+
+#table-of-contents ul>: first-child {
+color:  blue;
+}
+
+#table-of-contents #text-table-of-contents {
+display:  none;
+text-align:  left;
+}
+
+#table-of-contents: hover #text-table-of-contents {
+display:  block;
+padding:  0.5em;
+margin-top:  -1.5em;
+}
+
+/* footer */
+.footer {
+margin:  80px 0 0;
+text-align:  center;
+font-size:  15px;
+color:  #999;
+}
+.footer > p {
+margin:  0;
+line-height:  1.5;
+}
+.footpara {
+display:  inline;
+}
+
+/* Responsive
+-------------------------------------------------- */
+
+@media (min-width:  768px) {
+/* Increase body padding and font-sizes */
+body {
+padding:  30px;
+font-size:  18px;
+line-height:  1.75;
+}
+h1:before, h2:before, h3:before {
+display:  inline;
+}
+}
+
+@media (min-width:  1024px) {
+body {
+padding:  30px;
+}
+}
+@media (max-width: 768px) {
+div[role="doc-toc"] {
+display: none;
+}
+}
+</style>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',function() {
+document.getElementById("table-of-contents").onclick = function() {
+var elem = document.getElementById("text-table-of-contents");
+elem.style.display = elem.style.display == "block" ? "none" : "block";
+}
+});
+
+var url = document.location.href;
+var orgsource = url.substring(0, url.lastIndexOf("."))+".org.html";
+function show_org_source(){
+document.location.href = orgsource;
+}
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">PL Reading Group @ IU</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org375a8e1"><font color="#a90533">Happy Holidays!</font></a></li>
+<li><a href="#orgad2e2d4">About</a></li>
+<li><a href="#orgc90e873">Time &amp; Location</a></li>
+<li><a href="#orge7605c2">Schedule</a></li>
+<li><a href="#org2e395d8">Participation</a>
+<ul>
+<li><a href="#org15bc94f">Paper Bidding Mechanism (RFC)</a></li>
+<li><a href="#orgc2c87c1">Paper Discussion</a></li>
+</ul>
+</li>
+<li><a href="#org2289706">COVID &amp; Health</a></li>
+<li><a href="#orgf37d874">Contact</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org375a8e1" class="outline-2">
+<h2 id="org375a8e1"><font color="#a90533">Happy Holidays!</font></h2>
+<div class="outline-text-2" id="text-org375a8e1">
+<p>
+We have reached the end of the fall semester. Happy holidays and see you
+in spring! ❄
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgad2e2d4" class="outline-2">
+<h2 id="orgad2e2d4">About</h2>
+<div class="outline-text-2" id="text-orgad2e2d4">
+<p>
+The PL Reading Group (<i>PLRG@IU</i>) is the de facto successor to PL Wonks and
+several previous reading groups. Unlike PL Wonks events, the focus of PLRG
+is paper reading and discussion. However, we do occasionally schedule talks,
+presentations, and tutorials.
+</p>
+
+<p>
+<b><font color="#a90533">Call for Presentations</font></b>
+</p>
+
+<p>
+Please send us (<a href="#orgf37d874">Contact</a>) a short proposal (informal; one paragraph) if you
+have an idea, including but not limited to:
+</p>
+
+<ul class="org-ul">
+<li>Presenting a classic work <sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>.</li>
+<li>Talking about your original work (library, language design, etc. ).</li>
+<li>Tutorial (for example, how to use a proof assistant).</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc90e873" class="outline-2">
+<h2 id="orgc90e873">Time &amp; Location</h2>
+<div class="outline-text-2" id="text-orgc90e873">
+<ul class="org-ul">
+<li><b>Time:</b> &lt;4:00 PM&gt; on Fridays</li>
+<li><b>Location:</b> <a href="https://registrar.indiana.edu/information/building-codes.shtml">BLI-107</a> (<i>Myles Brand Hall West</i>, also known as <i>Info West</i>, Room 107)</li>
+<li>Where is it? Search "Myles Brand Hall" on <a href="https://map.iu.edu/iub/">Campus Map</a>.</li>
+<li>If you are a speaker, please make sure your talk is within 40 minutes.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge7605c2" class="outline-2">
+<h2 id="orge7605c2">Schedule</h2>
+<div class="outline-text-2" id="text-orge7605c2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Date</th>
+<th scope="col" class="org-left">Paper Title / Presentation</th>
+<th scope="col" class="org-left">Speaker(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2021-11-12 Fri&gt;</span></span></td>
+<td class="org-left">Paper Reading: <i>Theorems for free!</i></td>
+<td class="org-left"><a href="https://github.com/Fyrbll">Kartik Sabharwal</a></td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">( Paper links:  <a href="https://people.mpi-sws.org/~dreyer/tor/papers/wadler.pdf">1</a> , <a href="https://dl.acm.org/doi/pdf/10.1145/99370.99404">ACM-DL</a> )</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2021-11-19 Fri&gt;</span></span></td>
+<td class="org-left">1. Invited Talk: On Paper Reading</td>
+<td class="org-left"><a href="https://wphomes.soic.indiana.edu/jsiek/">Prof. Jeremy Siek</a></td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">2. Presentation: Programming and Proving</td>
+<td class="org-left"><a href="https://homes.luddy.indiana.edu/chen512/">Tianyu Chen</a></td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">in <a href="https://wiki.portal.chalmers.se/agda">Agda</a> ( <a href="./upload/agda-tutorial/index.html">Presentation Homepage</a> )</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><del><span class="timestamp-wrapper"><span class="timestamp">&lt;2021-11-26 Fri&gt;</span></span></del></td>
+<td class="org-left">Thanksgiving break</td>
+<td class="org-left">n/a</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2021-12-03 Fri&gt;</span></span></td>
+<td class="org-left">Tutorial: Satisfiability Modulo Theories</td>
+<td class="org-left"><a href="https://github.com/Fyrbll">Kartik Sabharwal</a></td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Using SMT-LIB and Z3 (<a href="./upload/smt-tutorial/presentation.txt">Presentation</a>)</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2021-12-10 Fri&gt;</span></span></td>
+<td class="org-left">Paper Reading:</td>
+<td class="org-left">Group Discussion</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>Applicative Programming with Effects</i></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">( Paper link: <a href="https://doi.org/10.1017/S0956796807006326">DOI</a> )</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org2e395d8" class="outline-2">
+<h2 id="org2e395d8">Participation</h2>
+<div class="outline-text-2" id="text-org2e395d8">
+<p>
+<b>Everyone is welcome!!</b>
+</p>
+</div>
+
+<div id="outline-container-org15bc94f" class="outline-3">
+<h3 id="org15bc94f">Paper Bidding Mechanism (RFC)</h3>
+<div class="outline-text-3" id="text-org15bc94f">
+<p>
+We maintain <a href="https://docs.google.com/spreadsheets/d/1NuWy4YpqwUCiR2V9wU1nb7UOKCusfiz1jaHEHUaEg3Y/edit?usp=sharing">a queue of papers</a> where every member can contribute to. New
+proposals are pushed to the rear of the queue.
+</p>
+
+<p>
+Paper selection is bidding-based: we maintain a sliding window with a
+tentative size of 3 (arbitrarily chosen), The window starts from the head
+of the queue. Members select from these 3 papers and vote for the next
+one to read. We then update the queue by popping the winner.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc2c87c1" class="outline-3">
+<h3 id="orgc2c87c1">Paper Discussion</h3>
+<div class="outline-text-3" id="text-orgc2c87c1">
+<ul class="org-ul">
+<li>We expect that every participant read the paper before coming to the discussion
+session. You do not need to understand every detail, but it is recommended that
+you go through the paper and get the main idea.</li>
+<li>We recommend that you bring a physical or electronic copy of the paper to the
+discussion.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2289706" class="outline-2">
+<h2 id="org2289706">COVID &amp; Health</h2>
+<div class="outline-text-2" id="text-org2289706">
+<ul class="org-ul">
+<li>Due to COVID-19, it <b>is required</b> to wear a mask when attending in-person meetings.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf37d874" class="outline-2">
+<h2 id="orgf37d874">Contact</h2>
+<div class="outline-text-2" id="text-orgf37d874">
+<ul class="org-ul">
+<li>Mailing list: <code>pl-reading-iu-group</code></li>
+<li>Email Tianyu (<code>chen512</code>) to ask questions and / or to join the mailing list</li>
+</ul>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Not limited to the ones in the paper queue.
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-01-13 Thu 17:27</p>
+</div>
+</body>
+</html>
