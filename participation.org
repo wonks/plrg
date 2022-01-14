@@ -1,4 +1,4 @@
-#+TITLE: PL Reading Group @ @@html:<font color="#a90533">@@ IU @@html:</font>@@
+#+TITLE: PL Reading Group @ IU
 #+SUBTITLE: Participation
 #+AUTHOR: Tianyu Chen
 #+SETUPFILE: ./white_clean.theme

@@ -1,4 +1,4 @@
-#+TITLE: PL Reading Group @ @@html:<font color="#a90533">@@ IU @@html:</font>@@
+#+TITLE: PL Reading Group @ IU
 #+AUTHOR: Tianyu Chen
 #+SETUPFILE: ./white_clean.theme
 #+OPTIONS: ^:nil p:t num:0 author:nil
@@ -10,19 +10,20 @@ in spring! ❄
 
 * About
 
-The PL Reading Group (/PLRG@IU/) is the de facto successor to PL Wonks and
-several previous reading groups. Unlike PL Wonks events, the focus of PLRG
-is paper reading and discussion. However, we do occasionally schedule talks,
-presentations, and tutorials.
+@@html:<font color="#a90533">@@ The PL Reading Group @@html:</font>@@ (PLRG)
+is the de facto successor to PL Wonks and several previous reading groups.
+Unlike PL Wonks talk series, the focus of PLRG is paper reading and discussion.
+However, we do occasionally schedule presentations, practice talks, and tutorial
+sessions ([[*Schedule]]).
  
 * Time
 
 + *Time:* <4:00 PM> on Fridays
-+ If you are a speaker, please make sure your talk is within 40 minutes.
++ If you are a speaker, please make sure your presentation is within 40 minutes.
 
 * Location
 
-+ *Location:* [[https://registrar.indiana.edu/information/building-codes.shtml][BLI-107]] (/Myles Brand Hall West/, also known as /Info West/, Room 107)
++ *Room:* [[https://registrar.indiana.edu/information/building-codes.shtml][BLI-107]] (/Myles Brand Hall West/, also known as /Info West/, Room 107)
 + Where is it? Search "Myles Brand Hall" on [[https://map.iu.edu/iub/][Campus Map]].
   
 * Schedule
