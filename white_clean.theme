@@ -52,6 +52,9 @@
 #+HTML_HEAD:     color:  #666;
 #+HTML_HEAD:     background-color:  #fff;
 #+HTML_HEAD: }
+#+HTML_HEAD: .subtitle {
+#+HTML_HEAD:     font-size: 22px;
+#+HTML_HEAD: }
 #+HTML_HEAD: p {
 #+HTML_HEAD:     margin:  0 0 20px;
 #+HTML_HEAD: }
@@ -419,3 +422,11 @@
 #+HTML_HEAD:</script>
 
 #+HTML_HEAD:  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+#+HTML_HEAD: <nav>
+#+HTML_HEAD: <b>#</b>
+#+HTML_HEAD: <a href="./index.html">        <u>Home         </u></a> |
+#+HTML_HEAD: <a href="./participation.html"><u>Participating</u></a> |
+#+HTML_HEAD: <a href="./contact.html">      <u>Contact      </u></a> |
+#+HTML_HEAD: <a href="./archive.html">      <u>Past Events  </u></a>
+#+HTML_HEAD: </nav>

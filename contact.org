@@ -1,0 +1,14 @@
+#+TITLE: PL Reading Group @ @@html:<font color="#a90533">@@ IU @@html:</font>@@
+#+SUBTITLE: Contact
+#+AUTHOR: Tianyu Chen
+#+SETUPFILE: ./white_clean.theme
+#+OPTIONS: ^:nil p:t num:0 author:nil
+
+* Mailing List
+
++ Mailing list address: ~pl-reading-iu-group~
++ Email Tianyu (~chen512~) to ask questions and / or to join the mailing list
+
+* Discord Channel
+
+We have a Discord channel hosted in the ~cps~ server. Email Tianyu or any member to join.
