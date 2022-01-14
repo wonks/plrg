@@ -4,4 +4,4 @@
 #+SETUPFILE: ./white_clean.theme
 #+OPTIONS: ^:nil p:t num:0 author:nil
 
-+ Fall 2021: [[./archived/fall21/index.html][Homepage]]
++ Fall 2021: [[./past-fall21.html][Homepage]]

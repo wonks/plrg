@@ -13,7 +13,7 @@
 *.elc
 *.fn
 *.fns
-*.html
+#*.html
 *.info
 *.ky
 *.kys
