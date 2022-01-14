@@ -1,4 +1,5 @@
 #+TITLE: PL Reading Group @ IU
+#+SUBTITLE: Spring 2022 🌷
 #+AUTHOR: Tianyu Chen
 #+SETUPFILE: ./white_clean.theme
 #+OPTIONS: ^:nil p:t num:0 author:nil
