@@ -4,11 +4,6 @@
 #+SETUPFILE: ./white_clean.theme
 #+OPTIONS: ^:nil p:t num:0 author:nil
 
-* @@html:<font color="#a90533">@@Happy Holidays!@@html:</font>@@
-
-We have reached the end of the fall semester. Happy holidays and see you
-in spring! ❄
-
 * About
 
 @@html:<font color="#a90533">@@ The PL Reading Group @@html:</font>@@ (PLRG)
@@ -16,34 +11,29 @@ is the de facto successor to PL Wonks and several previous reading groups.
 Unlike PL Wonks talk series, the focus of PLRG is paper reading and discussion.
 However, we do occasionally schedule presentations, practice talks, and tutorial
 sessions ([[*Schedule]]).
+
+*We are looking for presentations!* Please visit the "participating" page for
+details about voting for papers to read and scheduling your presentation.
  
 * Time
 
-+ *Time:* <4:00 PM> on Fridays
++ *Time:* <4:00 PM> on *Tuesdays*.
++ The event usually lasts *1 hour*. You may leave early.
 + If you are a speaker, please make sure your presentation is within 40 minutes.
 
 * Location
 
-+ *Room:* [[https://registrar.indiana.edu/information/building-codes.shtml][BLI-107]] (/Myles Brand Hall West/, also known as /Info West/, Room 107)
-+ Where is it? Search "Myles Brand Hall" on [[https://map.iu.edu/iub/][Campus Map]].
++ *Room:* TBA
++ Where is it? Search TBA on [[https://map.iu.edu/iub/][Campus Map]].
   
 * Schedule
 
-| Date               | Paper Title / Presentation               | Speaker(s)        |
-|--------------------+------------------------------------------+-------------------|
-| <2021-11-12 Fri>   | Paper Reading: /Theorems for free!/      | [[https://github.com/Fyrbll][Kartik Sabharwal]]  |
-|                    | ( Paper links:  [[https://people.mpi-sws.org/~dreyer/tor/papers/wadler.pdf][1]] , [[https://dl.acm.org/doi/pdf/10.1145/99370.99404][ACM-DL]] )             |                   |
-|--------------------+------------------------------------------+-------------------|
-| <2021-11-19 Fri>   | 1. Invited Talk: On Paper Reading        | [[https://wphomes.soic.indiana.edu/jsiek/][Prof. Jeremy Siek]] |
-|                    | 2. Presentation: Programming and Proving | [[https://homes.luddy.indiana.edu/chen512/][Tianyu Chen]]       |
-|                    | in [[https://wiki.portal.chalmers.se/agda][Agda]] ( [[./upload/agda-tutorial/index.html][Presentation Homepage]] )        |                   |
-|--------------------+------------------------------------------+-------------------|
-| +<2021-11-26 Fri>+ | Thanksgiving break                       | n/a               |
-|--------------------+------------------------------------------+-------------------|
-| <2021-12-03 Fri>   | Tutorial: Satisfiability Modulo Theories | [[https://github.com/Fyrbll][Kartik Sabharwal]]  |
-|                    | Using SMT-LIB and Z3 ([[./upload/smt-tutorial/presentation.txt][Presentation]])      |                   |
-|--------------------+------------------------------------------+-------------------|
-| <2021-12-10 Fri>   | Paper Reading:                           | Group Discussion  |
-|                    | /Applicative Programming with Effects/   |                   |
-|                    | ( Paper link: [[https://doi.org/10.1017/S0956796807006326][DOI]] )                      |                   |
-|--------------------+------------------------------------------+-------------------|
+| Date               | Paper Title / Presentation                            | Speaker(s)       |
+|--------------------+-------------------------------------------------------+------------------|
+| +<2022-01-18 Tue>+ | POPL Week                                             | n/a              |
+| <2022-01-25 Tue>   | *Paper Reading:*                                      | Group Discussion |
+|                    | /A Correspondence between Continuation Passing Style/ |                  |
+|                    | /and Static Single Assignment Form/                   |                  |
+|                    | *Links:* [[https://www.cs.purdue.edu/homes/suresh/502-Fall2008/papers/kelsey-ssa-cps.pdf][1]] , [[https://dl.acm.org/doi/10.1145/202530.202532][ACM-DL]]                                   |                  |
+|--------------------+-------------------------------------------------------+------------------|
+| <2022-02-01 Tue>   | TBA                                                   | TBA              |

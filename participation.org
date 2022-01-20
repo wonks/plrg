@@ -37,5 +37,6 @@ one to read. We then update the queue by popping the winner.
 * COVID & Health
 
 + Due to COVID-19, it *is required* to wear a mask when attending in-person meetings.
++ Food is unfortunately not provided per IU guideline "about food at events and meetings".
 
 [fn:1] Not limited to the ones in the paper queue.
