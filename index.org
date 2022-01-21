@@ -23,14 +23,15 @@ details about voting for papers to read and scheduling your presentation.
 
 * Location
 
-+ *Room:* TBA
-+ Where is it? Search TBA on [[https://map.iu.edu/iub/][Campus Map]].
++ *Room:* *BLIF-4105* (study room, 4th floor /Luddy Hall/)
++ Where is it? Search "Luddy Hall" on [[https://map.iu.edu/iub/][Campus Map]].
   
 * Schedule
 
-| Date               | Paper Title / Presentation                            | Speaker(s)       |
+| *Date*             | *Paper Title / Presentation*                          | *Speaker(s)*     |
 |--------------------+-------------------------------------------------------+------------------|
 | +<2022-01-18 Tue>+ | POPL Week                                             | n/a              |
+|--------------------+-------------------------------------------------------+------------------|
 | <2022-01-25 Tue>   | *Paper Reading:*                                      | Group Discussion |
 |                    | /A Correspondence between Continuation Passing Style/ |                  |
 |                    | /and Static Single Assignment Form/                   |                  |
