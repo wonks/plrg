@@ -37,4 +37,10 @@ details about voting for papers to read and scheduling your presentation.
 |                    | /and Static Single Assignment Form/                   |                  |
 |                    | *Links:* [[https://www.cs.purdue.edu/homes/suresh/502-Fall2008/papers/kelsey-ssa-cps.pdf][1]] , [[https://dl.acm.org/doi/10.1145/202530.202532][ACM-DL]]                                   |                  |
 |--------------------+-------------------------------------------------------+------------------|
-| <2022-02-01 Tue>   | TBA                                                   | TBA              |
+| <2022-02-01 Tue>   | *Presentation:* /Recursive Types/                     | [[http://www.fyrbll.me/][Kartik]]           |
+|--------------------+-------------------------------------------------------+------------------|
+| <2022-02-08 Tue>   | TBA                                                   | TBA              |
+|--------------------+-------------------------------------------------------+------------------|
+| <2022-02-15 Tue>   | TBA                                                   | TBA              |
+|--------------------+-------------------------------------------------------+------------------|
+| <2022-02-22 Tue>   | TBA                                                   | TBA              |
