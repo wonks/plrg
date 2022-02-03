@@ -28,19 +28,20 @@ details about voting for papers to read and scheduling your presentation.
   
 * Schedule
 
-| *Date*             | *Paper Title / Presentation*                          | *Speaker(s)*     |
-|--------------------+-------------------------------------------------------+------------------|
-| +<2022-01-18 Tue>+ | POPL Week                                             | n/a              |
-|--------------------+-------------------------------------------------------+------------------|
-| <2022-01-25 Tue>   | *Paper Reading:*                                      | Group Discussion |
-|                    | /A Correspondence between Continuation Passing Style/ |                  |
-|                    | /and Static Single Assignment Form/                   |                  |
-|                    | *Links:* [[https://www.cs.purdue.edu/homes/suresh/502-Fall2008/papers/kelsey-ssa-cps.pdf][1]] , [[https://dl.acm.org/doi/10.1145/202530.202532][ACM-DL]] , [[./upload/correspondence-cps-ssa/scheme-to-ann-cps.rkt][Scheme->CPS Code]]                |                  |
-|--------------------+-------------------------------------------------------+------------------|
-| <2022-02-01 Tue>   | *Presentation:* /Recursive Types/                     | [[http://www.fyrbll.me/][Kartik]]           |
-|--------------------+-------------------------------------------------------+------------------|
-| <2022-02-08 Tue>   | TBA                                                   | TBA              |
-|--------------------+-------------------------------------------------------+------------------|
-| <2022-02-15 Tue>   | TBA                                                   | TBA              |
-|--------------------+-------------------------------------------------------+------------------|
-| <2022-02-22 Tue>   | TBA                                                   | TBA              |
+| *Date*             | *Paper Title / Presentation*                           | *Speaker(s)*     |
+|--------------------+--------------------------------------------------------+------------------|
+| +<2022-01-18 Tue>+ | POPL Week                                              | n/a              |
+|--------------------+--------------------------------------------------------+------------------|
+| <2022-01-25 Tue>   | *Paper Reading:*                                       | Group Discussion |
+|                    | /A Correspondence between Continuation Passing Style/  |                  |
+|                    | /and Static Single Assignment Form/                    |                  |
+|                    | *Links:* [[https://www.cs.purdue.edu/homes/suresh/502-Fall2008/papers/kelsey-ssa-cps.pdf][1]] , [[https://dl.acm.org/doi/10.1145/202530.202532][ACM-DL]] , [[./upload/correspondence-cps-ssa/scheme-to-ann-cps.rkt][Scheme->CPS Code]]                 |                  |
+|--------------------+--------------------------------------------------------+------------------|
+| <2022-02-01 Tue>   | *Presentation:* /Recursive Types/                      | [[http://www.fyrbll.me/][Kartik]]           |
+|                    | *Links:* [[./upload/recursive-types/recursive-types.tex][LaTeX for Slides]] , [[./upload/recursive-types/recursive-types.rkt][Racket Code]] , [[./upload/recursive-types/RecursiveTypes.hs][Haskell Code]] |                  |
+|--------------------+--------------------------------------------------------+------------------|
+| <2022-02-08 Tue>   | TBA                                                    | TBA              |
+|--------------------+--------------------------------------------------------+------------------|
+| <2022-02-15 Tue>   | TBA                                                    | TBA              |
+|--------------------+--------------------------------------------------------+------------------|
+| <2022-02-22 Tue>   | TBA                                                    | TBA              |

@@ -1,0 +1,273 @@
+\documentclass[hyperref={colorlinks = true, urlcolor = blue},pdf]{beamer}
+\mode<presentation>{}
+
+%% packages
+%%%% unicode
+\usepackage[utf8]{inputenc}
+%%%% math
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+
+%% macros
+\newcommand{\Semantic}[1]{\llbracket {#1} \rrbracket}
+\newcommand{\SuchThat}{\ \vert\ }
+\newcommand{\Size}[1]{\vert {#1} \vert}
+
+%% preamble
+\title{Recursive Types}
+\subtitle{Programming Languages Reading Group, Indiana University}
+\author{Kartik Sabharwal}
+\date{2022-02-01}
+
+\begin{document}
+%% title frame
+\begin{frame}
+  \titlepage
+\end{frame}
+%% normal frame
+\begin{frame}{Types as Sets of Values}
+  \begin{align*}
+    \Semantic{\text{Integer}} =\ &
+    \{ \ldots, -2, -1, 0, 1, 2, \ldots \} \\
+    %
+    \Semantic{A \cup B} =\ &
+    \Semantic{A} \cup \Semantic{B} \\
+    %
+    \Semantic{A \cap B} =\ &
+    \Semantic{A} \cap \Semantic{B} \\
+    %
+    \Semantic{A \times B} =\ &
+    \Semantic{A} \times \Semantic{B} \\
+    %
+    \Semantic{A + B} =\ &
+    \{ \text{inj}_1(a) \ \vert\ a \in \Semantic{A} \} \cup
+    \{ \text{inj}_2(b) \ \vert\ b \in \Semantic{B} \} \\
+    %
+    \Semantic{A \rightarrow B} =\ &
+    \Semantic{B}^{\Semantic{A}}\
+    (\text{the set of functions from}\ A\ \text{to}\ B)
+  \end{align*}
+  %
+  \textit{Trivia.} If $X$ and $Y$ are finite sets,
+  %
+  \begin{align*}
+    \Size{X \times Y} =\ & \Size{X} \times \Size{Y} \\
+    \Size{X + Y} =\ & \Size{X} + \Size{Y} \\
+    \Size{Y^X} =\ & {\Size{Y}}^{\Size{X}}
+  \end{align*}
+\end{frame}
+%%
+\begin{frame}[fragile]{Types as Sets of Values -- Examples}
+\begin{verbatim}
+#lang typed/racket/base
+
+(struct (S) inj1 ([s : S]))
+(struct (T) inj2 ([t : T]))
+(define-type (Sum S T) (U (inj1 S) (inj2 T)))
+
+(define-type A (U False 1 2)) 
+(define-type B Boolean)
+
+(define ex1 : (U A B) 2)
+(define ex2 : (Intersection A B) #f)
+(define ex3 : (Pair A B) (cons 1 #t))
+(define ex4 : (Sum A B) (inj1 (ann 2 A)))
+(define ex5 : (-> A B) (lambda ([a : A]) (if a #t a)))
+\end{verbatim}
+\end{frame}
+%%
+\begin{frame}[fragile]{Recursive Types -- Motivation 1}
+  A lot of objects that we want to model using programming languages have a
+  self-referential structure. Natural numbers, lists, binary trees and abstract
+  syntax trees are popular examples.
+
+\begin{verbatim}
+(define-type Natural^ (Sum Null Natural^))
+
+(define ex6 : Natural^ (inj2 (inj2 (inj1 null))))
+;; * * * * * * * * * * * * * * * * * * * * * * * * *
+(define-type IntList (U Null (Pair Integer IntList)))
+
+(define ex7 : IntList null)
+(define ex8 : IntList (cons 1 (cons 5 (cons 4 null))))
+\end{verbatim}
+\end{frame}
+%%
+\begin{frame}[fragile]{Recursive Types -- Motivation 2}
+\begin{verbatim}
+(struct Leaf ())
+(struct (T) Node ([left : T]
+                  [value : Integer]
+                  [right : T]))
+(define-type Tree (U Leaf (Node Tree)))
+
+(define ex9 : Tree (Node (Leaf) 1 (Leaf)))
+(define ex10 : Tree (Node ex9 0 ex9))
+;; * * * * * * * * * * * * * * * * * * * * * * * * *
+(define-type IntFun (U Integer (-> Integer IntFun)))
+
+(define ex11 : IntFun
+  (lambda ([x : Integer])
+    (if (> x 0) x ex11)))
+\end{verbatim}
+\end{frame}
+%%
+\begin{frame}[fragile]{Recursive Types -- Motivation 3}
+\begin{verbatim}
+(struct Lit ([b : Boolean]))
+(struct Var ([s : Symbol]))
+(struct (BE) And ([beL : BE] [beR : BE]))
+(struct (BE) Or ([beL : BE] [beR : BE]))
+(struct (BE) Not ([be : BE]))
+(define-type BoolExp
+  (U Lit Var (And BoolExp) (Or BoolExp) (Not BoolExp)))
+
+(define ex12 : BoolExp (Not (And (Lit #t) (Var 'x))))
+\end{verbatim}
+We ought to be able to visualize these types as sets when we want to prove
+properties about them.
+\end{frame}
+%%
+\begin{frame}{Recursive Type $\rightarrow$ Generating Function}
+  We defined a recursive type intended to represent the natural numbers via an
+  equation.
+  %
+  \begin{equation*}
+    \text{Natural}\ =\ \text{Null} + \text{Natural}
+  \end{equation*}
+  %
+  We can confine the ``unknown'' in the equation to the left-hand side using a
+  $\mu$ variable binder.
+  %
+  \begin{equation*}
+    \text{Natural}\ =\ \mu X .\ \text{Null} + X
+  \end{equation*}
+  %
+  TAPL defines $\Semantic{\text{Natural}}$ as the ``greatest fixed-point'' of
+  the following function on sets of values. We can call it the
+  ``generating function'' for Natural.
+  %
+  \begin{equation*}
+    F(X) = \{ \text{inj1(null)} \} \cup \{ \text{inj2}(x) \SuchThat x \in X \}
+  \end{equation*}
+\end{frame}
+%%
+\begin{frame}{Fixed-Point}
+  A ``fixed-point'' of a function is a value that doesn't change when we apply
+  the function to it.
+  \medskip
+
+  Any set $X$ such that $F(X) = X$ is a fixed-point of $F$
+  \medskip
+
+  If $F$ has two fixed-points $X_1$ and $X_2$,
+  $X_1 \subseteq X_2 \implies X_1 \leq X_2$.
+\end{frame}
+%%
+\begin{frame}{Least Fixed Point}
+  Kleene's Fixed-Point Theorem shows us how to compute the least fixed-point of
+  $F$ -- repeatedly apply $F$ to $\varnothing$ and perform a union over all
+  elements in this sequence.
+  %
+  \begin{align*}
+    F^1(\varnothing) =\ & \{ \text{inj1(null)} \} \\
+    F^2(\varnothing) =\ & \{ \text{inj1(null), inj2(inj1(null))} \} \\
+    \cdots & \\
+    F^n(\varnothing) =\ &
+    \{ \text{inj1(null)}, \ldots, {\text{inj2}}^{(n-1)}\text{(inj1(null))} \}
+  \end{align*}
+  %
+  Applying $F$ to the set $\cup_{i=0}^\infty F^i(\varnothing)$ doesn't add or
+  remove any elements from it. We have our least fixed-point.
+  \medskip
+
+  The least fixed-point is already an infinite set! How are we going to
+  construct a larger fixed-point?
+\end{frame}
+%%
+\begin{frame}{Greatest Fixed Point}
+  Let $\Semantic{\text{Any}}$ be the set of all values in our language.
+  \medskip
+  
+  To crack a guess at what the greatest fixed point is let's iteratively apply
+  $F$ to $\Semantic{\text{Any}}$ and see which values are eventually killed off.
+  \medskip
+
+  Observe that any value in the LFP will survive intact. We don't need to worry
+  about those.
+  \medskip
+
+  I think it's fair to say that any value of the form
+  ${\text{inj2}}^n\text{(x)}$, where $n \geq 0$, $n$ is as large as possible and
+  $x$ is not $\text{inj1(null)}$, won't be in $F^{(n+1)}(\Semantic{\text{Any}})$
+  \medskip
+
+  Suppose, for a moment, that  we're allowed to have ``infinite'' values, like
+  ${\text{inj2}}\ldots$. This value is special because
+  $\text{inj2}({\text{inj2}}^\infty) = {\text{inj2}}^\infty$
+  \medskip
+
+  $\text{LFP} \cup \{{\text{inj2}}^\infty\}$ is the greatest fixed-point of $F$
+\end{frame}
+%%
+\begin{frame}[fragile]{Lazy vs Strict -- 1}
+  Infinite values aren't really a stretch when we're talking about programming
+  languages. All we need is the ability to evaluate code lazily. Here's
+  ${\text{inj2}}^\infty$ in Haskell, where's it's recognized as a Natural.
+  (Given this, the type should more accurately be called ``Conatural'')
+  %
+\begin{verbatim}
+module RecursiveTypes where
+
+data Natural = Inj1 () | Inj2 Natural 
+
+fix :: (t -> t) -> t
+fix f = f (fix f)
+
+inj2_infty :: Natural
+inj2_infty = fix Inj2
+\end{verbatim}
+\end{frame}
+%%
+\begin{frame}[fragile]{Lazy vs Strict -- 2}
+  Typed Racket uses strict semantics so we can't pull the same trick twice. Even
+  though the recursive type Natural theoretically admits infinite values, we
+  can't actually create one.
+  \medskip
+
+  We're aware that we can delay evaluation using thunks. Let's define a new type
+  that supports delayed evaluation.
+  %
+\begin{verbatim}
+(define-type Conatural (-> Null (Sum Null Conatural)))
+\end{verbatim}
+%
+Note that the generating function for this recursive type is non-trivially
+different from that of Natural, but I'm certain the information content is
+the same as Haskell's Natural type. We can now represent infinity.
+%
+\begin{verbatim}
+(define inj2_infty : Conatural 
+  (lambda ([_ : Null]) (inj2 inj2_infty)))
+\end{verbatim}
+\end{frame}
+%%
+\begin{frame}{References}
+  Chapters 20 and 21 of ``Types and Programming Languages'' by Benjamin C.
+  Pierce
+  \medskip
+
+  \href{https://homepage.cs.uiowa.edu/~astump/notes/recursive-types-and-fixed-points.pdf}
+       {A Note on Recursive Types and Fixed Points} by Aaron Stump
+  \medskip
+
+  \href{https://www.cs.cornell.edu/courses/cs4110/2018fa/lectures/lecture08.pdf}
+       {Cornell CS 4110 -- Denotational Semantics Examples}
+  \medskip
+
+  Recommended during talk:
+  \href{https://www.researchgate.net/publication/2615046_Calculating_Functional_Programs}
+       {Calculating Functional Programs} by Jeremy Gibbons
+\end{frame}
+\end{document}
