@@ -40,7 +40,9 @@ details about voting for papers to read and scheduling your presentation.
 | <2022-02-01 Tue>   | *Presentation:* /Recursive Types/                      | [[http://www.fyrbll.me/][Kartik]]           |
 |                    | *Links:* [[./upload/recursive-types/recursive-types.tex][LaTeX for Slides]] , [[./upload/recursive-types/recursive-types.rkt][Racket Code]] , [[./upload/recursive-types/RecursiveTypes.hs][Haskell Code]] |                  |
 |--------------------+--------------------------------------------------------+------------------|
-| <2022-02-08 Tue>   | TBA                                                    | TBA              |
+| <2022-02-08 Tue>   | *Paper Reading:*                                       | Group Discussion |
+|                    | /Compilers and Staging Transformations/                |                  |
+|                    | *Links:*  [[https://www.researchgate.net/publication/220997024_Compilers_and_Staging_Transformations][1]] , [[https://dl.acm.org/doi/abs/10.1145/512644.512652][ACM-DL]]                                   |                  |
 |--------------------+--------------------------------------------------------+------------------|
 | <2022-02-15 Tue>   | TBA                                                    | TBA              |
 |--------------------+--------------------------------------------------------+------------------|

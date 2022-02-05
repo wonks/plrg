@@ -3,13 +3,13 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-02-03 Thu 15:26 -->
+<!-- 2022-02-05 Sat 15:11 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>PL Reading Group @ IU</title>
-<meta name="generator" content="Org mode" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -30,8 +30,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -39,22 +40,22 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
+    overflow: auto;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -160,6 +161,19 @@
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
   .inlinetask {
     padding: 10px;
     border: 2px solid gray;
@@ -177,7 +191,6 @@
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
-  /*]]>*/-->
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -189,6 +202,7 @@
 * modification. Thanks Mark for the beautiful theme,
 * so I reserved the @mdo sign below.
 *****************************************************/
+
 /*
 __
 __                  /\ \
@@ -198,9 +212,14 @@ __                  /\ \
 \ \ `\__,_\ \_\ \_\ \_\ \___,_\ \____/
 \ `\_____\\/_/\/_/\/_/\/__,_ /\/___/
 `\/_____/
+
 */
+
+
+
 /* Body resets
 -------------------------------------------------- */
+
 * {
 -webkit-box-sizing:  border-box;
 -moz-box-sizing:  border-box;
@@ -400,6 +419,7 @@ width:  90px;
 height:  30px;
 line-height:  12px;
 padding:  4px 10px 4px 28px;
+
 -webkit-transition-duration:  400ms;
 -webkit-transition-property:  width, background;
 -webkit-transition-timing-function:  ease;
@@ -452,13 +472,16 @@ counter-increment:  o-list;
 margin-left:  -1.85em;
 color:  #ccc;
 }
+
 /* special for li in pre */
 .post pre li {
 list-style-type:  decimal;
 }
+
 .post pre li:before {
 display:  none;
 }
+
 /* meta info */
 .post-info {
 display:  inline-block;
@@ -474,6 +497,7 @@ display:  block;
 margin-top:  -1px;
 color:  #ccc;
 }
+
 /* table of content */
 #table-of-contents {
 position:  fixed;
@@ -490,6 +514,7 @@ max-height:  80%;
 overflow:  auto;
 z-index:  200;
 }
+
 #table-of-contents h2 {
 max-width:  20em;
 font-weight:  normal;
@@ -497,28 +522,34 @@ padding-left:  0.5em;
 padding-top:  0.05em;
 padding-bottom:  0.05em;
 }
+
 #table-of-contents ul {
 margin-left:  14pt;
 margin-bottom:  10pt;
 padding:  0
 }
+
 #table-of-contents li {
 padding:  0;
 margin:  1px;
 list-style:  none;
 }
+
 #table-of-contents ul>: first-child {
 color:  blue;
 }
+
 #table-of-contents #text-table-of-contents {
 display:  none;
 text-align:  left;
 }
+
 #table-of-contents: hover #text-table-of-contents {
 display:  block;
 padding:  0.5em;
 margin-top:  -1.5em;
 }
+
 /* footer */
 .footer {
 margin:  80px 0 0;
@@ -533,8 +564,10 @@ line-height:  1.5;
 .footpara {
 display:  inline;
 }
+
 /* Responsive
 -------------------------------------------------- */
+
 @media (min-width:  768px) {
 /* Increase body padding and font-sizes */
 body {
@@ -546,6 +579,7 @@ h1:before, h2:before, h3:before {
 display:  inline;
 }
 }
+
 @media (min-width:  1024px) {
 body {
 padding:  30px;
@@ -564,6 +598,7 @@ var elem = document.getElementById("text-table-of-contents");
 elem.style.display = elem.style.display == "block" ? "none" : "block";
 }
 });
+
 var url = document.location.href;
 var orgsource = url.substring(0, url.lastIndexOf("."))+".org.html";
 function show_org_source(){
@@ -578,80 +613,34 @@ document.location.href = orgsource;
 <a href="./contact.html">      <u>Contact      </u></a> |
 <a href="./archive.html">      <u>Past Events  </u></a>
 </nav>
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2019 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
 </head>
 <body>
-<div id="content">
+<div id="content" class="content">
 <h1 class="title">PL Reading Group @ IU
 <br />
 <span class="subtitle">Spring 2022 🌷</span>
 </h1>
-<div id="table-of-contents">
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org91dab5a">About</a></li>
-<li><a href="#org23a8017">Time</a></li>
-<li><a href="#org0a0a038">Location</a></li>
-<li><a href="#orgb880e6e">Schedule</a></li>
+<li><a href="#orgc9045e3">About</a></li>
+<li><a href="#orga1f3078">Time</a></li>
+<li><a href="#orgc5a3590">Location</a></li>
+<li><a href="#org93f1896">Schedule</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org91dab5a" class="outline-2">
-<h2 id="org91dab5a">About</h2>
-<div class="outline-text-2" id="text-org91dab5a">
+<div id="outline-container-orgc9045e3" class="outline-2">
+<h2 id="orgc9045e3">About</h2>
+<div class="outline-text-2" id="text-orgc9045e3">
 <p>
 <font color="#a90533"> The PL Reading Group </font> (PLRG)
 is the de facto successor to PL Wonks and several previous reading groups.
 Unlike PL Wonks talk series, the focus of PLRG is paper reading and discussion.
 However, we do occasionally schedule presentations, practice talks, and tutorial
-sessions (<a href="#orgb880e6e">Schedule</a>).
+sessions (<a href="#org93f1896">Schedule</a>).
 </p>
 
 <p>
@@ -661,9 +650,9 @@ details about voting for papers to read and scheduling your presentation.
 </div>
 </div>
 
-<div id="outline-container-org23a8017" class="outline-2">
-<h2 id="org23a8017">Time</h2>
-<div class="outline-text-2" id="text-org23a8017">
+<div id="outline-container-orga1f3078" class="outline-2">
+<h2 id="orga1f3078">Time</h2>
+<div class="outline-text-2" id="text-orga1f3078">
 <ul class="org-ul">
 <li><b>Time:</b> &lt;4:00 PM&gt; on <b>Tuesdays</b>.</li>
 <li>The event usually lasts <b>1 hour</b>. You may leave early.</li>
@@ -672,9 +661,9 @@ details about voting for papers to read and scheduling your presentation.
 </div>
 </div>
 
-<div id="outline-container-org0a0a038" class="outline-2">
-<h2 id="org0a0a038">Location</h2>
-<div class="outline-text-2" id="text-org0a0a038">
+<div id="outline-container-orgc5a3590" class="outline-2">
+<h2 id="orgc5a3590">Location</h2>
+<div class="outline-text-2" id="text-orgc5a3590">
 <ul class="org-ul">
 <li><b>Room:</b> <b>BLIF-4105</b> (study room, 4th floor <i>Luddy Hall</i>)</li>
 <li>Where is it? Search "Luddy Hall" on <a href="https://map.iu.edu/iub/">Campus Map</a>.</li>
@@ -682,9 +671,9 @@ details about voting for papers to read and scheduling your presentation.
 </div>
 </div>
 
-<div id="outline-container-orgb880e6e" class="outline-2">
-<h2 id="orgb880e6e">Schedule</h2>
-<div class="outline-text-2" id="text-orgb880e6e">
+<div id="outline-container-org93f1896" class="outline-2">
+<h2 id="org93f1896">Schedule</h2>
+<div class="outline-text-2" id="text-org93f1896">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -750,8 +739,20 @@ details about voting for papers to read and scheduling your presentation.
 <tbody>
 <tr>
 <td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2022-02-08 Tue&gt;</span></span></td>
-<td class="org-left">TBA</td>
-<td class="org-left">TBA</td>
+<td class="org-left"><b>Paper Reading:</b></td>
+<td class="org-left">Group Discussion</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>Compilers and Staging Transformations</i></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>Links:</b>  <a href="https://www.researchgate.net/publication/220997024_Compilers_and_Staging_Transformations">1</a> , <a href="https://dl.acm.org/doi/abs/10.1145/512644.512652">ACM-DL</a></td>
+<td class="org-left">&#xa0;</td>
 </tr>
 </tbody>
 <tbody>
@@ -773,8 +774,7 @@ details about voting for papers to read and scheduling your presentation.
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2022-02-03 Thu 15:26</p>
-<p class="validation"></p>
+<p class="date">Created: 2022-02-05 Sat 15:11</p>
 </div>
 </body>
 </html>
