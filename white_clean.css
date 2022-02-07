@@ -364,7 +364,7 @@ body {
     }
 }
 @media (max-width: 768px) {
-    div[role="doc-toc"] {
+    #table-of-contents {
         display: none;
     }
 }
