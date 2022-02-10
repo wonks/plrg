@@ -1,3 +1,14 @@
 Home of PLRG.
 
 Theme is credited to https://olmon.gitlab.io/org-themes/ .
+
+To contribute:
+
+* Edit the Org files
+* Run `make clean && make` to regenerate the corresponding HTML files
+* Commit and push your changes to _both_ the Org files and the HTML files using Git
+* If you would like to edit the look of the website, `white_clean.css` is what
+  you're looking for. The `white_clean.theme` is used to inject the HTML headers.
+  Do not edit `white_clean.theme` unless you're 100% sure what you're doing.
+* If a new semester begins, archive the old `index.html`. You can directly override
+  the old Org file with new contents.
