@@ -28,41 +28,42 @@ details about voting for papers to read and scheduling your presentation.
   
 * Schedule
 
-| *Date*             | *Paper Title / Presentation*                             | *Speaker(s)*      |
-|--------------------+----------------------------------------------------------+-------------------|
-| +<2022-01-18 Tue>+ | POPL Week                                                | n/a               |
-|--------------------+----------------------------------------------------------+-------------------|
-| <2022-01-25 Tue>   | *Paper Reading:*                                         | Group Discussion  |
-|                    | /A Correspondence between Continuation Passing Style/    |                   |
-|                    | /and Static Single Assignment Form/                      |                   |
-|                    | *Links:* [[https://www.cs.purdue.edu/homes/suresh/502-Fall2008/papers/kelsey-ssa-cps.pdf][1]] , [[https://dl.acm.org/doi/10.1145/202530.202532][ACM-DL]] , [[./upload/correspondence-cps-ssa/scheme-to-ann-cps.rkt][Scheme->CPS Code]]                   |                   |
-|--------------------+----------------------------------------------------------+-------------------|
-| <2022-02-01 Tue>   | *Presentation:* /Recursive Types/                        | [[http://www.fyrbll.me/][Kartik]]            |
-|                    | *Links:* [[./upload/recursive-types/recursive-types.tex][LaTeX for Slides]] , [[./upload/recursive-types/recursive-types.rkt][Racket Code]] , [[./upload/recursive-types/RecursiveTypes.hs][Haskell Code]]   |                   |
-|--------------------+----------------------------------------------------------+-------------------|
-| <2022-02-08 Tue>   | *Paper Reading:*                                         | Group Discussion  |
-|                    | /Compilers and Staging Transformations/                  |                   |
-|                    | *Links:*  [[https://www.researchgate.net/publication/220997024_Compilers_and_Staging_Transformations][1]] , [[https://dl.acm.org/doi/abs/10.1145/512644.512652][ACM-DL]]                                     |                   |
-|--------------------+----------------------------------------------------------+-------------------|
-| <2022-02-15 Tue>   | *Presentation:*                                          | Chenchao          |
-|                    | /λ-circuit: Reasoning About λ-calculus Diagrammatically/ |                   |
-|--------------------+----------------------------------------------------------+-------------------|
-| <2022-02-22 Tue>   | TBA                                                      | [[https://bicompact.space/][Hazel]] (tentative) |
-|--------------------+----------------------------------------------------------+-------------------|
-| <2022-03-01 Tue>   | TBA                                                      | TBA               |
-|--------------------+----------------------------------------------------------+-------------------|
-| <2022-03-08 Tue>   | TBA                                                      | TBA               |
-|--------------------+----------------------------------------------------------+-------------------|
-| +<2022-03-15 Tue>+ | Spring Break                                             | TBA               |
-|--------------------+----------------------------------------------------------+-------------------|
-| <2022-03-22 Tue>   | TBA                                                      | TBA               |
-|--------------------+----------------------------------------------------------+-------------------|
-| <2022-03-29 Tue>   | TBA                                                      | TBA               |
-|--------------------+----------------------------------------------------------+-------------------|
-| <2022-04-05 Tue>   | TBA                                                      | TBA               |
-|--------------------+----------------------------------------------------------+-------------------|
-| <2022-04-12 Tue>   | TBA                                                      | TBA               |
-|--------------------+----------------------------------------------------------+-------------------|
-| <2022-04-19 Tue>   | TBA                                                      | TBA               |
-|--------------------+----------------------------------------------------------+-------------------|
-| <2022-04-26 Tue>   | TBA                                                      | TBA               |
+| *Date*             | *Paper Title / Presentation*                             | *Speaker(s)*     |
+|--------------------+----------------------------------------------------------+------------------|
+| +<2022-01-18 Tue>+ | POPL Week                                                | n/a              |
+|--------------------+----------------------------------------------------------+------------------|
+| <2022-01-25 Tue>   | *Paper Reading:*                                         | Group Discussion |
+|                    | /A Correspondence between Continuation Passing Style/    |                  |
+|                    | /and Static Single Assignment Form/                      |                  |
+|                    | *Links:* [[https://www.cs.purdue.edu/homes/suresh/502-Fall2008/papers/kelsey-ssa-cps.pdf][1]] , [[https://dl.acm.org/doi/10.1145/202530.202532][ACM-DL]] , [[./upload/correspondence-cps-ssa/scheme-to-ann-cps.rkt][Scheme->CPS Code]]                   |                  |
+|--------------------+----------------------------------------------------------+------------------|
+| <2022-02-01 Tue>   | *Presentation:* /Recursive Types/                        | [[http://www.fyrbll.me/][Kartik]]           |
+|                    | *Links:* [[./upload/recursive-types/recursive-types.tex][LaTeX for Slides]] , [[./upload/recursive-types/recursive-types.rkt][Racket Code]] , [[./upload/recursive-types/RecursiveTypes.hs][Haskell Code]]   |                  |
+|--------------------+----------------------------------------------------------+------------------|
+| <2022-02-08 Tue>   | *Paper Reading:*                                         | Group Discussion |
+|                    | /Compilers and Staging Transformations/                  |                  |
+|                    | *Links:*  [[https://www.researchgate.net/publication/220997024_Compilers_and_Staging_Transformations][1]] , [[https://dl.acm.org/doi/abs/10.1145/512644.512652][ACM-DL]]                                     |                  |
+|--------------------+----------------------------------------------------------+------------------|
+| <2022-02-15 Tue>   | *Presentation:*                                          | Chenchao         |
+|                    | /λ-circuit: Reasoning About λ-calculus Diagrammatically/ |                  |
+|--------------------+----------------------------------------------------------+------------------|
+| <2022-02-22 Tue>   | *Presentation:*                                          | [[https://bicompact.space/][Hazel]]            |
+|                    | /Categories, parametricity, and a folk theorem/          |                  |
+|--------------------+----------------------------------------------------------+------------------|
+| <2022-03-01 Tue>   | TBA                                                      | TBA              |
+|--------------------+----------------------------------------------------------+------------------|
+| <2022-03-08 Tue>   | TBA                                                      | TBA              |
+|--------------------+----------------------------------------------------------+------------------|
+| +<2022-03-15 Tue>+ | Spring Break                                             | TBA              |
+|--------------------+----------------------------------------------------------+------------------|
+| <2022-03-22 Tue>   | TBA                                                      | TBA              |
+|--------------------+----------------------------------------------------------+------------------|
+| <2022-03-29 Tue>   | TBA                                                      | TBA              |
+|--------------------+----------------------------------------------------------+------------------|
+| <2022-04-05 Tue>   | TBA                                                      | TBA              |
+|--------------------+----------------------------------------------------------+------------------|
+| <2022-04-12 Tue>   | TBA                                                      | TBA              |
+|--------------------+----------------------------------------------------------+------------------|
+| <2022-04-19 Tue>   | TBA                                                      | TBA              |
+|--------------------+----------------------------------------------------------+------------------|
+| <2022-04-26 Tue>   | TBA                                                      | TBA              |
