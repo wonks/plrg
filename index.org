@@ -46,6 +46,7 @@ details about voting for papers to read and scheduling your presentation.
 |--------------------+----------------------------------------------------------+------------------|
 | <2022-02-15 Tue>   | *Presentation:*                                          | Chenchao         |
 |                    | /λ-circuit: Reasoning About λ-calculus Diagrammatically/ |                  |
+|                    | *Links:* [[./upload/λ-circuit.pdf][Slides]]                                          |                  |
 |--------------------+----------------------------------------------------------+------------------|
 | <2022-02-22 Tue>   | *Presentation:*                                          | [[https://bicompact.space/][Hazel]]            |
 |                    | /Categories, parametricity, and a folk theorem/          |                  |
