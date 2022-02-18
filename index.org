@@ -51,7 +51,9 @@ details about voting for papers to read and scheduling your presentation.
 | <2022-02-22 Tue>   | *Presentation:*                                          | [[https://bicompact.space/][Hazel]]            |
 |                    | /Categories, parametricity, and a folk theorem/          |                  |
 |--------------------+----------------------------------------------------------+------------------|
-| <2022-03-01 Tue>   | TBA                                                      | TBA              |
+| <2022-03-01 Tue>   | *Paper Reading:*                                         | Group Discussion |
+|                    | /Domains for Denotational Semantics/                     |                  |
+|                    | *Links:* [[https://www.researchgate.net/publication/220897586_Domains_for_Denotational_Semantics][1]] , [[https://dl.acm.org/doi/10.5555/646236.682867][ACM-DL]]                                      |                  |
 |--------------------+----------------------------------------------------------+------------------|
 | <2022-03-08 Tue>   | TBA                                                      | TBA              |
 |--------------------+----------------------------------------------------------+------------------|
