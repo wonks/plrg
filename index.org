@@ -50,6 +50,8 @@ details about voting for papers to read and scheduling your presentation.
 |--------------------+----------------------------------------------------------+------------------|
 | <2022-02-22 Tue>   | *Presentation:*                                          | [[https://bicompact.space/][Hazel]]            |
 |                    | /Categories, parametricity, and a folk theorem/          |                  |
+|                    | *Links:* [[file:upload/categorial-parametricity/ReverseNatural.agda][Agda Formalization]], [[file:upload/categorial-parametricity/functorial-polymorphism.pdf][Further Reading 1]],          |                  |
+|                    | [[https://golem.ph.utexas.edu/category/2013/04/scones_logical_relations_and_p.html][Further Reading 2]], [[file:upload/categorial-parametricity/slides/talk.rkt][Racket for Slides]]                     |                  |
 |--------------------+----------------------------------------------------------+------------------|
 | <2022-03-01 Tue>   | *Paper Reading:*                                         | Group Discussion |
 |                    | /Domains for Denotational Semantics/                     |                  |
