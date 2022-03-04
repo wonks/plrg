@@ -30,7 +30,7 @@ details about voting for papers to read and scheduling your presentation.
 
 | *Date*             | *Paper Title / Presentation*                             | *Speaker(s)*     |
 |--------------------+----------------------------------------------------------+------------------|
-| +<2022-01-18 Tue>+ | POPL Week                                                | n/a              |
+| +<2022-01-18 Tue>+ | POPL Week                                                | N/A              |
 |--------------------+----------------------------------------------------------+------------------|
 | <2022-01-25 Tue>   | *Paper Reading:*                                         | Group Discussion |
 |                    | /A Correspondence between Continuation Passing Style/    |                  |
@@ -61,7 +61,7 @@ details about voting for papers to read and scheduling your presentation.
 |                    | /A theory of type polymorphism in programming/           |                  |
 |                    | *Links:* [[https://homepages.inf.ed.ac.uk/wadler/papers/papers-we-love/milner-type-polymorphism.pdf][1]] , [[https://doi.org/10.1016/0022-0000(78)90014-4][DOI]]                                         |                  |
 |--------------------+----------------------------------------------------------+------------------|
-| +<2022-03-15 Tue>+ | Spring Break                                             | TBA              |
+| +<2022-03-15 Tue>+ | Spring Break                                             | N/A              |
 |--------------------+----------------------------------------------------------+------------------|
 | <2022-03-22 Tue>   | TBA                                                      | TBA              |
 |--------------------+----------------------------------------------------------+------------------|
