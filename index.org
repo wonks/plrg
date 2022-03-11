@@ -40,8 +40,7 @@ details about voting for papers to read and scheduling your presentation.
 | <2022-02-01 Tue>   | *Presentation:* /Recursive Types/                        | [[http://www.fyrbll.me/][Kartik]]           |
 |                    | *Links:* [[./upload/recursive-types/recursive-types.tex][LaTeX for Slides]] , [[./upload/recursive-types/recursive-types.rkt][Racket Code]] , [[./upload/recursive-types/RecursiveTypes.hs][Haskell Code]]   |                  |
 |--------------------+----------------------------------------------------------+------------------|
-| <2022-02-08 Tue>   | *Paper Reading:*                                         | Group Discussion |
-|                    | /Compilers and Staging Transformations/                  |                  |
+| <2022-02-08 Tue>   | *Paper Reading:* /Compilers and Staging Transformations/ | Group Discussion |
 |                    | *Links:*  [[https://www.researchgate.net/publication/220997024_Compilers_and_Staging_Transformations][1]] , [[https://dl.acm.org/doi/abs/10.1145/512644.512652][ACM-DL]]                                     |                  |
 |--------------------+----------------------------------------------------------+------------------|
 | <2022-02-15 Tue>   | *Presentation:*                                          | Chenchao         |
@@ -53,8 +52,7 @@ details about voting for papers to read and scheduling your presentation.
 |                    | *Links:* [[file:upload/categorial-parametricity/ReverseNatural.agda][Agda Formalization]], [[file:upload/categorial-parametricity/functorial-polymorphism.pdf][Further Reading 1]],          |                  |
 |                    | [[https://golem.ph.utexas.edu/category/2013/04/scones_logical_relations_and_p.html][Further Reading 2]], [[file:upload/categorial-parametricity/slides/talk.rkt][Racket for Slides]]                     |                  |
 |--------------------+----------------------------------------------------------+------------------|
-| <2022-03-01 Tue>   | *Paper Reading:*                                         | Group Discussion |
-|                    | /Domains for Denotational Semantics/                     |                  |
+| <2022-03-01 Tue>   | *Paper Reading:* /Domains for Denotational Semantics/    | Group Discussion |
 |                    | *Links:* [[https://www.researchgate.net/publication/220897586_Domains_for_Denotational_Semantics][1]] , [[https://dl.acm.org/doi/10.5555/646236.682867][ACM-DL]]                                      |                  |
 |--------------------+----------------------------------------------------------+------------------|
 | <2022-03-08 Tue>   | *Paper Reading:*                                         | Group Discussion |
@@ -63,7 +61,8 @@ details about voting for papers to read and scheduling your presentation.
 |--------------------+----------------------------------------------------------+------------------|
 | +<2022-03-15 Tue>+ | Spring Break                                             | N/A              |
 |--------------------+----------------------------------------------------------+------------------|
-| <2022-03-22 Tue>   | TBA                                                      | TBA              |
+| <2022-03-22 Tue>   | *Paper Reading:* /Data Types as Lattices/                | TBA              |
+|                    | *Links:* [[https://www.researchgate.net/publication/213877138_Data_Types_as_Lattices][1]] , [[https://doi.org/10.1137/0205037][DOI]]                                         |                  |
 |--------------------+----------------------------------------------------------+------------------|
 | <2022-03-29 Tue>   | TBA                                                      | TBA              |
 |--------------------+----------------------------------------------------------+------------------|
