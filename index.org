@@ -61,7 +61,7 @@ details about voting for papers to read and scheduling your presentation.
 |--------------------+----------------------------------------------------------+------------------|
 | +<2022-03-15 Tue>+ | Spring Break                                             | N/A              |
 |--------------------+----------------------------------------------------------+------------------|
-| <2022-03-22 Tue>   | *Paper Reading:* /Data Types as Lattices/                | TBA              |
+| <2022-03-22 Tue>   | *Paper Reading:* /Data Types as Lattices/                | Group Discussion |
 |                    | *Links:* [[https://www.researchgate.net/publication/213877138_Data_Types_as_Lattices][1]] , [[https://doi.org/10.1137/0205037][DOI]]                                         |                  |
 |--------------------+----------------------------------------------------------+------------------|
 | <2022-03-29 Tue>   | TBA                                                      | TBA              |
