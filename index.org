@@ -67,7 +67,8 @@ details about voting for papers to read and scheduling your presentation.
 | <2022-03-29 Tue>   | *Paper Reading:* /The mechanical evaluation of expressions/ | Group Discussion |
 |                    | *Links:* [[https://www.cs.cmu.edu/~crary/819-f09/Landin64.pdf][1]] , [[https://doi.org/10.1093/comjnl/6.4.308][DOI]]                                            |                  |
 |--------------------+-------------------------------------------------------------+------------------|
-| <2022-04-05 Tue>   | TBA                                                         | TBA              |
+| <2022-04-05 Tue>   | *Paper Reading:* /Call-by-name, call-by-value, and/         | Group Discussion |
+|                    | /the λ-calculus/ *Links:*  [[https://www.sciencedirect.com/science/article/pii/0304397575900171][1]] , [[https://doi.org/10.1016/0304-3975(75)90017-1][DOI]]                          |                  |
 |--------------------+-------------------------------------------------------------+------------------|
 | <2022-04-12 Tue>   | TBA                                                         | TBA              |
 |--------------------+-------------------------------------------------------------+------------------|
