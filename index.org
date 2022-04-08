@@ -70,7 +70,8 @@ details about voting for papers to read and scheduling your presentation.
 | <2022-04-05 Tue>   | *Paper Reading:* /Call-by-name, call-by-value, and/         | Group Discussion |
 |                    | /the λ-calculus/ *Links:*  [[https://www.sciencedirect.com/science/article/pii/0304397575900171][1]] , [[https://doi.org/10.1016/0304-3975(75)90017-1][DOI]]                          |                  |
 |--------------------+-------------------------------------------------------------+------------------|
-| <2022-04-12 Tue>   | TBA                                                         | TBA              |
+| <2022-04-12 Tue>   | *Paper Reading:* /A structural approach to operational/     | Group Discussion |
+|                    | /semantics/ *Links:* [[https://link.springer.com/chapter/10.1007/BFb0032732][1]] , [[https://web.eecs.umich.edu/~weimerw/590/reading/plotkin81structural.pdf][2]]                                  |                  |
 |--------------------+-------------------------------------------------------------+------------------|
 | <2022-04-19 Tue>   | TBA                                                         | TBA              |
 |--------------------+-------------------------------------------------------------+------------------|

@@ -3,13 +3,13 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-03-31 Thu 18:24 -->
+<!-- 2022-04-08 Fri 15:50 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>PL Reading Group @ IU</title>
-<meta name="generator" content="Org mode" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -30,8 +30,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -40,21 +41,21 @@
   pre.src {
     position: relative;
     overflow: auto;
-    padding-top: 1.2em;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
   pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -190,7 +191,6 @@
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
-  /*]]>*/-->
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -219,56 +219,34 @@ document.location.href = orgsource;
 <a href="./contact.html">      <u>Contact      </u></a> |
 <a href="./archive.html">      <u>Past Events  </u></a>
 </nav>
-<script type="text/javascript">
-// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
-<!--/*--><![CDATA[/*><!--*/
-     function CodeHighlightOn(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.add("code-highlighted");
-         target.classList.add("code-highlighted");
-       }
-     }
-     function CodeHighlightOff(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.remove("code-highlighted");
-         target.classList.remove("code-highlighted");
-       }
-     }
-    /*]]>*///-->
-// @license-end
-</script>
 </head>
 <body>
-<div id="content">
+<div id="content" class="content">
 <h1 class="title">PL Reading Group @ IU
 <br />
 <span class="subtitle">Spring 2022 🌷</span>
 </h1>
-<div id="table-of-contents">
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org688d700">About</a></li>
-<li><a href="#orgbfedd1a">Time</a></li>
-<li><a href="#org14c8f11">Location</a></li>
-<li><a href="#org9be044f">Schedule</a></li>
+<li><a href="#orga6354ae">About</a></li>
+<li><a href="#orgc1c6323">Time</a></li>
+<li><a href="#org49e82bb">Location</a></li>
+<li><a href="#org7c69028">Schedule</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org688d700" class="outline-2">
-<h2 id="org688d700">About</h2>
-<div class="outline-text-2" id="text-org688d700">
+<div id="outline-container-orga6354ae" class="outline-2">
+<h2 id="orga6354ae">About</h2>
+<div class="outline-text-2" id="text-orga6354ae">
 <p>
 <font color="#a90533"> The PL Reading Group </font> (PLRG)
 is the de facto successor to PL Wonks and several previous reading groups.
 Unlike PL Wonks talk series, the focus of PLRG is paper reading and discussion.
 However, we do occasionally schedule presentations, practice talks, and tutorial
-sessions (<a href="#org9be044f">Schedule</a>).
+sessions (<a href="#org7c69028">Schedule</a>).
 </p>
 
 <p>
@@ -278,9 +256,9 @@ details about voting for papers to read and scheduling your presentation.
 </div>
 </div>
 
-<div id="outline-container-orgbfedd1a" class="outline-2">
-<h2 id="orgbfedd1a">Time</h2>
-<div class="outline-text-2" id="text-orgbfedd1a">
+<div id="outline-container-orgc1c6323" class="outline-2">
+<h2 id="orgc1c6323">Time</h2>
+<div class="outline-text-2" id="text-orgc1c6323">
 <ul class="org-ul">
 <li><b>Time:</b> &lt;4:00 PM&gt; on <b>Tuesdays</b>.</li>
 <li>The event usually lasts <b>1 hour</b>. You may leave early.</li>
@@ -289,9 +267,9 @@ details about voting for papers to read and scheduling your presentation.
 </div>
 </div>
 
-<div id="outline-container-org14c8f11" class="outline-2">
-<h2 id="org14c8f11">Location</h2>
-<div class="outline-text-2" id="text-org14c8f11">
+<div id="outline-container-org49e82bb" class="outline-2">
+<h2 id="org49e82bb">Location</h2>
+<div class="outline-text-2" id="text-org49e82bb">
 <ul class="org-ul">
 <li><b>Room:</b> <b>BLIF-4105</b> (study room, 4th floor <i>Luddy Hall</i>)</li>
 <li>Where is it? Search "Luddy Hall" on <a href="https://map.iu.edu/iub/">Campus Map</a>.</li>
@@ -299,9 +277,9 @@ details about voting for papers to read and scheduling your presentation.
 </div>
 </div>
 
-<div id="outline-container-org9be044f" class="outline-2">
-<h2 id="org9be044f">Schedule</h2>
-<div class="outline-text-2" id="text-org9be044f">
+<div id="outline-container-org7c69028" class="outline-2">
+<h2 id="org7c69028">Schedule</h2>
+<div class="outline-text-2" id="text-org7c69028">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -502,8 +480,14 @@ details about voting for papers to read and scheduling your presentation.
 <tbody>
 <tr>
 <td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2022-04-12 Tue&gt;</span></span></td>
-<td class="org-left">TBA</td>
-<td class="org-left">TBA</td>
+<td class="org-left"><b>Paper Reading:</b> <i>A structural approach to operational</i></td>
+<td class="org-left">Group Discussion</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>semantics</i> <b>Links:</b> <a href="https://link.springer.com/chapter/10.1007/BFb0032732">1</a> , <a href="https://web.eecs.umich.edu/~weimerw/590/reading/plotkin81structural.pdf">2</a></td>
+<td class="org-left">&#xa0;</td>
 </tr>
 </tbody>
 <tbody>
@@ -525,7 +509,7 @@ details about voting for papers to read and scheduling your presentation.
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2022-03-31 Thu 18:24</p>
+<p class="date">Created: 2022-04-08 Fri 15:50</p>
 </div>
 </body>
 </html>
