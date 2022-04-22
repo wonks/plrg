@@ -76,4 +76,5 @@ details about voting for papers to read and scheduling your presentation.
 | <2022-04-19 Tue>   | *Paper Reading:* /Control Operators, the SECD-Machine,/     | Group Discussion |
 |                    | /and the λ-Calculus/ *Links:* [[https://legacy.cs.indiana.edu/ftp/techreports/TR197.pdf][1]]                             |                  |
 |--------------------+-------------------------------------------------------------+------------------|
-| <2022-04-26 Tue>   | TBA                                                         | TBA              |
+| <2022-04-26 Tue>   | *Paper Reading:* /Natural semantics/                        | Group Discussion |
+|                    | *Links:* [[https://link.springer.com/chapter/10.1007/BFb0039592][1]]                                                  |                  |
