@@ -78,3 +78,11 @@ details about voting for papers to read and scheduling your presentation.
 |--------------------+-------------------------------------------------------------+------------------|
 | <2022-04-26 Tue>   | *Paper Reading:* /Natural semantics/                        | Group Discussion |
 |                    | *Links:* [[https://link.springer.com/chapter/10.1007/BFb0039592][1]]                                                  |                  |
+|--------------------+-------------------------------------------------------------+------------------|
+| <2022-05-10 Tue>   | *Paper Reading:* /A Functional Correspondence between/      | Group Discussion |
+|                    | /Evaluators and Abstract Machines/                          |                  |
+|                    | *Links:* [[https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.197.3493&data=05%7C01%7Cksabharw%40iu.edu%7C3cb208b9c8dd4ae4673108da31e0eb6e%7C1113be34aed14d00ab4bcdd02510be91%7C0%7C0%7C637877139335744832%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=b8RqjGBaHd8lY4jIYD4Q3cqzC1uswzItMEI0s5npoDg%3D&reserved=0][1]]                                                  |                  |
+|--------------------+-------------------------------------------------------------+------------------|
+| <2022-05-17 Tue>   | *Presentation:* /Semantic Subtyping/                        | Kartik           |
+|                    | *Links:* [[https://www.irif.fr/~gc/papers/semantic_subtyping.pdf][Reference on Semantic Subtyping]]                    |                  |
+|--------------------+-------------------------------------------------------------+------------------|
