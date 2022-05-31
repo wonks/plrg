@@ -86,3 +86,12 @@ details about voting for papers to read and scheduling your presentation.
 | <2022-05-17 Tue>   | *Presentation:* /Semantic Subtyping/                        | Kartik           |
 |                    | *Links:* [[https://www.irif.fr/~gc/papers/semantic_subtyping.pdf][Reference on Semantic Subtyping]]                    |                  |
 |--------------------+-------------------------------------------------------------+------------------|
+| <2022-05-24 Tue>   | *Presentation:* /ACL2 and J-Bob/                            | Kartik           |
+|                    | *References:* Computer-Aided Reasoning: An Approach by      |                  |
+|                    | Kaufman, Manolios and Moore; The Little Prover by Friedman  |                  |
+|                    | and Eastlund                                                |                  |
+|--------------------+-------------------------------------------------------------+------------------|
+| <2022-05-31 Tue>   | *Paper Reading:* /Type-Preserving Renaming and/             | Group Discussion |
+|                    | /Substitution/                                              |                  |
+|                    | *Links:* [[https://personal.cis.strath.ac.uk/conor.mcbride/ren-sub.pdf][1]]                                                  |                  |
+|--------------------+-------------------------------------------------------------+------------------|
