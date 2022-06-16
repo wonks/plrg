@@ -95,3 +95,9 @@ details about voting for papers to read and scheduling your presentation.
 |                    | /Substitution/                                              |                  |
 |                    | *Links:* [[https://personal.cis.strath.ac.uk/conor.mcbride/ren-sub.pdf][1]]                                                  |                  |
 |--------------------+-------------------------------------------------------------+------------------|
+| <2022-06-07 Tue>   | *Paper Reading:* /A Syntactic Approach to Type Soundness/   | Group Discussion |
+|                    | *Links:* [[https://www.sciencedirect.com/science/article/pii/S0890540184710935?via%3Dihub][1]]                                                  |                  |
+|--------------------+-------------------------------------------------------------+------------------|
+| <2022-06-14 Tue>   | *Paper Reading:* /Fast and Effective Procedure Inlining/    | Group Discussion |
+|                    | *Links:* [[https://link.springer.com/chapter/10.1007/BFb0032732][1]]                                                  |                  |
+|--------------------+-------------------------------------------------------------+------------------|
