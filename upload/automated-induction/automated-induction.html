@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>automated-induction</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      /*overflow-wrap: break-word;*/
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      /*overflow: auto;*/
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     /*overflow: visible;*/
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      /*overflow-x: auto;*/
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    /*code{white-space: pre-wrap;}*/
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h2 id="automation-of-induction-proofs">Automation of Induction Proofs</h2>
+<h3 id="define-problem-scope">Define Problem Scope</h3>
+<p>We’re going to restrict our reasoning to values described by the grammar</p>
+<pre><code>VALUE ::= null
+        | integer(INTEGER)
+        | cons(VALUE,VALUE)
+        </code></pre>
+<p>The functions and values below will be our primitives. They behave as we would expect.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Arity</th>
+<th>Range</th>
+<th>Symbol</th>
+<th>Arity</th>
+<th>Range</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>null</code></td>
+<td>0</td>
+<td><code>Value</code></td>
+<td><code>false</code></td>
+<td>0</td>
+<td><code>Bool</code></td>
+</tr>
+<tr class="even">
+<td><code>integer</code></td>
+<td>1</td>
+<td><code>Value</code></td>
+<td><code>ite</code></td>
+<td>3</td>
+<td>*</td>
+</tr>
+<tr class="odd">
+<td><code>cons</code></td>
+<td>2</td>
+<td><code>Value</code></td>
+<td><code>and</code></td>
+<td>≥ 0</td>
+<td><code>Bool</code></td>
+</tr>
+<tr class="even">
+<td><code>is-null</code></td>
+<td>1</td>
+<td><code>Bool</code></td>
+<td><code>or</code></td>
+<td>≥ 0</td>
+<td><code>Bool</code></td>
+</tr>
+<tr class="odd">
+<td><code>is-integer</code></td>
+<td>1</td>
+<td><code>Bool</code></td>
+<td><code>not</code></td>
+<td>1</td>
+<td><code>Bool</code></td>
+</tr>
+<tr class="even">
+<td><code>is-cons</code></td>
+<td>1</td>
+<td><code>Bool</code></td>
+<td><code>=&gt;</code></td>
+<td>≥ 2</td>
+<td><code>Bool</code></td>
+</tr>
+<tr class="odd">
+<td><code>true</code></td>
+<td>0</td>
+<td><code>Bool</code></td>
+<td><code>=</code></td>
+<td>2</td>
+<td><code>Bool</code></td>
+</tr>
+</tbody>
+</table>
+<p>The grammar of the input file is still SMT-LIB 2.0, but with some restrictions.</p>
+<ul>
+<li><p>Functions should only be defined with <code>define-fun-rec</code>. The body of a function can contain calls to itself, as well as calls to primitives. However calls to other user-defined functions are not permitted.</p></li>
+<li><p>The domain of each user-defined function must be <code>Value</code>.</p></li>
+<li><p>There must be only one command of the form <code>(assert (not ...))</code>, and it will be treated as the claim that needs to be proved.</p></li>
+</ul>
+<h3 id="desugar">Desugar</h3>
+<p>The body of every user-defined function must be desugared.</p>
+<p>The claim to be proved must also be desugared.</p>
+<p>Other assertions can be left as they are.</p>
+<p>To desugar, change each <code>and</code>, <code>or</code>, <code>=&gt;</code> to an <code>ite</code> according to these rules.</p>
+<pre><code>and()             = true
+and(p₁,p₂,...,pₙ) = ite(p₁,and(p₂,...,pₙ),false)
+
+or()             = false
+or(p₁,p₂,...,pₙ) = ite(p₁,true,or(p₂,...,pₙ))
+
+=&gt;(p₁,p₂)              = ite(p₁,p₂,true)
+=&gt;(p₁,p₂,p₃,p₄,...,pₙ) = ite(p₁,=&gt;(p₂,p₃,p₄,...,pₙ),true)</code></pre>
+<h3 id="unfold">Unfold</h3>
+<p>The first step is to compute the <em>depth</em> of each user-defined function called within the claim.</p>
+<p>The depth of a given formal argument of a function is the number of times <code>car</code> or <code>cdr</code> is consecutively applied to that argument. The depth of an entire function is the maximum over the depths of its formal arguments. Consider a few examples.</p>
+<p>The function below has depth 1.</p>
+<pre><code>(define-fun-rec is-natural ((v Value)) Bool
+  (or (is-null v)
+      (and (is-cons v)
+           (is-null (car v))
+           (is-natural (cdr v)))))</code></pre>
+<p>The function below has depth 1.</p>
+<pre><code>(define-fun-rec plus ((v Value) (w Value)) Value
+  (ite (is-null v) w
+  (ite (is-cons v) (plus (cdr v) (cons null w))
+                   null)))</code></pre>
+<p>The function below has depth 3.</p>
+<pre><code>(define-fun-rec is-list ((v Value)) Bool
+  (or (is-null v)
+      (and (is-cons v)
+           (is-integer (car v))
+           (is-null (cdr v)))
+      (and (is-cons v)
+           (is-integer (car v))
+           (is-cons (cdr v))
+           (is-integer (car (cdr v)))
+           (is-null (cdr (cdr v))))
+      (and (is-cons v)
+           (is-integer (car v))
+           (is-cons (cdr v))
+           (is-integer (car (cdr v)))
+           (is-cons (cdr (cdr v)))
+           (is-integer (car (cdr (cdr v))))
+           (is-list (cdr (cdr (cdr v)))))))</code></pre>
+<p>Then compute the least common multiple of the depths of all the user-defined functions involved in the claim. Call this value <em>l</em></p>
+<p>For each involved function <em>f</em>, if its depth is <em>d</em>, compute the <em>l/d</em> th unfolding of <em>f</em> and add this new function to the list of definitions. What’s important is each of the unfolded definitions will have the same depth.</p>
+<p>To be precise, the 1st unfolding of a function can be computed by expanding each recursive call within its body into the function’s body, with the appropriate substitution applied. Here’s an example to aid my explanation.</p>
+<pre><code>(define-fun-rec is-tree ((v Value)) Bool
+  (or (is-null v)
+      (and (is-cons v)
+           (is-tree (car v))
+           (is-tree (cdr v)))))</code></pre>
+<p>This is its first unfolding.</p>
+<pre><code>(define-fun-rec is-tree-1 ((v Value)) Bool
+  (or (is-null v)
+      (and (is-cons v)
+           (or (is-null (car v))
+               (and (is-cons (car v))
+                    (is-tree-1 (car (car v)))
+                    (is-tree-1 (cdr (car v)))))
+           (or (is-null (cdr v))
+               (and (is-cons (cdr v))
+                    (is-tree-1 (car (cdr v)))
+                    (is-tree-1 (cdr (cdr v))))))))</code></pre>
+<h3 id="strategize">Strategize</h3>
+<p>This is the step where we inspect the claim to be proved and come up with possible induction schemes. Consider the functions <code>is-natural</code> and <code>plus</code> defined in the last section. Suppose we need to prove</p>
+<pre><code>∀ v, w ∈ Value, 
+  (is-natural(v) ∧ is-natural(w)) ⇒
+    plus(cons(null, v), w) = cons(null, plus(v, w))</code></pre>
+<p>The first stage is to collect all non-primitive function calls.</p>
+<ul>
+<li><code>is-natural(v)</code></li>
+<li><code>is-natural(w)</code></li>
+<li><code>plus(cons(null, v), w)</code></li>
+<li><code>plus(v, w)</code></li>
+</ul>
+<p>Next, iterate over the function calls. For each call, iterate over its arguments and produce a version of the call where that argument has been replaced with a hole.</p>
+<ul>
+<li><code>is-natural(_)</code></li>
+<li><code>plus(_, w)</code></li>
+<li><code>plus(cons(null, v), _)</code></li>
+<li><code>plus(v, _)</code></li>
+</ul>
+<p>Look at the universally quantified variables in the claim. Compute all the ways we can “pop” a single variable to induct on while leaving the other variables under the universal quantifier. We can envision each of these “ways” as a pair whose first element is a variable to induct on and whose second element is a list of universally quantified variables.</p>
+<ul>
+<li><code>(v, [w])</code></li>
+<li><code>(w, [v])</code></li>
+</ul>
+<p>For each element in this set of pairs. for each hole-bearing function call, produce a new pair. The first element of this new pair is the call’s hole plugged with the variable to induct on. The second element of the new pair is just the list of universally quantified variables.</p>
+<ul>
+<li><code>(is-natural(v), [w])</code></li>
+<li><code>(plus(v, w), [w])</code></li>
+<li><code>(plus(cons(null, v), v), [w])</code></li>
+<li><code>(plus(v, v), [w])</code></li>
+<li><code>(is-natural(w), [v])</code></li>
+<li><code>(plus(w, w), [v])</code></li>
+<li><code>(plus(cons(null, v), w), [v])</code></li>
+<li><code>(plus(v, w), [v])</code></li>
+</ul>
+<p>We only want to consider strategies that are “good” and we’re going to adopt The Little Prover’s idea of only considering calls whose arguments meet the following criteria.</p>
+<ul>
+<li>The arguments are all symbols</li>
+<li>No symbol is repeated</li>
+<li>The symbols are a subset of the universally quantified variables in the claim, which also means they can’t be primitives.</li>
+</ul>
+<p>Therefore the list of good strategies is</p>
+<ul>
+<li><code>(is-natural(v), [w])</code></li>
+<li><code>(plus(v, w), [w])</code></li>
+<li><code>(is-natural(w), [v])</code></li>
+<li><code>(plus(v, w), [v])</code></li>
+</ul>
+<h3 id="subgoals">Subgoals</h3>
+<p>Pick a strategy from among those in the last section. For this demonstration let’s choose <code>(plus(v, w), [w])</code></p>
+<p>Let <code>P(v,w)</code> represent the claim to be proved, but abstrated over its universally quantified variables.</p>
+<pre><code>P(v, w) =
+  (is-natural(v) ∧ is-natural(w)) ⇒
+    plus(cons(null, v), w) = cons(null, plus(v, w))</code></pre>
+<p>Construct a tree from the body of <code>plus</code>, the function mentioned in the strategy. Each node in this tree is an <code>ite</code> form. The expression at the node is the form’s test.</p>
+<pre><code>             w
+            /
+      true /     
+          /
+is-null(v)                plus(cdr(v), cons(null, w))
+          \              /
+     false \            / true
+            \          /
+             is-cons(v)
+                       \
+                        \ false
+                         \
+                          null</code></pre>
+<p>We work from the leaves to the root to gather the subgoals suggested by this strategy.</p>
+<p>Say we’re at a leaf. We scan the expression at the leaf for recursive calls to <code>plus</code>. Say there are two recursive calls – <code>plus(p, q)</code> and <code>plus(r, s)</code> – where <code>p</code>, <code>q</code>, <code>r</code> and <code>s</code> are expressions that may depend on <code>v</code> and <code>w</code>. The induction hypotheses created from these expressions are <code>P(p, q)</code> and <code>P(r, s)</code>. The list of subgoals at this leaf is then just the singleton</p>
+<pre><code>[ (∀ w, P(p, q)) ⇒ (∀ w, P(r, s)) ⇒ P(v, w) ]</code></pre>
+<p>Say we’re at a node. We begin by finding the induction hypotheses (<code>ihs</code>) for the expression at the node (<code>e</code>). We already have the subgoals for the two branches of the node. Let’s call them <code>s-true</code> and <code>s-false</code>. If <code>s-true</code> and <code>s-false</code> are the same, we add <code>ihs</code> as assumptions to each subgoal in <code>s-true</code> and return the result. If <code>s-true</code> and <code>s-false</code> are distinct, we add <code>e</code> and <code>ihs</code> as assumptions to each subgoal in <code>s-true</code> to get <code>s-true'</code>. We also add <code>¬e</code> and <code>ihs</code> as assumptions to each subgoal in <code>s-false</code> to get <code>s-false'</code>. Then we append <code>s-true'</code> to <code>s-false'</code> and return the result.</p>
+<p>Step 1.</p>
+<pre><code>             [ P(v, w) ]
+            /
+      true /     
+          /
+is-null(v)                [ (∀ w, P(cdr(v), cons(null, w))) ⇒ P(v, w) ]
+          \              /
+     false \            / true
+            \          /
+             is-cons(v)
+                       \
+                        \ false
+                         \
+                          [ P(v, w) ]</code></pre>
+<p>Step 2.</p>
+<pre><code>             [ P(v, w) ]
+            /
+      true /     
+          /
+is-null(v)                
+          \
+     false \
+            \
+             [ is-cons(v) ⇒ (∀ w, P(cdr(v), cons(null, w))) ⇒ P(v, w)
+             , ¬is-cons(v) ⇒ P(v, w) ]</code></pre>
+<p>Step 3.</p>
+<pre><code>[ is-null(v) ⇒ P(v, w)
+, ¬is-null(v) ⇒ is-cons(v) ⇒ (∀ w, P(cdr(v), cons(null, w))) ⇒ P(v, w)
+, ¬is-null(v) ⇒ ¬is-cons(v) ⇒ P(v, w) ]</code></pre>
+<h2 id="code-examples">Code &amp; Examples</h2>
+<p>Available upon request, as the code and usage instructions will change over time.</p>
+<h2 id="shortcomings-of-z3">Shortcomings of Z3</h2>
+<ol type="1">
+<li><p>Z3 sometimes needs a quantifier pattern to correctly guess the necessary instantiation.</p></li>
+<li><p>Z3 sometimes needs about 2 seconds – more time than I want to yield – to guess the necessary instantiation.</p></li>
+</ol>
+<h2 id="planned-features">Planned Features</h2>
+<ol type="1">
+<li><p>Support nested induction. An example of a problem that needs nested induction. Start with</p>
+<p>∀ v, w ∈ Value, (is-natural(v) ∧ is-natural(w)) ⇒ plus(v, w) = cons(w, v)</p></li>
+</ol>
+<p>We know <code>(plus(x,y), [y])</code> is among the good strategies. One subgoal that arises from it is</p>
+<pre><code>is-null(v) ⇒            
+  (is-natural(v) ∧ is-natural(w)) ⇒ 
+    plus(null, w) = plus(w, null)</code></pre>
+<p>Note that it’s okay to have <code>v</code> and <code>w</code> open in this subgoal because this is how the problem will be printed to Z3:</p>
+<pre><code>(declare-const v Value)
+(declare-const w Value)
+(assert (not
+  (=&gt; (is-null v)
+      (and (is-natural v)
+           (is-natural w))
+      (= (plus null w)
+         (plus w null)))))
+(check-sat)</code></pre>
+<p>The challenge is to recognize that this subgoal also needs to be considered for a proof by induction. It’s called a <em>nested</em> induction because we need to use induction to prove a subgoal of the main goal.</p>
+<pre><code>∀ v, w ∈ Value,
+  (is-natural(v) ∧ is-natural(w)) ⇒ 
+    plus(null, w) = plus(w, null)</code></pre>
+<ol start="2" type="1">
+<li><p>Support functions that call other user-defined functions, including mutually recursive functions.</p></li>
+<li><p>Guess potentially useful lemmas. See <a href="https://research.chalmers.se/en/publication/216678">Hipster</a> and <a href="https://link.springer.com/chapter/10.1007/978-3-540-45085-6_22">IsaPlanner</a>.</p></li>
+</ol>
+<!-- LINKS -->
+</body>
+</html>
