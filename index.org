@@ -116,3 +116,9 @@ details about voting for papers to read and scheduling your presentation.
 | <2022-07-19 Tue>   | *Presentation:* /Automating Proofs by Induction/                                      | Kartik           |
 |                    | *Links:* [[./upload/automated-induction/automated-induction.html][Implementation Notes]]                                                         |                  |
 |--------------------+---------------------------------------------------------------------------------------+------------------|
+| <2022-07-26 Tue>   | *Paper Reading:* /Full Abstraction for PCF/                                           | Group Discussion |
+|                    | *Links:* [[https://www.sciencedirect.com/science/article/pii/S0890540100929304][Paper]], [[https://arxiv.org/abs/1311.6057][Previous Paper on Game Semantics]], [[https://www.cs.uoregon.edu/research/summerschool/summer22/topics.php#Curien][Notes from OPLSS]]                    |                  |
+|--------------------+---------------------------------------------------------------------------------------+------------------|
+| <2022-08-02 Tue>   | *Presentation* /Classical Realizability/                                              | Darshal          |
+|                    | *Links:* [[./upload/classical-realizability/classical-realizability.pdf][Reference]]                                                                    |                  |
+|--------------------+---------------------------------------------------------------------------------------+------------------|
