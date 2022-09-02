@@ -1,5 +1,5 @@
 #+TITLE: PL Reading Group @ IU
-#+SUBTITLE: Spring 2022 🌷
+#+SUBTITLE: Fall 2022 🍁
 #+AUTHOR: Tianyu Chen
 #+SETUPFILE: ./white_clean.theme
 #+OPTIONS: ^:nil p:t num:0 author:nil
@@ -14,111 +14,24 @@ sessions ([[*Schedule]]).
 
 *We are looking for presentations!* Please visit the "participating" page for
 details about voting for papers to read and scheduling your presentation.
- 
+
 * Time
 
-+ *Time:* <4:00 PM> on *Tuesdays*.
++ *Time:* <3:00 PM> on *Mondays*.
 + The event usually lasts *1 hour*. You may leave early.
-+ If you are a speaker, please make sure your presentation is within 40 minutes.
++ If you are a speaker, please make sure your presentation is within *40 minutes*.
 
 * Location
 
-+ *Room:* *BLIF-4105* (study room, 4th floor /Luddy Hall/)
++ *Room:* *BLIF-4101* (study room, 4th floor /Luddy Hall/)
 + Where is it? Search "Luddy Hall" on [[https://map.iu.edu/iub/][Campus Map]].
-  
+
 * Schedule
 
-| *Date*             | *Paper Title / Presentation*                                                          | *Speaker(s)*     |
-|--------------------+---------------------------------------------------------------------------------------+------------------|
-| +<2022-01-18 Tue>+ | POPL Week                                                                             | N/A              |
-|--------------------+---------------------------------------------------------------------------------------+------------------|
-| <2022-01-25 Tue>   | *Paper Reading:*                                                                      | Group Discussion |
-|                    | /A Correspondence between Continuation Passing Style/                                 |                  |
-|                    | /and Static Single Assignment Form/                                                   |                  |
-|                    | *Links:* [[https://www.cs.purdue.edu/homes/suresh/502-Fall2008/papers/kelsey-ssa-cps.pdf][1]] , [[https://dl.acm.org/doi/10.1145/202530.202532][ACM-DL]] , [[./upload/correspondence-cps-ssa/scheme-to-ann-cps.rkt][Scheme->CPS Code]]                                                |                  |
-|--------------------+---------------------------------------------------------------------------------------+------------------|
-| <2022-02-01 Tue>   | *Presentation:* /Recursive Types/                                                     | [[http://www.fyrbll.me/][Kartik]]           |
-|                    | *Links:* [[./upload/recursive-types/recursive-types.tex][LaTeX for Slides]] , [[./upload/recursive-types/recursive-types.rkt][Racket Code]] , [[./upload/recursive-types/RecursiveTypes.hs][Haskell Code]]                                |                  |
-|--------------------+---------------------------------------------------------------------------------------+------------------|
-| <2022-02-08 Tue>   | *Paper Reading:* /Compilers and Staging Transformations/                              | Group Discussion |
-|                    | *Links:*  [[https://www.researchgate.net/publication/220997024_Compilers_and_Staging_Transformations][1]] , [[https://dl.acm.org/doi/abs/10.1145/512644.512652][ACM-DL]]                                                                  |                  |
-|--------------------+---------------------------------------------------------------------------------------+------------------|
-| <2022-02-15 Tue>   | *Presentation:*                                                                       | Chenchao         |
-|                    | /λ-circuit: Reasoning About λ-calculus Diagrammatically/                              |                  |
-|                    | *Links:* [[./upload/λ-circuit.pdf][Slides]]                                                                       |                  |
-|--------------------+---------------------------------------------------------------------------------------+------------------|
-| <2022-02-22 Tue>   | *Presentation:*                                                                       | [[https://bicompact.space/][Hazel]]            |
-|                    | /Categories, parametricity, and a folk theorem/                                       |                  |
-|                    | *Links:* [[file:upload/categorial-parametricity/ReverseNatural.agda][Agda Formalization]], [[file:upload/categorial-parametricity/functorial-polymorphism.pdf][Further Reading 1]],                                       |                  |
-|                    | [[https://golem.ph.utexas.edu/category/2013/04/scones_logical_relations_and_p.html][Further Reading 2]], [[file:upload/categorial-parametricity/slides/talk.rkt][Racket for Slides]]                                                  |                  |
-|--------------------+---------------------------------------------------------------------------------------+------------------|
-| <2022-03-01 Tue>   | *Paper Reading:* /Domains for Denotational Semantics/                                 | Group Discussion |
-|                    | *Links:* [[https://www.researchgate.net/publication/220897586_Domains_for_Denotational_Semantics][1]] , [[https://dl.acm.org/doi/10.5555/646236.682867][ACM-DL]]                                                                   |                  |
-|--------------------+---------------------------------------------------------------------------------------+------------------|
-| <2022-03-08 Tue>   | *Paper Reading:*                                                                      | Group Discussion |
-|                    | /A theory of type polymorphism in programming/                                        |                  |
-|                    | *Links:* [[https://homepages.inf.ed.ac.uk/wadler/papers/papers-we-love/milner-type-polymorphism.pdf][1]] , [[https://doi.org/10.1016/0022-0000(78)90014-4][DOI]]                                                                      |                  |
-|--------------------+---------------------------------------------------------------------------------------+------------------|
-| +<2022-03-15 Tue>+ | Spring Break                                                                          | N/A              |
-|--------------------+---------------------------------------------------------------------------------------+------------------|
-| <2022-03-22 Tue>   | *Paper Reading:* /Data Types as Lattices/                                             | Group Discussion |
-|                    | *Links:* [[https://www.researchgate.net/publication/213877138_Data_Types_as_Lattices][1]] , [[https://doi.org/10.1137/0205037][DOI]]                                                                      |                  |
-|--------------------+---------------------------------------------------------------------------------------+------------------|
-| <2022-03-29 Tue>   | *Paper Reading:* /The mechanical evaluation of expressions/                           | Group Discussion |
-|                    | *Links:* [[https://www.cs.cmu.edu/~crary/819-f09/Landin64.pdf][1]] , [[https://doi.org/10.1093/comjnl/6.4.308][DOI]]                                                                      |                  |
-|--------------------+---------------------------------------------------------------------------------------+------------------|
-| <2022-04-05 Tue>   | *Paper Reading:* /Call-by-name, call-by-value, and/                                   | Group Discussion |
-|                    | /the λ-calculus/ *Links:*  [[https://www.sciencedirect.com/science/article/pii/0304397575900171][1]] , [[https://doi.org/10.1016/0304-3975(75)90017-1][DOI]]                                                    |                  |
-|--------------------+---------------------------------------------------------------------------------------+------------------|
-| <2022-04-12 Tue>   | *Paper Reading:* /A structural approach to operational/                               | Group Discussion |
-|                    | /semantics/ Chapters 1~3 *Links:* [[https://web.eecs.umich.edu/~weimerw/590/reading/plotkin81structural.pdf][1]] , [[https://homepages.inf.ed.ac.uk/gdp/publications/SOS.ps][2]]                                               |                  |
-|--------------------+---------------------------------------------------------------------------------------+------------------|
-| <2022-04-19 Tue>   | *Paper Reading:* /Control Operators, the SECD-Machine,/                               | Group Discussion |
-|                    | /and the λ-Calculus/ *Links:* [[https://legacy.cs.indiana.edu/ftp/techreports/TR197.pdf][1]]                                                       |                  |
-|--------------------+---------------------------------------------------------------------------------------+------------------|
-| <2022-04-26 Tue>   | *Paper Reading:* /Natural semantics/                                                  | Group Discussion |
-|                    | *Links:* [[https://link.springer.com/chapter/10.1007/BFb0039592][1]]                                                                            |                  |
-|--------------------+---------------------------------------------------------------------------------------+------------------|
-| <2022-05-10 Tue>   | *Paper Reading:* /A Functional Correspondence between/                                | Group Discussion |
-|                    | /Evaluators and Abstract Machines/                                                    |                  |
-|                    | *Links:* [[https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.197.3493&data=05%7C01%7Cksabharw%40iu.edu%7C3cb208b9c8dd4ae4673108da31e0eb6e%7C1113be34aed14d00ab4bcdd02510be91%7C0%7C0%7C637877139335744832%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=b8RqjGBaHd8lY4jIYD4Q3cqzC1uswzItMEI0s5npoDg%3D&reserved=0][1]]                                                                            |                  |
-|--------------------+---------------------------------------------------------------------------------------+------------------|
-| <2022-05-17 Tue>   | *Presentation:* /Semantic Subtyping/                                                  | Kartik           |
-|                    | *Links:* [[https://www.irif.fr/~gc/papers/semantic_subtyping.pdf][Reference on Semantic Subtyping]]                                              |                  |
-|--------------------+---------------------------------------------------------------------------------------+------------------|
-| <2022-05-24 Tue>   | *Presentation:* /ACL2 and J-Bob/                                                      | Kartik           |
-|                    | *References:* Computer-Aided Reasoning: An Approach by                                |                  |
-|                    | Kaufman, Manolios and Moore; The Little Prover by Friedman                            |                  |
-|                    | and Eastlund                                                                          |                  |
-|--------------------+---------------------------------------------------------------------------------------+------------------|
-| <2022-05-31 Tue>   | *Paper Reading:* /Type-Preserving Renaming and/                                       | Group Discussion |
-|                    | /Substitution/                                                                        |                  |
-|                    | *Links:* [[https://personal.cis.strath.ac.uk/conor.mcbride/ren-sub.pdf][1]]                                                                            |                  |
-|--------------------+---------------------------------------------------------------------------------------+------------------|
-| <2022-06-07 Tue>   | *Paper Reading:* /A Syntactic Approach to Type Soundness/                             | Group Discussion |
-|                    | *Links:* [[https://www.sciencedirect.com/science/article/pii/S0890540184710935?via%3Dihub][1]]                                                                            |                  |
-|--------------------+---------------------------------------------------------------------------------------+------------------|
-| <2022-06-14 Tue>   | *Paper Reading:* /Fast and Effective Procedure Inlining/                              | Group Discussion |
-|                    | *Links:* [[https://link.springer.com/chapter/10.1007/BFb0032732][1]]                                                                            |                  |
-|--------------------+---------------------------------------------------------------------------------------+------------------|
-| <2022-06-21 Tue>   | *Paper Reading:* /Call-by-Push-Value: A Subsuming Paradigm/                           | Group Discussion |
-|                    | *Links:* [[https://www.cs.bham.ac.uk/~pbl/papers/tlca99.pdf][1]]                                                                            |                  |
-|--------------------+---------------------------------------------------------------------------------------+------------------|
-| <2022-06-28 Tue>   | *Paper Reading:* /The Derivative of a Regular Type is its Type of One-Hole Contexts/  | Group Discussion |
-|                    | *Links:* [[http://strictlypositive.org/diff.pdf][1]]                                                                            |                  |
-|--------------------+---------------------------------------------------------------------------------------+------------------|
-| <2022-07-05 Tue>   | *Paper Reading:* /An Axiomatic Basis for Computer Programming/                        | Group Discussion |
-|                    | *Links:* [[https://dl.acm.org/doi/pdf/10.1145/363235.363259][1]]                                                                            |                  |
-|--------------------+---------------------------------------------------------------------------------------+------------------|
-| <2022-07-12 Tue>   | *Paper Reading:* /Functional Pearls: Probabilistic Functional Programming in Haskell/ | Group Discussion |
-|                    | *Links:* [[https://www.cambridge.org/core/services/aop-cambridge-core/content/view/8DF2F2B191C68260A961BA3A9F50B332/S0956796805005721a.pdf/functional-pearls-probabilistic-functional-programming-in-haskell.pdf][1]]                                                                            |                  |
-|--------------------+---------------------------------------------------------------------------------------+------------------|
-| <2022-07-19 Tue>   | *Presentation:* /Automating Proofs by Induction/                                      | Kartik           |
-|                    | *Links:* [[./upload/automated-induction/automated-induction.html][Implementation Notes]]                                                         |                  |
-|--------------------+---------------------------------------------------------------------------------------+------------------|
-| <2022-07-26 Tue>   | *Paper Reading:* /Full Abstraction for PCF/                                           | Group Discussion |
-|                    | *Links:* [[https://www.sciencedirect.com/science/article/pii/S0890540100929304][Paper]], [[https://arxiv.org/abs/1311.6057][Previous Paper on Game Semantics]], [[https://www.cs.uoregon.edu/research/summerschool/summer22/topics.php#Curien][Notes from OPLSS]]                    |                  |
-|--------------------+---------------------------------------------------------------------------------------+------------------|
-| <2022-08-02 Tue>   | *Presentation* /Classical Realizability/                                              | Darshal          |
-|                    | *Links:* [[./upload/classical-realizability/classical-realizability.pdf][Reference]]                                                                    |                  |
-|--------------------+---------------------------------------------------------------------------------------+------------------|
+| *Date*             | *Paper Title / Presentation* | *Speaker(s)*     |
+|--------------------+------------------------------+------------------|
+| +<2022-09-05 Mon>+ | Labor Day                    | N/A              |
+|--------------------+------------------------------+------------------|
+| <2022-09-12 Mon>   | *Paper Reading:* TBA         | Group Discussion |
+|                    | *Links:* TBA                 |                  |
+|--------------------+------------------------------+------------------|
