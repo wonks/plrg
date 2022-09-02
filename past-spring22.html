@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-08-02 Tue 11:44 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PL Reading Group @ IU</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Libre+Baskerville&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="white_clean.css">
+<link rel="shortcut icon" type="image/png" href="favicon.png">
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',function() {
+document.getElementById("table-of-contents").onclick = function() {
+var elem = document.getElementById("text-table-of-contents");
+elem.style.display = elem.style.display == "block" ? "none" : "block";
+}
+});
+
+var url = document.location.href;
+var orgsource = url.substring(0, url.lastIndexOf("."))+".org.html";
+function show_org_source(){
+document.location.href = orgsource;
+}
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<nav>
+<b>#</b>
+<a href="./index.html">        <u>Home         </u></a> |
+<a href="./participation.html"><u>Participating</u></a> |
+<a href="./contact.html">      <u>Contact      </u></a> |
+<a href="./archive.html">      <u>Past Events  </u></a>
+</nav>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">PL Reading Group @ IU
+<br />
+<span class="subtitle">Spring 2022 🌷</span>
+</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orge42b99e">About</a></li>
+<li><a href="#orgbb7d0e2">Time</a></li>
+<li><a href="#org35da047">Location</a></li>
+<li><a href="#orgabcf136">Schedule</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge42b99e" class="outline-2">
+<h2 id="orge42b99e">About</h2>
+<div class="outline-text-2" id="text-orge42b99e">
+<p>
+<font color="#a90533"> The PL Reading Group </font> (PLRG)
+is the de facto successor to PL Wonks and several previous reading groups.
+Unlike PL Wonks talk series, the focus of PLRG is paper reading and discussion.
+However, we do occasionally schedule presentations, practice talks, and tutorial
+sessions (<a href="#orgabcf136">Schedule</a>).
+</p>
+
+<p>
+<b>We are looking for presentations!</b> Please visit the "participating" page for
+details about voting for papers to read and scheduling your presentation.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbb7d0e2" class="outline-2">
+<h2 id="orgbb7d0e2">Time</h2>
+<div class="outline-text-2" id="text-orgbb7d0e2">
+<ul class="org-ul">
+<li><b>Time:</b> &lt;4:00 PM&gt; on <b>Tuesdays</b>.</li>
+<li>The event usually lasts <b>1 hour</b>. You may leave early.</li>
+<li>If you are a speaker, please make sure your presentation is within 40 minutes.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org35da047" class="outline-2">
+<h2 id="org35da047">Location</h2>
+<div class="outline-text-2" id="text-org35da047">
+<ul class="org-ul">
+<li><b>Room:</b> <b>BLIF-4105</b> (study room, 4th floor <i>Luddy Hall</i>)</li>
+<li>Where is it? Search "Luddy Hall" on <a href="https://map.iu.edu/iub/">Campus Map</a>.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgabcf136" class="outline-2">
+<h2 id="orgabcf136">Schedule</h2>
+<div class="outline-text-2" id="text-orgabcf136">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left"><b>Date</b></th>
+<th scope="col" class="org-left"><b>Paper Title / Presentation</b></th>
+<th scope="col" class="org-left"><b>Speaker(s)</b></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><del><span class="timestamp-wrapper"><span class="timestamp">&lt;2022-01-18 Tue&gt;</span></span></del></td>
+<td class="org-left">POPL Week</td>
+<td class="org-left">N/A</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2022-01-25 Tue&gt;</span></span></td>
+<td class="org-left"><b>Paper Reading:</b></td>
+<td class="org-left">Group Discussion</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>A Correspondence between Continuation Passing Style</i></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>and Static Single Assignment Form</i></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>Links:</b> <a href="https://www.cs.purdue.edu/homes/suresh/502-Fall2008/papers/kelsey-ssa-cps.pdf">1</a> , <a href="https://dl.acm.org/doi/10.1145/202530.202532">ACM-DL</a> , <a href="./upload/correspondence-cps-ssa/scheme-to-ann-cps.rkt">Scheme-&gt;CPS Code</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2022-02-01 Tue&gt;</span></span></td>
+<td class="org-left"><b>Presentation:</b> <i>Recursive Types</i></td>
+<td class="org-left"><a href="http://www.fyrbll.me/">Kartik</a></td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>Links:</b> <a href="./upload/recursive-types/recursive-types.tex">LaTeX for Slides</a> , <a href="./upload/recursive-types/recursive-types.rkt">Racket Code</a> , <a href="./upload/recursive-types/RecursiveTypes.hs">Haskell Code</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2022-02-08 Tue&gt;</span></span></td>
+<td class="org-left"><b>Paper Reading:</b> <i>Compilers and Staging Transformations</i></td>
+<td class="org-left">Group Discussion</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>Links:</b>  <a href="https://www.researchgate.net/publication/220997024_Compilers_and_Staging_Transformations">1</a> , <a href="https://dl.acm.org/doi/abs/10.1145/512644.512652">ACM-DL</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2022-02-15 Tue&gt;</span></span></td>
+<td class="org-left"><b>Presentation:</b></td>
+<td class="org-left">Chenchao</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>λ-circuit: Reasoning About λ-calculus Diagrammatically</i></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>Links:</b> <a href="./upload/λ-circuit.pdf">Slides</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2022-02-22 Tue&gt;</span></span></td>
+<td class="org-left"><b>Presentation:</b></td>
+<td class="org-left"><a href="https://bicompact.space/">Hazel</a></td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>Categories, parametricity, and a folk theorem</i></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>Links:</b> <a href="upload/categorial-parametricity/ReverseNatural.agda">Agda Formalization</a>, <a href="upload/categorial-parametricity/functorial-polymorphism.pdf">Further Reading 1</a>,</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="https://golem.ph.utexas.edu/category/2013/04/scones_logical_relations_and_p.html">Further Reading 2</a>, <a href="upload/categorial-parametricity/slides/talk.rkt">Racket for Slides</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2022-03-01 Tue&gt;</span></span></td>
+<td class="org-left"><b>Paper Reading:</b> <i>Domains for Denotational Semantics</i></td>
+<td class="org-left">Group Discussion</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>Links:</b> <a href="https://www.researchgate.net/publication/220897586_Domains_for_Denotational_Semantics">1</a> , <a href="https://dl.acm.org/doi/10.5555/646236.682867">ACM-DL</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2022-03-08 Tue&gt;</span></span></td>
+<td class="org-left"><b>Paper Reading:</b></td>
+<td class="org-left">Group Discussion</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>A theory of type polymorphism in programming</i></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>Links:</b> <a href="https://homepages.inf.ed.ac.uk/wadler/papers/papers-we-love/milner-type-polymorphism.pdf">1</a> , <a href="https://doi.org/10.1016/0022-0000(78)90014-4">DOI</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><del><span class="timestamp-wrapper"><span class="timestamp">&lt;2022-03-15 Tue&gt;</span></span></del></td>
+<td class="org-left">Spring Break</td>
+<td class="org-left">N/A</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2022-03-22 Tue&gt;</span></span></td>
+<td class="org-left"><b>Paper Reading:</b> <i>Data Types as Lattices</i></td>
+<td class="org-left">Group Discussion</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>Links:</b> <a href="https://www.researchgate.net/publication/213877138_Data_Types_as_Lattices">1</a> , <a href="https://doi.org/10.1137/0205037">DOI</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2022-03-29 Tue&gt;</span></span></td>
+<td class="org-left"><b>Paper Reading:</b> <i>The mechanical evaluation of expressions</i></td>
+<td class="org-left">Group Discussion</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>Links:</b> <a href="https://www.cs.cmu.edu/~crary/819-f09/Landin64.pdf">1</a> , <a href="https://doi.org/10.1093/comjnl/6.4.308">DOI</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2022-04-05 Tue&gt;</span></span></td>
+<td class="org-left"><b>Paper Reading:</b> <i>Call-by-name, call-by-value, and</i></td>
+<td class="org-left">Group Discussion</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>the λ-calculus</i> <b>Links:</b>  <a href="https://www.sciencedirect.com/science/article/pii/0304397575900171">1</a> , <a href="https://doi.org/10.1016/0304-3975(75)90017-1">DOI</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2022-04-12 Tue&gt;</span></span></td>
+<td class="org-left"><b>Paper Reading:</b> <i>A structural approach to operational</i></td>
+<td class="org-left">Group Discussion</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>semantics</i> Chapters 1~3 <b>Links:</b> <a href="https://web.eecs.umich.edu/~weimerw/590/reading/plotkin81structural.pdf">1</a> , <a href="https://homepages.inf.ed.ac.uk/gdp/publications/SOS.ps">2</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2022-04-19 Tue&gt;</span></span></td>
+<td class="org-left"><b>Paper Reading:</b> <i>Control Operators, the SECD-Machine,</i></td>
+<td class="org-left">Group Discussion</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>and the λ-Calculus</i> <b>Links:</b> <a href="https://legacy.cs.indiana.edu/ftp/techreports/TR197.pdf">1</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2022-04-26 Tue&gt;</span></span></td>
+<td class="org-left"><b>Paper Reading:</b> <i>Natural semantics</i></td>
+<td class="org-left">Group Discussion</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>Links:</b> <a href="https://link.springer.com/chapter/10.1007/BFb0039592">1</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2022-05-10 Tue&gt;</span></span></td>
+<td class="org-left"><b>Paper Reading:</b> <i>A Functional Correspondence between</i></td>
+<td class="org-left">Group Discussion</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>Evaluators and Abstract Machines</i></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>Links:</b> <a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.197.3493&amp;data=05%7C01%7Cksabharw%40iu.edu%7C3cb208b9c8dd4ae4673108da31e0eb6e%7C1113be34aed14d00ab4bcdd02510be91%7C0%7C0%7C637877139335744832%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=b8RqjGBaHd8lY4jIYD4Q3cqzC1uswzItMEI0s5npoDg%3D&amp;reserved=0">1</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2022-05-17 Tue&gt;</span></span></td>
+<td class="org-left"><b>Presentation:</b> <i>Semantic Subtyping</i></td>
+<td class="org-left">Kartik</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>Links:</b> <a href="https://www.irif.fr/~gc/papers/semantic_subtyping.pdf">Reference on Semantic Subtyping</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2022-05-24 Tue&gt;</span></span></td>
+<td class="org-left"><b>Presentation:</b> <i>ACL2 and J-Bob</i></td>
+<td class="org-left">Kartik</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>References:</b> Computer-Aided Reasoning: An Approach by</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Kaufman, Manolios and Moore; The Little Prover by Friedman</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">and Eastlund</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2022-05-31 Tue&gt;</span></span></td>
+<td class="org-left"><b>Paper Reading:</b> <i>Type-Preserving Renaming and</i></td>
+<td class="org-left">Group Discussion</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><i>Substitution</i></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>Links:</b> <a href="https://personal.cis.strath.ac.uk/conor.mcbride/ren-sub.pdf">1</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2022-06-07 Tue&gt;</span></span></td>
+<td class="org-left"><b>Paper Reading:</b> <i>A Syntactic Approach to Type Soundness</i></td>
+<td class="org-left">Group Discussion</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>Links:</b> <a href="https://www.sciencedirect.com/science/article/pii/S0890540184710935?via%3Dihub">1</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2022-06-14 Tue&gt;</span></span></td>
+<td class="org-left"><b>Paper Reading:</b> <i>Fast and Effective Procedure Inlining</i></td>
+<td class="org-left">Group Discussion</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>Links:</b> <a href="https://link.springer.com/chapter/10.1007/BFb0032732">1</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2022-06-21 Tue&gt;</span></span></td>
+<td class="org-left"><b>Paper Reading:</b> <i>Call-by-Push-Value: A Subsuming Paradigm</i></td>
+<td class="org-left">Group Discussion</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>Links:</b> <a href="https://www.cs.bham.ac.uk/~pbl/papers/tlca99.pdf">1</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2022-06-28 Tue&gt;</span></span></td>
+<td class="org-left"><b>Paper Reading:</b> <i>The Derivative of a Regular Type is its Type of One-Hole Contexts</i></td>
+<td class="org-left">Group Discussion</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>Links:</b> <a href="http://strictlypositive.org/diff.pdf">1</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2022-07-05 Tue&gt;</span></span></td>
+<td class="org-left"><b>Paper Reading:</b> <i>An Axiomatic Basis for Computer Programming</i></td>
+<td class="org-left">Group Discussion</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>Links:</b> <a href="https://dl.acm.org/doi/pdf/10.1145/363235.363259">1</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2022-07-12 Tue&gt;</span></span></td>
+<td class="org-left"><b>Paper Reading:</b> <i>Functional Pearls: Probabilistic Functional Programming in Haskell</i></td>
+<td class="org-left">Group Discussion</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>Links:</b> <a href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/8DF2F2B191C68260A961BA3A9F50B332/S0956796805005721a.pdf/functional-pearls-probabilistic-functional-programming-in-haskell.pdf">1</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2022-07-19 Tue&gt;</span></span></td>
+<td class="org-left"><b>Presentation:</b> <i>Automating Proofs by Induction</i></td>
+<td class="org-left">Kartik</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>Links:</b> <a href="./upload/automated-induction/automated-induction.html">Implementation Notes</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2022-07-26 Tue&gt;</span></span></td>
+<td class="org-left"><b>Paper Reading:</b> <i>Full Abstraction for PCF</i></td>
+<td class="org-left">Group Discussion</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>Links:</b> <a href="https://www.sciencedirect.com/science/article/pii/S0890540100929304">Paper</a>, <a href="https://arxiv.org/abs/1311.6057">Previous Paper on Game Semantics</a>, <a href="https://www.cs.uoregon.edu/research/summerschool/summer22/topics.php#Curien">Notes from OPLSS</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2022-08-02 Tue&gt;</span></span></td>
+<td class="org-left"><b>Presentation</b> <i>Classical Realizability</i></td>
+<td class="org-left">Darshal</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>Links:</b> <a href="./upload/classical-realizability/classical-realizability.pdf">Reference</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-08-02 Tue 11:44</p>
+</div>
+</body>
+</html>
