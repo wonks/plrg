@@ -23,7 +23,7 @@ details about voting for papers to read and scheduling your presentation.
 
 * Location
 
-+ *Room:* *BLIF-4101* (study room, 4th floor /Luddy Hall/)
++ *Room:* *BLIF-4101* (study room, 4th floor Luddy Hall)
 + Where is it? Search "Luddy Hall" on [[https://map.iu.edu/iub/][Campus Map]].
 
 * Schedule
