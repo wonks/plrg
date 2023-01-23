@@ -1,5 +1,5 @@
-#+TITLE: PL Reading Group @ IU
-#+SUBTITLE: Fall 2022 🍁
+#+TITLE: Indiana University PL Reading Group
+#+SUBTITLE: Spring 2023 🌱
 #+AUTHOR: Tianyu Chen
 #+SETUPFILE: ./white_clean.theme
 #+OPTIONS: ^:nil p:t num:0 author:nil
@@ -8,51 +8,43 @@
 
 @@html:<font color="#a90533">@@ The PL Reading Group @@html:</font>@@ (PLRG)
 is the de facto successor to PL Wonks and several previous reading groups.
-Unlike PL Wonks talk series, the focus of PLRG is paper reading and discussion.
+Unlike the PL Wonks talk series, the focus of PLRG is paper reading and discussion.
 However, we do occasionally schedule presentations, practice talks, and tutorial
 sessions ([[*Schedule]]).
 
-*We are looking for presentations!* Please visit the "participating" page for
-details about voting for papers to read and scheduling your presentation.
+*We are looking for presentations!* Please refer to [[./participation.html][Participation]] for
+details about voting for papers and scheduling your presentation.
 
 * Time
 
-+ *Time:* <3:00 PM> on *Mondays*.
++ *Time:* <1:00 PM> on *Tuesdays*.
 + The event usually lasts *1 hour*. You may leave early.
 + If you are a speaker, please make sure your presentation is within *40 minutes*.
 
 * Location
 
-+ *Room:* *BLIF-4101* (study room, 4th floor Luddy Hall)
++ *Room:* *BLIF-3069* (conference room, 3rd floor Luddy Hall)
 + Where is it? Search "Luddy Hall" on [[https://map.iu.edu/iub/][Campus Map]].
 
 * Schedule
 
-| *Date*             | *Paper Title / Presentation*                      | *Speaker(s)*     |
-|--------------------+---------------------------------------------------+------------------|
-| +<2022-09-05 Mon>+ | Labor Day                                         | N/A              |
-|--------------------+---------------------------------------------------+------------------|
-| <2022-09-12 Mon>   | *Paper Reading:* The Cartesian Product Algorithm: | Group Discussion |
-|                    | Simple and Precise Type Inference of              |                  |
-|                    | Parametric Polymorphism                           |                  |
-|                    | *Link:* [[https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.30.8177&rep=rep1&type=pdf][1]]                                         |                  |
-|--------------------+---------------------------------------------------+------------------|
-| <2022-09-19 Mon>   | *Paper Reading:* Separation Logic: A Logic for    | Group Discussion |
-|                    | Shared Mutable Data Structures                    |                  |
-|                    | *Link:* [[https://www.cs.cmu.edu/~jcr/seplogic.pdf][1]]                                         |                  |
-|--------------------+---------------------------------------------------+------------------|
-| <2022-09-26 Mon>   | *Paper Reading:* A Framework for Substructural    | Group Discussion |
-|                    | Type Systems                                      |                  |
-|                    | *Links:* [[https://bentnib.org/quant-framework.pdf][1]] , [[https://dl.acm.org/doi/10.1007/978-3-030-99336-8_14][2(ACM DL)]]                            |                  |
-|--------------------+---------------------------------------------------+------------------|
-| <2022-10-03 Mon>   | *Paper Reading:* A Lattice Model of               | Group Discussion |
-|                    | Secure Information Flow                           |                  |
-|                    | *Links:* [[https://courses.cs.washington.edu/courses/cse590s/02sp/secure-information-flow.pdf][1]] , [[https://dl.acm.org/doi/10.1145/360051.360056][2(ACM DL)]]                            |                  |
-|--------------------+---------------------------------------------------+------------------|
-| <2022-10-10 Mon>   | TBA                                               |                  |
-|--------------------+---------------------------------------------------+------------------|
-| <2022-10-17 Mon>   | TBA                                               |                  |
-|--------------------+---------------------------------------------------+------------------|
-| <2022-10-24 Mon>   | TBA                                               |                  |
-|--------------------+---------------------------------------------------+------------------|
-| <2022-10-31 Mon>   | TBA                                               |                  |
+| *Date*             | *Paper Title / Presentation*        | *Speaker(s)*     |
+|--------------------+-------------------------------------+------------------|
+| +<2023-01-17 Tue>+ | POPL week                           | N/A              |
+|--------------------+-------------------------------------+------------------|
+| <2023-01-24 Tue>   | *Paper Reading:*                    | Group Discussion |
+|                    | /Notions of computation and monads/ |                  |
+|                    | *Links:* [[https://www.cs.cmu.edu/~crary/819-f09/Moggi91.pdf][Moggi91]] , [[https://doi.org/10.1016/0890-5401(91)90052-4][DOI]]              |                  |
+|--------------------+-------------------------------------+------------------|
+| <2023-01-31 Tue>   | *Paper Reading:*                    | Group Discussion |
+|                    | /Title TBA/                         |                  |
+|                    | *Links:* TBA                        |                  |
+|--------------------+-------------------------------------+------------------|
+| <2023-02-07 Tue>   | *Paper Reading:*                    | Group Discussion |
+|                    | /Title TBA/                         |                  |
+|                    | *Links:* TBA                        |                  |
+|--------------------+-------------------------------------+------------------|
+| <2023-02-14 Tue>   | *Paper Reading:*                    | Group Discussion |
+|                    | /Title TBA/                         |                  |
+|                    | *Links:* TBA                        |                  |
+|--------------------+-------------------------------------+------------------|

@@ -6,3 +6,4 @@
 
 + Fall 2021: [[./past-fall21.html][link]]
 + Spring and Summer 2022: [[./past-spring22.html][link]]
++ Fall 2022: [[./past-fall22.html][link]]
