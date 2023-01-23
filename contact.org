@@ -1,4 +1,4 @@
-#+TITLE: PL Reading Group @ IU
+#+TITLE: Indiana University PL Reading Group
 #+SUBTITLE: Contact
 #+AUTHOR: Tianyu Chen
 #+SETUPFILE: ./white_clean.theme
@@ -7,8 +7,9 @@
 * Mailing List
 
 + Mailing list address: ~pl-reading-iu-group~
-+ Email Tianyu (~chen512~) to ask questions and / or to join the mailing list
++ Please contact Tianyu (id: ~chen512~) or any member to join.
 
 * Discord Channel
 
-We have a Discord channel hosted in the ~cps~ server. Email Tianyu or any member to join.
++ We have a discussion channel on the ~cps~ server.
++ Please email Tianyu or any member to join.

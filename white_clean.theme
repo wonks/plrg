@@ -26,7 +26,7 @@
 #+HTML_HEAD: <nav>
 #+HTML_HEAD: <b>#</b>
 #+HTML_HEAD: <a href="./index.html">        <u>Home         </u></a> |
-#+HTML_HEAD: <a href="./participation.html"><u>Participating</u></a> |
+#+HTML_HEAD: <a href="./participation.html"><u>Participation</u></a> |
 #+HTML_HEAD: <a href="./contact.html">      <u>Contact      </u></a> |
 #+HTML_HEAD: <a href="./archive.html">      <u>Past Events  </u></a>
 #+HTML_HEAD: </nav>

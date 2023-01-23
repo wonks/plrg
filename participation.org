@@ -1,4 +1,4 @@
-#+TITLE: PL Reading Group @ IU
+#+TITLE: Indiana University PL Reading Group
 #+SUBTITLE: Participation
 #+AUTHOR: Tianyu Chen
 #+SETUPFILE: ./white_clean.theme
@@ -8,35 +8,32 @@
 
 * @@html:<font color="#a90533">@@Call for Presentations@@html:</font>@@
 
-Please send us ([[./contact.html][contact]]) a short proposal (informal; one paragraph) if you
-have an idea, including but not limited to:
+Please send us ([[./contact.html][Contact]]) a short proposal (informal, one paragraph)
+about your presentation.
 
-+ Presenting a classic work [fn:1].
-+ Talking about your original work (library, language design, etc. ).
-+ Tutorial (for example, how to use a proof assistant).
- 
+Possible topics:
+
++ Present a classic work [fn:1].
++ Talk about your original work like library, language design, etc.
++ Host a tutorial session (for example: how to use a proof assistant).
+
 
 * Paper Bidding Mechanism (RFC)
 
-We maintain [[https://docs.google.com/spreadsheets/d/1NuWy4YpqwUCiR2V9wU1nb7UOKCusfiz1jaHEHUaEg3Y/edit?usp=sharing][a queue of papers]] where every member can contribute to. New
-proposals are pushed to the rear of the queue.
+We maintain [[https://docs.google.com/spreadsheets/d/1NuWy4YpqwUCiR2V9wU1nb7UOKCusfiz1jaHEHUaEg3Y/edit?usp=sharing][a queue of papers]] which every member can contribute to.
 
-Paper selection is bidding-based: we maintain a sliding window with a
-tentative size of 3 (arbitrarily chosen), The window starts from the head
-of the queue. Members select from these 3 papers and vote for the next
-one to read. We then update the queue by popping the winner.
-   
+Paper selection is bidding-based. Each week we vote for the next
+paper to read from the first 3 papers in the paper queue.
+
 * Paper Discussion
 
-+ We expect that every participant read the paper before coming to the discussion
-  session. You do not need to understand every detail, but it is recommended that
-  you go through the paper and get the main idea.
-+ We recommend that you bring a physical or electronic copy of the paper to the
-  discussion.
++ We expect that every participant at least go through the paper and
+  get its main idea before coming to each meeting.
++ We recommend that you bring a physical or electronic copy of the paper.
 
 * COVID & Health
 
-+ Due to COVID-19, it *is required* to wear a mask when attending in-person meetings.
-+ Food is unfortunately not provided per IU guideline "about food at events and meetings".
++ It is always recommended to wear a mask when attending in-person meetings.
+
 
 [fn:1] Not limited to the ones in the paper queue.
