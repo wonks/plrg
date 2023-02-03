@@ -28,24 +28,25 @@ details about voting for papers and scheduling your presentation.
 
 * Schedule
 
-| *Date*             | *Paper Title / Presentation*              | *Speaker(s)*     |
-|--------------------+-------------------------------------------+------------------|
-| +<2023-01-17 Tue>+ | POPL week                                 | N/A              |
-|--------------------+-------------------------------------------+------------------|
-| <2023-01-24 Tue>   | *Paper Reading:*                          | Group Discussion |
-|                    | /Notions of computation and monads/       |                  |
-|                    | *Links:* [[https://www.cs.cmu.edu/~crary/819-f09/Moggi91.pdf][Moggi91]] , [[https://doi.org/10.1016/0890-5401(91)90052-4][DOI]]                    |                  |
-|--------------------+-------------------------------------------+------------------|
-| <2023-01-31 Tue>   | *Paper Reading:*                          | Group Discussion |
-|                    | /An Indexed Model of Recursive Types for/ |                  |
-|                    | /Foundational Proof-carrying Code/        |                  |
-|                    | *Links:* [[https://dl.acm.org/doi/10.1145/504709.504712][ACM]] , [[https://doi.org/10.1145/504709.504712][DOI]]                        |                  |
-|--------------------+-------------------------------------------+------------------|
-| <2023-02-07 Tue>   | *Paper Reading:*                          | Group Discussion |
-|                    | /Title TBA/                               |                  |
-|                    | *Links:* TBA                              |                  |
-|--------------------+-------------------------------------------+------------------|
-| <2023-02-14 Tue>   | *Paper Reading:*                          | Group Discussion |
-|                    | /Title TBA/                               |                  |
-|                    | *Links:* TBA                              |                  |
-|--------------------+-------------------------------------------+------------------|
+| *Date*             | *Paper Title / Presentation*                  | *Speaker(s)*     |
+|--------------------+-----------------------------------------------+------------------|
+| +<2023-01-17 Tue>+ | POPL week                                     | N/A              |
+|--------------------+-----------------------------------------------+------------------|
+| <2023-01-24 Tue>   | *Paper Reading:*                              | Group Discussion |
+|                    | /Notions of computation and monads/           |                  |
+|                    | *Links:* [[https://www.cs.cmu.edu/~crary/819-f09/Moggi91.pdf][Moggi91]] , [[https://doi.org/10.1016/0890-5401(91)90052-4][DOI]]                        |                  |
+|--------------------+-----------------------------------------------+------------------|
+| <2023-01-31 Tue>   | *Paper Reading:*                              | Group Discussion |
+|                    | /An Indexed Model of Recursive Types for/     |                  |
+|                    | /Foundational Proof-carrying Code/            |                  |
+|                    | *Links:* [[https://dl.acm.org/doi/10.1145/504709.504712][ACM]] , [[https://doi.org/10.1145/504709.504712][DOI]]                            |                  |
+|--------------------+-----------------------------------------------+------------------|
+| <2023-02-07 Tue>   | *Paper Reading:*                              | Group Discussion |
+|                    | /A type- and scope-safe universe of syntaxes/ |                  |
+|                    | /with binding: their semantics and proofs/    |                  |
+|                    | *Links:* [[https://dl.acm.org/doi/10.1145/3236785][ACM]] , [[https://doi.org/10.1145/3236785][DOI]]                            |                  |
+|--------------------+-----------------------------------------------+------------------|
+| <2023-02-14 Tue>   | *Paper Reading:*                              | Group Discussion |
+|                    | /Title TBA/                                   |                  |
+|                    | *Links:* TBA                                  |                  |
+|--------------------+-----------------------------------------------+------------------|
