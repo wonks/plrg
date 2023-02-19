@@ -51,7 +51,7 @@ details about voting for papers and scheduling your presentation.
 |                    | *Links:* [[https://dl.acm.org/doi/10.1145/91556.91622][ACM]] , [[https://doi.org/10.1145/91556.91622][DOI]]                                        |                  |
 |--------------------+-----------------------------------------------------------+------------------|
 | <2023-02-21 Tue>   | *Paper Reading:*                                          | Group Discussion |
-| (Tentative)        | /Representing Control: a Study of the CPS Transformation/ |                  |
+| (meet at 1:30 pm)  | /Representing Control: a Study of the CPS Transformation/ |                  |
 |                    | *Links:* [[https://dotat.at/tmp/danvy-filinski-mscs92.pdf][MSCS92]] , [[https://doi.org/10.1017/S0960129500001535][DOI]]                                     |                  |
 |--------------------+-----------------------------------------------------------+------------------|
 | <2023-02-28 Tue>   | *Paper Reading:*                                          | Group Discussion |
