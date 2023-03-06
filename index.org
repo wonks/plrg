@@ -60,8 +60,9 @@ details about voting for papers and scheduling your presentation.
 |                    | /The Essence of Compiling with Continuations/             |                  |
 |                    | *Links:* [[https://dl.acm.org/doi/pdf/10.1145/155090.155113][PDF]]                                              |                  |
 |--------------------+-----------------------------------------------------------+------------------|
-| <2023-03-14 Tue>   | *Paper Reading:*                                          | Group Discussion |
+| +<2023-03-14 Tue>+ | Spring break                                              | N/A              |
+|--------------------+-----------------------------------------------------------+------------------|
+| <2023-03-21 Tue>   | *Paper Reading:*                                          | Group Discussion |
 |                    | /Title TBA/                                               |                  |
 |                    | *Links:* TBA                                              |                  |
 |--------------------+-----------------------------------------------------------+------------------|
-
