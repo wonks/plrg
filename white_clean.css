@@ -367,4 +367,7 @@ body {
     #table-of-contents {
         display: none;
     }
+    #gmap {
+        display: none;
+    }
 }
