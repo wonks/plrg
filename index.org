@@ -17,14 +17,15 @@ details about voting for papers and scheduling your presentation.
 
 * Time
 
-+ *Time:* <1:00 PM> on *Tuesdays*.
++ *<1:00 PM> on Tuesdays*.
 + The event usually lasts *1 hour*. You may leave early.
 + If you are a speaker, please make sure your presentation is within *40 minutes*.
 
 * Location
 
-+ *Room:* *BLIF-3069* (conference room, 3rd floor Luddy Hall)
-+ Where is it? Search "Luddy Hall" on [[https://map.iu.edu/iub/][Campus Map]].
++ *BLIF-3069*: conference room, 3rd floor Luddy Hall ([[https://map.concept3d.com/?id=951#!m/9510993][Campus Map]])
+
+#+INCLUDE: "./embed.html" export html
 
 * Schedule
 
