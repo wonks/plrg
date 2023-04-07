@@ -76,3 +76,7 @@ details about voting for papers and scheduling your presentation.
 |                    | /Data types à la carte/                                   |                  |
 |                    | *Links:* [[https://doi.org/10.1017/S0956796808006758][DOI]] , [[https://www.cambridge.org/core/journals/journal-of-functional-programming/article/data-types-a-la-carte/14416CB20C4637164EA9F77097909409][1]]                                          |                  |
 |--------------------+-----------------------------------------------------------+------------------|
+| <2023-04-11 Tue>   | *Paper Reading:*                                          | Group Discussion |
+|                    | /From System F to Typed Assembly Language/                |                  |
+|                    | *Links:* [[https://www.cs.cornell.edu/talc/papers/tal-popl.pdf][PDF]]                                              |                  |
+|--------------------+-----------------------------------------------------------+------------------|
