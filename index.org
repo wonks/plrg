@@ -1,5 +1,5 @@
 #+TITLE: Indiana University PL Reading Group
-#+SUBTITLE: Spring 2023 🌱
+#+SUBTITLE: Fall 2023 🍁
 #+AUTHOR: Tianyu Chen
 #+SETUPFILE: ./white_clean.theme
 #+OPTIONS: ^:nil p:t num:0 author:nil
@@ -17,74 +17,20 @@ details about voting for papers and scheduling your presentation.
 
 * Time
 
-+ *<1:00 PM> on Tuesdays*.
-+ The event usually lasts *1 hour*. You may leave early.
++ *TBA*.
++ The event usually lasts *1 hour*, but you may leave early.
 + If you are a speaker, please make sure your presentation is within *40 minutes*.
 
 * Location
 
-+ *BLIF-3069*: conference room, 3rd floor Luddy Hall ([[https://map.concept3d.com/?id=951#!m/9510993][Campus Map]])
++ *TBA*: conference room, ?? floor Luddy Hall ([[https://map.concept3d.com/?id=951#!m/9510993][Campus Map]])
 
 #+INCLUDE: "./embed.html" export html
 
 * Schedule
 
-| *Date*             | *Paper Title / Presentation*                              | *Speaker(s)*     |
-|--------------------+-----------------------------------------------------------+------------------|
-| +<2023-01-17 Tue>+ | POPL week                                                 | N/A              |
-|--------------------+-----------------------------------------------------------+------------------|
-| <2023-01-24 Tue>   | *Paper Reading:*                                          | Group Discussion |
-|                    | /Notions of computation and monads/                       |                  |
-|                    | *Links:* [[https://www.cs.cmu.edu/~crary/819-f09/Moggi91.pdf][Moggi91]] , [[https://doi.org/10.1016/0890-5401(91)90052-4][DOI]]                                    |                  |
-|--------------------+-----------------------------------------------------------+------------------|
-| <2023-01-31 Tue>   | *Paper Reading:*                                          | Group Discussion |
-|                    | /An Indexed Model of Recursive Types for/                 |                  |
-|                    | /Foundational Proof-carrying Code/                        |                  |
-|                    | *Links:* [[https://dl.acm.org/doi/10.1145/504709.504712][ACM]] , [[https://doi.org/10.1145/504709.504712][DOI]]                                        |                  |
-|--------------------+-----------------------------------------------------------+------------------|
-| <2023-02-07 Tue>   | *Paper Reading:*                                          | Group Discussion |
-|                    | /A type- and scope-safe universe of syntaxes/             |                  |
-|                    | /with binding: their semantics and proofs/                |                  |
-|                    | *Links:* [[https://dl.acm.org/doi/10.1145/3236785][ACM]] , [[https://doi.org/10.1145/3236785][DOI]]                                        |                  |
-|--------------------+-----------------------------------------------------------+------------------|
-| <2023-02-14 Tue>   | *Paper Reading:*                                          | Group Discussion |
-|                    | /Abstracting Control/                                     |                  |
-|                    | *Links:* [[https://dl.acm.org/doi/10.1145/91556.91622][ACM]] , [[https://doi.org/10.1145/91556.91622][DOI]]                                        |                  |
-|--------------------+-----------------------------------------------------------+------------------|
-| +<2023-02-21 Tue>+ | CS Colloquium                                             | N/A              |
-|--------------------+-----------------------------------------------------------+------------------|
-| <2023-02-28 Tue>   | *Paper Reading:*                                          | Group Discussion |
-|                    | /Representing Control: a Study of the CPS Transformation/ |                  |
-|                    | *Links:* [[https://dotat.at/tmp/danvy-filinski-mscs92.pdf][MSCS92]] , [[https://doi.org/10.1017/S0960129500001535][DOI]]                                     |                  |
-|--------------------+-----------------------------------------------------------+------------------|
-| <2023-03-07 Tue>   | *Paper Reading:*                                          | Group Discussion |
-|                    | /The Essence of Compiling with Continuations/             |                  |
-|                    | *Links:* [[https://dl.acm.org/doi/pdf/10.1145/155090.155113][PDF]]                                              |                  |
-|--------------------+-----------------------------------------------------------+------------------|
-| +<2023-03-14 Tue>+ | Spring break                                              | N/A              |
-|--------------------+-----------------------------------------------------------+------------------|
-| <2023-03-21 Tue>   | *Paper Reading:*                                          | Group Discussion |
-|                    | /What we talk about when we talk about monads/            |                  |
-|                    | *Links:* [[https://tomasp.net/academic/papers/monads/monads-programming.pdf][Petricek]]                                         |                  |
-|--------------------+-----------------------------------------------------------+------------------|
-| <2023-03-28 Tue>   | *Paper Reading:*                                          | Group Discussion |
-|                    | /Scrap Your Boilerplate: A Practical Design Pattern for/  |                  |
-|                    | /Generic Programming/                                     |                  |
-|                    | *Links:* [[https://www.microsoft.com/en-us/research/wp-content/uploads/2003/01/hmap.pdf][hmap]]                                             |                  |
-|--------------------+-----------------------------------------------------------+------------------|
-| <2023-04-04 Tue>   | *Paper Reading:*                                          | Group Discussion |
-|                    | /Data types à la carte/                                   |                  |
-|                    | *Links:* [[https://doi.org/10.1017/S0956796808006758][DOI]] , [[https://www.cambridge.org/core/journals/journal-of-functional-programming/article/data-types-a-la-carte/14416CB20C4637164EA9F77097909409][1]]                                          |                  |
-|--------------------+-----------------------------------------------------------+------------------|
-| <2023-04-11 Tue>   | *Paper Reading:*                                          | Group Discussion |
-|                    | /From System F to Typed Assembly Language/                |                  |
-|                    | *Links:* [[https://www.cs.cornell.edu/talc/papers/tal-popl.pdf][PDF]]                                              |                  |
-|--------------------+-----------------------------------------------------------+------------------|
-| <2023-04-18 Tue>   | *Paper Reading:*                                          | Group Discussion |
-|                    | /Initial Algebra Semantics and Continuous Algebras/       |                  |
-|                    | *Links:* [[https://dl.acm.org/doi/pdf/10.1145/321992.321997][PDF]]                                              |                  |
-|--------------------+-----------------------------------------------------------+------------------|
-| <2023-04-25 Tue>   | *Special Topic:*                                          | Group Discussion |
-|                    | /Expressing Information Flow Properties/                  |                  |
-|                    | *Links:* [[https://www.cs.cornell.edu/andru/papers/now-info-flow/now-info-flow.pdf][PDF]]                                              |                  |
-|--------------------+-----------------------------------------------------------+------------------|
+# you may use `org-time-stamp` to insert date
+
+| *Date* | *Paper Title / Presentation* | *Speaker(s)* |
+|--------+------------------------------+--------------|
+| TBA    | TBA                          | TBA          |
