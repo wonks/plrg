@@ -17,13 +17,13 @@ details about voting for papers and scheduling your presentation.
 
 * Time
 
-+ *TBA*.
++ <10 AM> on *Thursdays*.
 + The event usually lasts *1 hour*, but you may leave early.
 + If you are a speaker, please make sure your presentation is within *40 minutes*.
 
 * Location
 
-+ *TBA*: conference room, ?? floor Luddy Hall ([[https://map.concept3d.com/?id=951#!m/9510993][Campus Map]])
++ *BLIF 3069* (conference room, 3rd floor Luddy Hall) ([[https://map.concept3d.com/?id=951#!m/9510993][Campus Map]])
 
 #+INCLUDE: "./embed.html" export html
 
@@ -31,6 +31,7 @@ details about voting for papers and scheduling your presentation.
 
 # you may use `org-time-stamp` to insert date
 
-| *Date* | *Paper Title / Presentation* | *Speaker(s)* |
-|--------+------------------------------+--------------|
-| TBA    | TBA                          | TBA          |
+| *Date*           | *Paper Title / Presentation*                                                         | *Speaker(s)*   |
+|------------------+--------------------------------------------------------------------------------------+----------------|
+| <2023-08-31 Thu> | *Presentation Title:* Implementing Reverse Mode Automatic Differentiation in Racket. | Darshal Shetty |
+|                  |                                                                                      |                |
