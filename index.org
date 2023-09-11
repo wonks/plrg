@@ -41,4 +41,8 @@ details about voting for papers and scheduling your presentation.
 |                  | /λμ-Calculus: An algorithmic interpretation of classical natural deduction/ |                  |
 |                  | *Links:* [[https://link.springer.com/chapter/10.1007/BFb0013061][SPRINGER]]                                                           |                  |
 |------------------+-----------------------------------------------------------------------------+------------------|
+| <2023-09-14 Thu> | *Paper Reading:*                                                            | Group Discussion |
+|                  | /I am not a number: I am a free variable/                                   |                  |
+|                  | *Links:*[[https://doi.org/10.1145/1017472.1017477][ DOI]]                                                                |                  |
+|------------------+-----------------------------------------------------------------------------+------------------|
 |                  |                                                                             |                  |
