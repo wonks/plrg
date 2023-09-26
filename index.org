@@ -45,8 +45,12 @@ details about voting for papers and scheduling your presentation.
 |                  | /I am not a number: I am a free variable/                                   |                  |
 |                  | *Links:* [[https://doi.org/10.1145/1017472.1017477][ DOI]]                                                               |                  |
 |------------------+-----------------------------------------------------------------------------+------------------|
-| <2023-09-14 Thu> | *Paper Reading:*                                                            | Group Discussion |
+| <2023-09-21 Thu> | *Paper Reading:*                                                            | Group Discussion |
 |                  | /Engineering formal metatheory/                                             |                  |
 |                  | *Links:* [[https://doi.org/10.1145/1328438.1328443][ DOI]]                                                               |                  |
+|------------------+-----------------------------------------------------------------------------+------------------|
+| <2023-09-28 Thu> | *Paper Reading:*                                                            | Group Discussion |
+|                  | /A Formulae-as-Types Notion of Control/                                     |                  |
+|                  | *Links:* [[https://www.cl.cam.ac.uk/~tgg22/publications/popl90.pdf][PDF]]                                                                |                  |
 |------------------+-----------------------------------------------------------------------------+------------------|
 |                  |                                                                             |                  |
