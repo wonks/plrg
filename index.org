@@ -12,6 +12,9 @@ Unlike the PL Wonks talk series, the focus of PLRG is paper reading and discussi
 However, we do occasionally schedule presentations, practice talks, and tutorial
 sessions ([[*Schedule]]).
 
+The papers to discuss are maintained in a [[https://docs.google.com/spreadsheets/d/1NuWy4YpqwUCiR2V9wU1nb7UOKCusfiz1jaHEHUaEg3Y/edit?usp=sharing][queue]]. Please add to the queue
+if you have a new suggestion.
+
 *We are looking for presentations!* Please refer to [[./participation.html][Participation]] for
 details about voting for papers and scheduling your presentation.
 
