@@ -7,7 +7,7 @@
 * About
 
 @@html:<font color="#a90533">@@ The PL Reading Group @@html:</font>@@ (PLRG)
-is the successor to several [[https://wonks.github.io/groups.html][previous reading groups]] in programming language research.
+is successor to several [[https://wonks.github.io/groups.html][previous reading groups]] in programming language research.
 The main focus of PLRG is paper reading and discussion. We occasionally schedule
 presentations, practice talks, and tutorial sessions. Check our [[*Schedule]].
 
