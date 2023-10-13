@@ -7,10 +7,9 @@
 * About
 
 @@html:<font color="#a90533">@@ The PL Reading Group @@html:</font>@@ (PLRG)
-is the de facto successor to PL Wonks and several previous reading groups.
-Unlike the PL Wonks talk series, the focus of PLRG is paper reading and discussion.
-However, we do occasionally schedule presentations, practice talks, and tutorial
-sessions ([[*Schedule]]).
+is the successor to several [[https://wonks.github.io/groups.html][previous reading groups]] in programming language research.
+The main focus of PLRG is paper reading and discussion. We occasionally schedule
+presentations, practice talks, and tutorial sessions. Check our [[*Schedule]].
 
 The papers to discuss are maintained in a [[https://docs.google.com/spreadsheets/d/1NuWy4YpqwUCiR2V9wU1nb7UOKCusfiz1jaHEHUaEg3Y/edit?usp=sharing][queue]]. Please add to the queue
 if you have a new suggestion.
@@ -26,7 +25,7 @@ details about voting for papers and scheduling your presentation.
 
 * Location
 
-+ *BLIF 3069* (conference room, 3rd floor Luddy Hall) ([[https://map.concept3d.com/?id=951#!m/9510993][Campus Map]])
++ *BLIF 3069* (conference room, 3rd floor Luddy Hall) [[https://map.concept3d.com/?id=951#!m/9510993][Campus Map]]
 
 #+INCLUDE: "./embed.html" export html
 
