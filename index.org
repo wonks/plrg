@@ -41,7 +41,7 @@ details about voting for papers and scheduling your presentation.
 |                  | *Notes:* [[file:upload/auto-differentiation/plrg-notes.rkt][plrg-notes.rkt]], [[file:upload/auto-differentiation/same-as.rkt][same-as.rkt]]                  |                  |
 |------------------+-------------------------------------------------------+------------------|
 | <2023-09-07 Thu> | *Paper Reading:*                                      | Group Discussion |
-|                  | /λμ-Calculus: An algorithmic interpretation of/       |                  |
+|                  | /λμ-Calculus: An algorithmic interpretation of/        |                  |
 |                  | /classical natural deduction/                         |                  |
 |                  | *Link:* [[https://link.springer.com/chapter/10.1007/BFb0013061][SPRINGER]]                                      |                  |
 |------------------+-------------------------------------------------------+------------------|
@@ -65,4 +65,20 @@ details about voting for papers and scheduling your presentation.
 |                  | /Run your research: on the effectiveness of/          |                  |
 |                  | /lightweight mechanization/                           |                  |
 |                  | *Link:* [[https://doi.org/10.1145/2103621.2103691][DOI]]                                           |                  |
-
+|------------------+-------------------------------------------------------+------------------|
+| <2023-10-26 Thu> | *Paper Reading:*                                      | Group Discussion |
+|                  | /Semantical Considerations On Floyd-Hoare Logic/      |                  |
+|                  | *Link:* [[https://doi.org/10.1109/SFCS.1976.27][DOI]]                                           |                  |
+|------------------+-------------------------------------------------------+------------------|
+| <2023-11-02 Thu> | *Paper Reading:*                                      | Group Discussion |
+|                  | /Meta-theory à la carte/                              |                  |
+|                  | *Link:* [[https://doi.org/10.1145/2429069.2429094][DOI]]                                           |                  |
+|------------------+-------------------------------------------------------+------------------|
+| <2023-11-09 Thu> | *Paper Reading:*                                      | Group Discussion |
+|                  | /Modeling an Algebraic Stepper/                       |                  |
+|                  | *Link:* [[https://doi.org/10.1007/3-540-45309-1_21][DOI]]                                           |                  |
+|------------------+-------------------------------------------------------+------------------|
+| <2023-11-16 Thu> | *Paper Reading:*                                      | Group Discussion |
+|                  | /The Locally Nameless Representation/                 |                  |
+|                  | *Link:* [[https://doi.org/10.1007/s10817-011-9225-2][DOI]]                                           |                  |
+|                  |                                                       |                  |
