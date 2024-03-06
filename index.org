@@ -1,5 +1,5 @@
 #+TITLE: Indiana University PL Reading Group
-#+SUBTITLE: Fall 2023 🍁
+#+SUBTITLE: Spring 2024 🌷
 #+AUTHOR: Tianyu Chen, Darshal Shetty
 #+SETUPFILE: ./white_clean.theme
 #+OPTIONS: ^:nil p:t num:0 author:nil
@@ -19,13 +19,13 @@ details about voting for papers and scheduling your presentation.
 
 * Time
 
-+ <10 AM> on *Thursdays*.
++ <2 PM> on *Fridays*.
 + The event usually lasts *1 hour*, but you may leave early.
 + If you are a speaker, please make sure your presentation is within *40 minutes*.
 
 * Location
 
-+ *BLIF 3069* (conference room, 3rd floor Luddy Hall) [[https://map.concept3d.com/?id=951#!m/9510993][Campus Map]]
++ *BLI 100A* (conference room, 1st floor Myles Brand Hall) [[https://map.concept3d.com/?id=951#!m/9510413][Campus Map]]
 
 #+INCLUDE: "./embed.html" export html
 
@@ -33,56 +33,14 @@ details about voting for papers and scheduling your presentation.
 
 # you may use `org-time-stamp` to insert date
 
-| *Date*           | *Paper Title / Presentation*                          | *Speaker(s)*     |
-|------------------+-------------------------------------------------------+------------------|
-| <2023-08-31 Thu> | *Presentation:*                                       | Darshal Shetty   |
-|                  | /Implementing Reverse Mode Automatic Differentiation/ |                  |
-|                  | /in Racket/                                           |                  |
-|                  | *Notes:* [[file:upload/auto-differentiation/plrg-notes.rkt][plrg-notes.rkt]], [[file:upload/auto-differentiation/same-as.rkt][same-as.rkt]]                  |                  |
-|------------------+-------------------------------------------------------+------------------|
-| <2023-09-07 Thu> | *Paper Reading:*                                      | Group Discussion |
-|                  | /λμ-Calculus: An algorithmic interpretation of/        |                  |
-|                  | /classical natural deduction/                         |                  |
-|                  | *Link:* [[https://link.springer.com/chapter/10.1007/BFb0013061][SPRINGER]]                                      |                  |
-|------------------+-------------------------------------------------------+------------------|
-| <2023-09-14 Thu> | *Paper Reading:*                                      | Group Discussion |
-|                  | /I am not a number: I am a free variable/             |                  |
-|                  | *Link:* [[https://doi.org/10.1145/1017472.1017477][DOI]]                                           |                  |
-|------------------+-------------------------------------------------------+------------------|
-| <2023-09-21 Thu> | *Paper Reading:*                                      | Group Discussion |
-|                  | /Engineering formal metatheory/                       |                  |
-|                  | *Link:* [[https://doi.org/10.1145/1328438.1328443][DOI]]                                           |                  |
-|------------------+-------------------------------------------------------+------------------|
-| <2023-09-28 Thu> | *Paper Reading:*                                      | Group Discussion |
-| <2023-10-05 Thu> | /A Formulae-as-Types Notion of Control/               |                  |
-|                  | *Link:* [[https://www.cl.cam.ac.uk/~tgg22/publications/popl90.pdf][PDF]]                                           |                  |
-|------------------+-------------------------------------------------------+------------------|
-| <2023-10-12 Thu> | *Paper Reading:*                                      | Group Discussion |
-|                  | /The next 700 programming languages/                  |                  |
-|                  | *Link:* [[https://dl.acm.org/doi/10.1145/365230.365257][ACM]]                                           |                  |
-|------------------+-------------------------------------------------------+------------------|
-| <2023-10-19 Thu> | *Paper Reading:*                                      | Group Discussion |
-|                  | /Run your research: on the effectiveness of/          |                  |
-|                  | /lightweight mechanization/                           |                  |
-|                  | *Link:* [[https://doi.org/10.1145/2103621.2103691][DOI]]                                           |                  |
-|------------------+-------------------------------------------------------+------------------|
-| <2023-10-26 Thu> | *Paper Reading:*                                      | Group Discussion |
-|                  | /Semantical Considerations On Floyd-Hoare Logic/      |                  |
-|                  | *Link:* [[https://doi.org/10.1109/SFCS.1976.27][DOI]]                                           |                  |
-|------------------+-------------------------------------------------------+------------------|
-| <2023-11-02 Thu> | *Paper Reading:*                                      | Group Discussion |
-|                  | /Meta-theory à la carte/                              |                  |
-|                  | *Link:* [[https://doi.org/10.1145/2429069.2429094][DOI]]                                           |                  |
-|------------------+-------------------------------------------------------+------------------|
-| <2023-11-09 Thu> | *Paper Reading:*                                      | Group Discussion |
-|                  | /Modeling an Algebraic Stepper/                       |                  |
-|                  | *Link:* [[https://doi.org/10.1007/3-540-45309-1_21][DOI]]                                           |                  |
-|------------------+-------------------------------------------------------+------------------|
-| <2023-11-16 Thu> | *Paper Reading:*                                      | Group Discussion |
-|                  | /The Locally Nameless Representation/                 |                  |
-|                  | *Link:* [[https://doi.org/10.1007/s10817-011-9225-2][DOI]]                                           |                  |
-|------------------+-------------------------------------------------------+------------------|
-| <2023-11-30 Thu> | *Paper Reading:*                                      | Group Discussion |
-| <2023-12-07 Thu> | /Logical types for untyped languages/                 |                  |
-|                  | *Link:* [[https://doi.org/10.1145/1863543.1863561][DOI]]                                           |                  |
-|                  |                                                       |                  |
+| *Date*           | *Paper Title / Presentation*          | *Speaker(s)*     |
+|------------------+---------------------------------------+------------------|
+| <2024-02-16 Fri> | *Paper Reading:*                      | Group Discussion |
+|                  | /Handlers in action/                  |                  |
+|                  | *Link:* [[https://doi.org/10.1145/2544174.2500590][DOI]]                           |                  |
+|------------------+---------------------------------------+------------------|
+| <2024-03-01 Thu> | *Paper Reading:*                      | Group Discussion |
+| <2024-03-06 Thu> | /Dynamic Typing with Dependent Types/ |                  |
+|                  | *Links:* [[https://doi.org/10.1007/1-4020-8141-3_34][SPRINGER]], [[https://www.cs.princeton.edu/techreports/2004/695.pdf][Technical Report]]   |                  |
+|------------------+---------------------------------------+------------------|
+|                  |                                       |                  |

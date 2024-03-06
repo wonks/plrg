@@ -1,6 +1,6 @@
 #+TITLE: Indiana University PL Reading Group
 #+SUBTITLE: Past Events
-#+AUTHOR: Tianyu Chen
+#+AUTHOR: Tianyu Chen, Darshal Shetty
 #+SETUPFILE: ./white_clean.theme
 #+OPTIONS: ^:nil p:t num:0 author:nil
 
@@ -8,3 +8,4 @@
 + [X] Spring and Summer 2022: [[./past-spring22.html][link]]
 + [X] Fall 2022: [[./past-fall22.html][link]]
 + [X] Spring 2023: [[./past-spring23.html][link]]
++ [X] Fall 2023: [[./past-fall23.html][link]]
