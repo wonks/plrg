@@ -1,6 +1,6 @@
 #+TITLE: Indiana University PL Reading Group
 #+SUBTITLE: Fall 2023 🍁
-#+AUTHOR: Tianyu Chen
+#+AUTHOR: Tianyu Chen, Darshal Shetty
 #+SETUPFILE: ./white_clean.theme
 #+OPTIONS: ^:nil p:t num:0 author:nil
 
@@ -81,4 +81,8 @@ details about voting for papers and scheduling your presentation.
 | <2023-11-16 Thu> | *Paper Reading:*                                      | Group Discussion |
 |                  | /The Locally Nameless Representation/                 |                  |
 |                  | *Link:* [[https://doi.org/10.1007/s10817-011-9225-2][DOI]]                                           |                  |
+|------------------+-------------------------------------------------------+------------------|
+| <2023-11-30 Thu> | *Paper Reading:*                                      | Group Discussion |
+| <2023-12-07 Thu> | /Logical types for untyped languages/                 |                  |
+|                  | *Link:* [[https://doi.org/10.1145/1863543.1863561][DOI]]                                           |                  |
 |                  |                                                       |                  |
