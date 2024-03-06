@@ -33,14 +33,14 @@ details about voting for papers and scheduling your presentation.
 
 # you may use `org-time-stamp` to insert date
 
-| *Date*           | *Paper Title / Presentation*          | *Speaker(s)*     |
-|------------------+---------------------------------------+------------------|
-| <2024-02-16 Fri> | *Paper Reading:*                      | Group Discussion |
-|                  | /Handlers in action/                  |                  |
-|                  | *Link:* [[https://doi.org/10.1145/2544174.2500590][DOI]]                           |                  |
-|------------------+---------------------------------------+------------------|
-| <2024-03-01 Thu> | *Paper Reading:*                      | Group Discussion |
-| <2024-03-06 Thu> | /Dynamic Typing with Dependent Types/ |                  |
-|                  | *Links:* [[https://doi.org/10.1007/1-4020-8141-3_34][SPRINGER]], [[https://www.cs.princeton.edu/techreports/2004/695.pdf][Technical Report]]   |                  |
-|------------------+---------------------------------------+------------------|
-|                  |                                       |                  |
+| *Date*       | *Paper Title / Presentation*          | *Speaker(s)*     |
+|--------------+---------------------------------------+------------------|
+| <2024-02-16> | *Paper Reading:*                      | Group Discussion |
+|              | /Handlers in action/                  |                  |
+|              | *Link:* [[https://doi.org/10.1145/2544174.2500590][DOI]]                           |                  |
+|--------------+---------------------------------------+------------------|
+| <2024-03-01> | *Paper Reading:*                      | Group Discussion |
+| <2024-03-08> | /Dynamic Typing with Dependent Types/ |                  |
+|              | *Links:* [[https://doi.org/10.1007/1-4020-8141-3_34][SPRINGER]], [[https://www.cs.princeton.edu/techreports/2004/695.pdf][Technical Report]]   |                  |
+|--------------+---------------------------------------+------------------|
+|              |                                       |                  |
