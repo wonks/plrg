@@ -9,3 +9,5 @@
 + [X] Fall 2022: [[./past-fall22.html][link]]
 + [X] Spring 2023: [[./past-spring23.html][link]]
 + [X] Fall 2023: [[./past-fall23.html][link]]
++ [X] Spring 2024: [[./past-spring24.html][link]]
++ [X] Summer 2024: [[./past-summer24.html][link]]
