@@ -24,14 +24,9 @@ details about voting for papers and scheduling your presentation.
 + If you are a speaker, please make sure your presentation is within *40 minutes*.
 
 * Location
-
-TBA
-
-#+BEGIN_COMMENT
-+ *BLIF 3004* (3rd Floor, Luddy Hall) [[https://map.concept3d.com/?id=951#!m/9510990?share][Campus Map]]
++ BLIF 2069 (2nd floor Luddy Hall) [[https://map.concept3d.com/?id=951#!m/9510990?share][Campus Map]]
 
 #+INCLUDE: "./embed.html" export html
-#+END_COMMENT
 
 * Schedule
 
