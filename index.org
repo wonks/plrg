@@ -47,4 +47,8 @@ TBA
 |              | /The Duality of Computation/                                         |                  |
 |              | *Links:* [[http://pauillac.inria.fr/~herbelin/publis/icfp-CuHer00-duality+errata.pdf][PDF]]                                                         |                  |
 |--------------+----------------------------------------------------------------------+------------------|
+| <2024-09-27> | *Paper Reading:*                                                     | Group Discussion |
+|              | /Staged Compilation with Two-Level Type Theory/                      |                  |
+|              | *Links:* [[https://arxiv.org/pdf/2209.09729][Arxiv]]                                                       |                  |
+|--------------+----------------------------------------------------------------------+------------------|
 |              |                                                                      |                  |
